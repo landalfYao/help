@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/pub/pub"
+  ],
+  "window":{ 
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarTitleText": "互帮互助代替你",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#FF6666",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "img/t1.png",
+      "selectedIconPath": "img/t2.png"
+    },{
+      "pagePath": "pages/order/order",
+      "text": "订单",
+      "iconPath": "img/t3.png",
+      "selectedIconPath": "img/t4.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "img/t5.png",
+      "selectedIconPath": "img/t6.png"
+    }]
+  }
+}

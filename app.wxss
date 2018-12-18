@@ -1,0 +1,20 @@
+@import './common.wxss';
+.fo-m{
+  color: #FF6666
+}
+.fix-t{
+  width: 100%;
+  position: fixed;
+  top: 0
+}
+.fo-bu{
+  color: #0099ff
+}
+.fb-btn{
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  background-color: #ff9900
+}

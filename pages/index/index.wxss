@@ -1,0 +1,29 @@
+.i-item{
+  padding: 30rpx;
+  box-shadow: 0 0 20rpx 2rpx #e7e7e7;
+  margin-bottom: 30rpx;
+  border-radius: 5rpx
+}
+.q-btn{
+  width: 120rpx;
+  font-size: 26rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #FF6666;
+  color: #fff;
+  border-radius: 5rpx
+}
+.pub-btn{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ff9900;
+  color: #ffffff;
+  border-radius: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  position: fixed;
+  right: 30rpx;
+  bottom: 30rpx;
+  box-shadow: 0 0 20px 5rpx #f5e4d8
+}

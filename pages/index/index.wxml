@@ -1,0 +1,33 @@
+<view class='pa-l30 pa-t20 panel-start item-center'>
+  <image src='/img/l2.png' class="icon-30"></image>
+  <view class='fo-30 fo-g ma-l20'>杭州</view>
+</view>
+<view class="pa-30">
+  <view class='i-item' wx:for="{{3}}">
+    <view class='panel-between'>
+      <view class='fo-30 bold'>匿名用户</view>
+      <view class='fo-24 fo-g'>刚刚</view>
+    </view>
+    <view class='fo-28 ma-t10'>我要一个大JJ</view>
+    <view class='border-b ma-t20'></view>
+    <view class='panel-between item-center ma-t20'>
+      <view class='panel-start item-center '>
+        <view class='panel-start item-center'>
+          <image src='/img/m.png' class='icon-30'></image>
+          <view class='fo-32 ma-l10 fo-m'>5.00</view>
+        </view>
+        <view class='panel-start item-center ma-l30'>
+          <image src='/img/x.png' class='icon-30'></image>
+          <view class='fo-28 ma-l10 fo-g'>限男性</view>
+        </view>
+        <view class='panel-start item-center ma-l30'>
+          <image src='/img/l.png' class='icon-35'></image>
+          <view class='fo-28 ma-l10 fo-g'>150m</view>
+        </view>
+      </view>
+      <view class='q-btn'>抢单</view>
+    </view>
+  </view>
+</view>
+
+<view class='pub-btn' bindtap='publist'>+</view>
