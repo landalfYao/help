@@ -1,1 +1,41 @@
-/* pages/order/order.wxss */
+page{
+  background-color: #f3f3f3
+}
+.ft{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: #fff
+}
+.f-item{
+  font-size: 28rpx;
+  line-height: 80rpx;
+  width: 50%;
+  text-align: center;
+  background: #fff
+}
+.nlin{
+  width: 100rpx;
+  border-bottom: 4rpx solid #ff6666;
+  margin: auto
+}
+.dh{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #66cc99
+}
+.dh2{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6699CC
+}

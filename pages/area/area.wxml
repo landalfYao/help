@@ -1,0 +1,6 @@
+<view class='fix-t'>
+  <view class='pa-30 panel-start'>
+    <view class='bgn-act'>校园</view>
+    <view class='bgn-def'>城市</view>
+  </view>
+</view>

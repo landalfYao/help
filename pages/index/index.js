@@ -6,6 +6,11 @@ Page({
   data: {
    
   },
+  navToArea(){
+    wx.navigateTo({
+      url: '/pages/area/area',
+    })
+  },
   publist(){
     wx.navigateTo({
       url: '/pages/pub/pub',

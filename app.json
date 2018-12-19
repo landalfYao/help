@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/order/order",
     "pages/mine/mine",
-    "pages/pub/pub"
+    "pages/pub/pub",
+    "pages/area/area"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",

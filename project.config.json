@@ -37,12 +37,24 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "发布",
-					"pathName": "pages/pub/pub"
+					"pathName": "pages/pub/pub",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地区",
+					"pathName": "pages/area/area"
 				}
 			]
 		}

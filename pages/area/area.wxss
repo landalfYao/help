@@ -1,0 +1,29 @@
+page{
+  background: #f3f3f3
+}
+.bgn-act{
+  width: 150rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 5rpx;
+  background: #ff9900;
+  color: #fff;
+  font-size: 28rpx;
+  box-shadow: 0 0 20rpx 5rpx rgba(0, 0, 0, 0.1)
+}
+.bgn-def{
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  width: 150rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 5rpx;
+  background: #fff;
+  box-shadow: 0 0 20rpx 5rpx rgba(0, 0, 0, 0.02)
+}
+.fix-t{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f3f3f3
+}

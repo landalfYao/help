@@ -1,4 +1,4 @@
-<view class='pa-l30 pa-t20 panel-start item-center'>
+<view class='pa-l30 pa-t20 panel-start item-center' bindtap='navToArea'>
   <image src='/img/l2.png' class="icon-30"></image>
   <view class='fo-30 fo-g ma-l20'>杭州</view>
 </view>

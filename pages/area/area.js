@@ -1,19 +1,13 @@
-// pages/order/order.js
+// pages/area/area.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tags:['我的订单','我的帮助'],
-    tagFlag:0
+
   },
-  changeTag(e){
-    let index = e.currentTarget.dataset.index
-    this.setData({
-      tagFlag:index
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

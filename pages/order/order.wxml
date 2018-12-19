@@ -1,2 +1,28 @@
-<!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class='ft'>
+  <view class="f-item" wx:for="{{tags}}" wx:key="{{index}}" data-index='{{index}}' bindtap='changeTag'>
+    <view class='{{index == tagFlag?"fo-m":""}}'>{{item}}</view>
+    <view class='nlin' wx:if="{{index == tagFlag}}"></view>
+  </view>
+</view>
+<view style="height:80rpx;"></view>
+
+<view class='pa-30 '>
+  <view class='panel ma-b30' wx:for="{{3}}">
+    <view class='panel-between'>
+      <view class='fo-30'>飞翔的企鹅</view>
+      <view class='fo-m fo-30'>￥5.00</view>
+    </view>
+    <view class='fo-28 ma-t10'>
+      简单描述、所有人可见
+    </view>
+    <view class='fo-28 ma-t10 fo-g'>
+      简单描述、接单人可见
+    </view>
+    <view class='border-b ma-t20'></view>
+    <view class='panel-start item-center ma-t20'>
+      <image src='/img/l.png' class='icon-30'></image>
+      <view class='fo-26 ma-l10 fo-g'>杭州滨江求一路52号</view>
+    </view>
+    
+  </view>
+</view>
