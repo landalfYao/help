@@ -1,0 +1,14 @@
+
+<!-- <view> -->
+<view class="container">
+  <view class="wechatapp">
+    <!-- <image class="header" src="/images/wechatapp.png"></image> -->
+    <view class="header">
+      <open-data class="" type="userAvatarUrl"></open-data>
+    </view>
+  </view>
+  <view class="auth-title">申请获取以下权限</view>
+  <view class="auth-subtitle">获得你的公开信息（昵称、头像等）</view>
+  <button class="login-btn" openType="getUserInfo" lang="zh_CN" bindgetuserinfo="authorLogin">授权登录</button>
+</view>
+<!-- </view> -->

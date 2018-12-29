@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tags:['我的订单','我的帮助'],
+    tags:['我发出的','我收到的'],
     tagFlag:0
   },
   changeTag(e){

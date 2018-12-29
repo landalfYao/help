@@ -1,29 +1,33 @@
-.i-item{
+
+.bz{
   padding: 30rpx;
-  box-shadow: 0 0 20rpx 2rpx #e7e7e7;
-  margin-bottom: 30rpx;
-  border-radius: 5rpx
+  box-shadow: 0 0 10rpx 6rpx rgba(0, 0, 0, 0.07);
+  border-radius: 10rpx;
+  margin-top: 80rpx
 }
-.q-btn{
-  width: 120rpx;
-  font-size: 26rpx;
-  line-height: 60rpx;
+.avatar{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  top: -100rpx;
+  border: 6rpx solid #FFCC66
+}
+.btns{
+  line-height: 90rpx;
   text-align: center;
-  background: #FF6666;
   color: #fff;
-  border-radius: 5rpx
-}
-.pub-btn{
-  width: 100rpx;
-  height: 100rpx;
-  background-color: #ff9900;
-  color: #ffffff;
+  font-size: 30rpx;
   border-radius: 100rpx;
-  line-height: 100rpx;
-  text-align: center;
-  font-size: 50rpx;
-  position: fixed;
-  right: 30rpx;
-  bottom: 30rpx;
-  box-shadow: 0 0 20px 5rpx #f5e4d8
+  background: linear-gradient(to top right, #FF9933 0%,#FF6666 100%);
+  margin-top: 80rpx;
+}
+.btns:active{
+  background: linear-gradient(to top right, rgba(255, 153, 51, 0.8) 0%,rgba(255, 102, 102, 0.8) 100%);
+}
+.fo-b{
+  margin-top: 50rpx;
+  color: #6699CC
 }

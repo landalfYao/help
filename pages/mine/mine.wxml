@@ -1,2 +1,35 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class='vb'>
+  <view class="avatar">
+    <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
+  </view>
+  <view class='fo-w fo-30 text-center ma-t10'>
+    <open-data type="userNickName" mode="aspectFill"></open-data>
+  </view>
+</view>
+
+<view class='panel panel-between item-center ma-t20'>
+  <view class='panel-start'>
+    <view class='fo-28'>我的记录</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+
+<view class='panel panel-between item-center ma-t20 border-b'>
+  <view class='panel-start'>
+    <view class='fo-28'>问题反馈</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+<view class='panel panel-between item-center'>
+  <view class='panel-start'>
+    <view class='fo-28'>电话客服</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+
+<view class='panel panel-between item-center ma-t20 '>
+  <view class='panel-start'>
+    <view class='fo-28'>申请接单</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>

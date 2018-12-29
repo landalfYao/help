@@ -18,3 +18,6 @@
   border-radius: 10rpx;
   background-color: #ff9900
 }
+.bg-m{
+  background: #FF6666
+}

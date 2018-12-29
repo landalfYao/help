@@ -1,33 +1,38 @@
-<view class='pa-l30 pa-t20 panel-start item-center' bindtap='navToArea'>
-  <image src='/img/l2.png' class="icon-30"></image>
-  <view class='fo-30 fo-g ma-l20'>杭州</view>
-</view>
-<view class="pa-30">
-  <view class='i-item' wx:for="{{3}}">
-    <view class='panel-between'>
-      <view class='fo-30 bold'>匿名用户</view>
-      <view class='fo-24 fo-g'>刚刚</view>
-    </view>
-    <view class='fo-28 ma-t10'>我要一个大JJ</view>
-    <view class='border-b ma-t20'></view>
-    <view class='panel-between item-center ma-t20'>
-      <view class='panel-start item-center '>
-        <view class='panel-start item-center'>
-          <image src='/img/m.png' class='icon-30'></image>
-          <view class='fo-32 ma-l10 fo-m'>5.00</view>
-        </view>
-        <view class='panel-start item-center ma-l30'>
-          <image src='/img/x.png' class='icon-30'></image>
-          <view class='fo-28 ma-l10 fo-g'>限男性</view>
-        </view>
-        <view class='panel-start item-center ma-l30'>
-          <image src='/img/l.png' class='icon-35'></image>
-          <view class='fo-28 ma-l10 fo-g'>150m</view>
-        </view>
-      </view>
-      <view class='q-btn'>抢单</view>
-    </view>
+<view class='pa-30 bg-m panel-between item-center ' data-path='/pages/area/area' bindtap='navTo'>
+  <view class='panel-start item-center'>
+    <image src='/img/l.png' class='icon-35'></image>
+    <view class='fo-28 fo-w ma-l20'>{{area.name}}</view>
   </view>
+  <image src='/img/cn.png' class='icon-30'></image>
 </view>
+<view class='pa-30'>
 
-<view class='pub-btn' bindtap='publist'>+</view>
+  <view class='bz'>
+    <view style='height:60rpx'>
+      <view class="avatar">
+        <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
+      </view>
+    </view>
+    <form>
+      <view class='fo-28 ma-t10 bold'>帮助内容(必填):</view>
+      <view class='border pa-20 ma-t20'>
+        <textarea class='fo-28' data-name='des' bindinput='bindInput' style='height:200rpx' placeholder='请输入详细的帮助信息'></textarea>
+      </view>
+      <view class='panel-between border-b pa-t30 pa-b10'>
+        <view class='fo-28 bold'>赏金(必填):</view>
+        <input class='text-right fo-28' type='number' data-name='price' bindinput='bindInput' placeholder='输入金额(元)'></input>
+      </view>
+      <view class='panel-between border-b pa-t30 pa-b10 '>
+        <view class='fo-28 bold'>手机号(必填):</view>
+        <input class='text-right fo-28' type='number' data-name='phone' bindinput='bindInput' placeholder='输入正确的手机号'></input>
+      </view>
+      <button class='btns ' bindtap=''>立即发布帮助</button>
+    </form>
+    
+  </view>
+  <view class='panel-center item-center'>
+    <view class='fo-28 fo-b text-center '>费用参考</view>
+    <view class='fo-28 fo-b text-center ma-l30'>代理商入口</view>
+  </view>
+
+</view>

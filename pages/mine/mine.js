@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+const app = getApp()
 Page({
 
   /**
@@ -7,7 +7,9 @@ Page({
   data: {
 
   },
-
+  navTo(e) {
+    app.com.navTo(e)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

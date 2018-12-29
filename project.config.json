@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
-	"appid": "wx9676e5a723951d1a",
+	"appid": "wx22bc8cbb12140eba",
 	"projectname": "%E5%B8%AE%E6%88%91%E4%B8%80%E4%B8%AA%E5%BF%99",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -54,7 +54,25 @@
 				{
 					"id": -1,
 					"name": "地区",
-					"pathName": "pages/area/area"
+					"pathName": "pages/area/area",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的钱包",
+					"pathName": "pages/payment/payment"
 				}
 			]
 		}

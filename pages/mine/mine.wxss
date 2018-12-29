@@ -1,1 +1,15 @@
-/* pages/mine/mine.wxss */
+.vb{
+  padding: 30rpx;
+  background: linear-gradient(to top , #FF9933 0%,#FF6666 100%);
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 130rpx;
+  overflow: hidden;
+  margin: auto;
+  border: 6rpx solid #ffffff
+}
+page{
+  background: #f3f3f3
+}

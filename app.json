@@ -4,8 +4,9 @@
     "pages/logs/logs",
     "pages/order/order",
     "pages/mine/mine",
-    "pages/pub/pub",
-    "pages/area/area"
+    "pages/area/area",
+    "pages/login/login",
+    "pages/payment/payment"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",
@@ -23,7 +24,7 @@
       "selectedIconPath": "img/t2.png"
     },{
       "pagePath": "pages/order/order",
-      "text": "订单",
+      "text": "记录",
       "iconPath": "img/t3.png",
       "selectedIconPath": "img/t4.png"
     },

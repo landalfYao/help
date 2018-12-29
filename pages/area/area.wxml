@@ -1,6 +1,13 @@
-<view class='fix-t'>
-  <view class='pa-30 panel-start'>
-    <view class='bgn-act'>校园</view>
-    <view class='bgn-def'>城市</view>
+
+<view class='fixt bg-g panel-between item-center'>
+  <view class='panel-start item-center'>
+    <image src='/img/search2.png' class='icon-30'></image>
+    <input class='fo-28 ma-l30' style='width:600rpx' auto-focus='true'  placeholder='输入关键字搜索'></input>
+  </view>
+</view>
+
+<view class='pa-l30 pa-r30'>
+  <view class='pa-t30 pa-b30 border-b fo-28' wx:for="{{list}}" data-index='{{index}}' bindtap='checkedIt'>
+    {{item.name}}
   </view>
 </view>

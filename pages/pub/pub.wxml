@@ -1,21 +1,21 @@
-<view class='panel'>
+<!-- <view class='panel'>
   <view class='fo-30'><text class='fo-m'>*</text> 标题 <text class="fo-24 fo-g">(所有人可见)</text></view>
   <view class='bg-g pa-20 ma-t20'>
     <textarea class='w-100 fo-28 ' style='height:150rpx' placeholder='(必填) 此处填写您的需求。注意不要填写敏感信息'></textarea>
   </view>
-</view>
+</view> -->
 
-<view class='panel ma-t20'>
-  <view class='fo-30'>发布内容 <text class="fo-24 fo-g">(仅接单人可见)</text></view>
+<view class='panel'>
+  <view class='fo-30'><text class='fo-m'>*</text> 发布内容 <text class="fo-24 fo-g">(仅接单人可见)</text></view>
   <view class='bg-g pa-20 ma-t20'>
-    <textarea class='w-100 fo-28 ' style='height:150rpx' placeholder='(选填) 此处填写敏感信息，如地址/门牌号/手机号/姓名'></textarea>
+    <textarea class='w-100 fo-28 ' bindinput="helpInput" style='height:300rpx' placeholder='(必填) 此处填写帮助信息'></textarea>
   </view>
 </view>
 
-<view class='panel panel-between ma-t20 border-b'>
+<view class='panel panel-between ma-t20 border-b' bindtap='openLocation'>
   <view class='fo-28'>位置信息</view>
   <view class='panel-end item-center'>
-      <view class='fo-28 fo-g'>点击获取位置信息</view>
+      <view class='fo-28 fo-g'>{{address ? address:'点击获取位置信息'}}</view>
       <image src='/img/right.png' class='icon-30 ma-l10'></image>
     </view>
 </view>
@@ -32,12 +32,12 @@
 
 <view class='panel panel-between'>
   <view class='fo-28'><text class='fo-m'>*</text> 打赏</view>
-  <input class='text-right fo-28' type='number' placeholder='填写金额,可参考平台价格'></input>
+  <input class='text-right fo-28' type='number' bindinput='priceInput' placeholder='填写金额,可参考平台价格'></input>
 </view>
 <view class='pa-r30 text-right pa-t20 fo-28 fo-bu'>
   价格参考
 </view>
 
 <view class='pa-30 ma-t30'>
-  <view class='fb-btn'>立即发布</view>
+  <view class='fb-btn' bindtap='submit'>立即发布</view>
 </view>

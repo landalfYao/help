@@ -1,28 +1,29 @@
-<view class='ft'>
+<!-- <view class='ft'>
   <view class="f-item" wx:for="{{tags}}" wx:key="{{index}}" data-index='{{index}}' bindtap='changeTag'>
     <view class='{{index == tagFlag?"fo-m":""}}'>{{item}}</view>
     <view class='nlin' wx:if="{{index == tagFlag}}"></view>
   </view>
 </view>
-<view style="height:80rpx;"></view>
+<view style="height:80rpx;"></view> -->
 
-<view class='pa-30 '>
-  <view class='panel ma-b30' wx:for="{{3}}">
-    <view class='panel-between'>
-      <view class='fo-30'>飞翔的企鹅</view>
-      <view class='fo-m fo-30'>￥5.00</view>
-    </view>
-    <view class='fo-28 ma-t10'>
-      简单描述、所有人可见
-    </view>
-    <view class='fo-28 ma-t10 fo-g'>
-      简单描述、接单人可见
-    </view>
-    <view class='border-b ma-t20'></view>
-    <view class='panel-start item-center ma-t20'>
-      <image src='/img/l.png' class='icon-30'></image>
-      <view class='fo-26 ma-l10 fo-g'>杭州滨江求一路52号</view>
-    </view>
-    
+<view class='panel-around pa-30'>
+  <view >
+    <view class='fo-30 text-center'>支出(元)</view>
+    <view class='fo-36 bold text-center'>156</view>
+  </view>
+  <view >
+    <view class='fo-30 text-center'>数量(个)</view>
+    <view class='fo-36 bold text-center'>5</view>
+  </view>
+</view>
+
+<view class='panel panel-between pa-30 border-b'>
+  <view>
+    <view class='fo-28 ell ' style='width:500rpx'>阿三打撒是的发士大大十大阿瑟东撒的撒夫阿瑟东</view>
+    <view class='fo-24 fo-g'>2018-05-26</view>
+  </view>
+  <view>
+    <view class='fo-28 fo-g text-right'>已取消</view>
+    <view class='fo-28 bold text-right'>￥26</view>
   </view>
 </view>

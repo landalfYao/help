@@ -1,42 +1,18 @@
-const app = getApp()
-let _this;
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    _this = this
-    this.getArea()
-  },
-  checkedIt(e){
-    let index = e.currentTarget.dataset.index;
-    wx.setStorageSync('area', this.data.list[index])
-    wx.navigateBack({
-      delta:1
-    })
-  },
-  getArea(){
-    app.com.get('area/wxget',{},function(res){
-      if(res.code == 1){
-        _this.setData({
-          list: res.data
-        })
-      }else{
-        wx.showToast({
-          title: '请求失败',
-          icon:none
-        })
-      }
-      
-    })
+
   },
 
   /**
