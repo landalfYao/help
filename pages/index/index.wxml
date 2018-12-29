@@ -13,20 +13,20 @@
         <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
       </view>
     </view>
-    <form>
+    <form bindsubmit="formSubmit" report-submit="true">
       <view class='fo-28 ma-t10 bold'>帮助内容(必填):</view>
       <view class='border pa-20 ma-t20'>
-        <textarea class='fo-28' data-name='des' bindinput='bindInput' style='height:200rpx' placeholder='请输入详细的帮助信息'></textarea>
+        <textarea class='fo-28' name='des' value='{{des}}' style='height:200rpx' placeholder='请输入详细的帮助信息'></textarea>
       </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>赏金(必填):</view>
-        <input class='text-right fo-28' type='number' data-name='price' bindinput='bindInput' placeholder='输入金额(元)'></input>
+        <input class='text-right fo-28' type='number' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
       </view>
       <view class='panel-between border-b pa-t30 pa-b10 '>
         <view class='fo-28 bold'>手机号(必填):</view>
-        <input class='text-right fo-28' type='number' data-name='phone' bindinput='bindInput' placeholder='输入正确的手机号'></input>
+        <input class='text-right fo-28' type='number' name='phone' value="{{phone}}" placeholder='输入正确的手机号'></input>
       </view>
-      <button class='btns ' bindtap=''>立即发布帮助</button>
+      <button class='btns ' form-type="submit">立即发布帮助</button>
     </form>
     
   </view>
