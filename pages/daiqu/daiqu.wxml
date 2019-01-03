@@ -1,0 +1,23 @@
+<view class="pa-30 dk">
+  <view class='panel ra-10 ma-t30'>
+    <view class=' pa-b30 border-b'>
+      <view class='fo-30'>快递类型</view>
+      <view class='panel-around'>
+        <view  wx:for="{{kdtype}}" class='{{index == flag ? "fgh2":"fgh"}}' data-index='{{index}}' bindtap='change'>{{item.la}}</view>
+      </view>
+    </view>
+    <view class='pa-t30 panel-between item-center'>
+      <view class='fo-30'>收件地址</view>
+      <input class='fo-30 text-right' placeholder='输入详细地址'></input>
+    </view>
+  </view>
+</view>
+
+<view class='fo-26 text-center ma-t30'>需支付</view>
+<view class='text-center fo-40 bold ma-t20 fo-m'>{{kdtype[flag].price}}<text class='fo-26'>元</text></view>
+
+<view class='pa-l40 pa-r40'>
+  <form >
+    <button class='btns ' form-type="submit">立即发布</button>
+  </form>
+</view>

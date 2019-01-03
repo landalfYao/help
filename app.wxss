@@ -10,6 +10,9 @@
 .fo-bu{
   color: #0099ff
 }
+.bg-b{
+  background: #00CCFF
+}
 .fb-btn{
   line-height: 90rpx;
   text-align: center;
@@ -19,5 +22,26 @@
   background-color: #ff9900
 }
 .bg-m{
-  background: #FF6666
+  background: linear-gradient(to right top,#fd65a2,#ff8866);
+}
+.pa-40{
+  padding: 40rpx;
+}
+.pa-l40{
+  padding-left: 40rpx
+}
+.pa-r40{
+  padding-right: 40rpx
+}
+.btns{
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 100rpx;
+  background: linear-gradient(to top right, #FF9933 0%,#FF6666 100%);
+  margin-top: 80rpx;
+}
+.btns:active{
+  background: linear-gradient(to top right, rgba(255, 153, 51, 0.8) 0%,rgba(255, 102, 102, 0.8) 100%);
 }

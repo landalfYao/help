@@ -1,0 +1,24 @@
+.dk{
+  background: linear-gradient(to top,#fff,#45c6ff);
+  min-height: 200rpx
+}
+.fgh{
+  width: 190rpx;
+  height: 80rpx;
+  border: 1px solid #e1e1e1;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+  color: #888
+}
+.fgh2{
+  width: 190rpx;
+  height: 80rpx;
+  border: 1px solid #ff6633;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+  color: #ff6633
+}

@@ -1,38 +1,20 @@
-<view class='pa-30 bg-m panel-between item-center ' data-path='/pages/area/area' bindtap='navTo'>
-  <view class='panel-start item-center'>
-    <image src='/img/l.png' class='icon-35'></image>
-    <view class='fo-28 fo-w ma-l20'>{{area.name}}</view>
-  </view>
-  <image src='/img/cn.png' class='icon-30'></image>
-</view>
-<view class='pa-30'>
-
-  <view class='bz'>
-    <view style='height:60rpx'>
-      <view class="avatar">
-        <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
-      </view>
+<view class='pa-l40 pa-r40' >
+  <view class='pa-30 bg-m panel-between item-center ra-10' data-path='/pages/area/area' bindtap='navTo'>
+    <view class='panel-start item-center'>
+      <image src='/img/l.png' class='icon-35'></image>
+      <view class='fo-28 fo-w ma-l20'>{{area.name}}</view>
     </view>
-    <form bindsubmit="formSubmit" report-submit="true">
-      <view class='fo-28 ma-t10 bold'>帮助内容(必填):</view>
-      <view class='border pa-20 ma-t20'>
-        <textarea class='fo-28' name='des' value='{{des}}' style='height:200rpx' placeholder='请输入详细的帮助信息'></textarea>
-      </view>
-      <view class='panel-between border-b pa-t30 pa-b10'>
-        <view class='fo-28 bold'>赏金(必填):</view>
-        <input class='text-right fo-28' type='number' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
-      </view>
-      <view class='panel-between border-b pa-t30 pa-b10 '>
-        <view class='fo-28 bold'>手机号(必填):</view>
-        <input class='text-right fo-28' type='number' name='phone' value="{{phone}}" placeholder='输入正确的手机号'></input>
-      </view>
-      <button class='btns ' form-type="submit">立即发布帮助</button>
-    </form>
-    
+    <image src='/img/cn.png' class='icon-30'></image>
   </view>
-  <view class='panel-center item-center'>
-    <view class='fo-28 fo-b text-center '>费用参考</view>
-    <view class='fo-28 fo-b text-center ma-l30'>代理商入口</view>
-  </view>
+</view>
 
+<view class='pa-40 panel-between wrap' style='padding-bottom:0'>
+  <view wx:for="{{list}}" class='items panel-center item-center wrap' data-path="{{item.page}}" bindtap='navTo'>
+    <view class='text-center'>
+      <view class='cri panel-center item-center' style='background:{{item.color}}'>
+        <image src='{{item.icon}}' class='icon-40'></image>
+      </view>
+      <view class=' fo-30 text-center ma-t20'>{{item.label}}</view>
+    </view>
+  </view>
 </view>

@@ -6,13 +6,16 @@
     "pages/mine/mine",
     "pages/area/area",
     "pages/login/login",
-    "pages/payment/payment"
+    "pages/payment/payment",
+    "pages/other/other",
+    "pages/daiqu/daiqu",
+    "pages/dayin/dayin"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "互帮互助代替你",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"black"
   },
   "tabBar": {
     "selectedColor": "#FF6666",

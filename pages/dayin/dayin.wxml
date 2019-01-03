@@ -1,0 +1,29 @@
+<view class="pa-30 dk">
+  <view class='panel'>
+    <view class=' pa-b20  panel-between item-center border-b'>
+      <view class='fo-30'>打印原件</view>
+      <view class='day'>+</view>
+    </view>
+    <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+      <view class='fo-30'>收件地址</view>
+      <input class='fo-30 text-right' placeholder='输入详细地址'></input>
+    </view>
+    <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+      <view class='fo-30'>页数</view>
+      <input class='fo-30 text-right' type='number' placeholder='输入页数'></input>
+    </view>
+    <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+      <view class='fo-30'>是否彩印</view>
+      <switch color="#0099ff" bindchange="switch1Change" />
+    </view>
+  </view>
+</view>
+<view class='text-center fo-26 fo-g'>彩印 <text class='fo-m'>1元/张</text>  黑白 <text class='fo-m'>0.3元/张</text> 跑路费 <text class='fo-m'>1元</text></view>
+<view class='fo-26 text-center ma-t30'>需支付</view>
+<view class='text-center fo-40 bold ma-t20 fo-m'>1<text class='fo-26'>元</text> </view>
+
+<view class='pa-l40 pa-r40'>
+  <form >
+    <button class='btns ' form-type="submit">立即发布</button>
+  </form>
+</view>

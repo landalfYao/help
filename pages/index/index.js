@@ -4,56 +4,20 @@ const app = getApp()
 let _this;
 Page({
   data: {
-    price:'',
-    des:'',
-    phone:''
+    area:{
+      name:'宁波大红鹰学院'
+    },
+    list:[
+      { icon: '/img/s1.png', label: '快递代取', page: '/pages/daiqu/daiqu', color:'linear-gradient(to right top,#7162f6,#b746f0)'},
+      { icon: '/img/s2.png', label: '校园跑腿', page: '/pages/paotui/paotui', color: 'linear-gradient(to right top,#8faefd,#45c6ff)' },
+      { icon: '/img/s3.png', label: '打印', page: '/pages/dayin/dayin', color: 'linear-gradient(to right top,#43e2ec,#31beff)' },
+      { icon: '/img/s4.png', label: '上门维修', page: '/pages/weixiu/weixiu', color: 'linear-gradient(to right top,#ef429a,#f95f46)' },
+      { icon: '/img/s5.png', label: '代课', page: '/pages/daike/daike', color: 'linear-gradient(to right top,#0dc8b8,#29d790)' },
+      { icon: '/img/s6.png', label: '其他', page: '/pages/other/other', color: 'linear-gradient(to right top,#fd65a2,#ff8866)' }
+    ]
   },
 
-  formSubmit(e){
-    this.setData({
-      des: e.detail.value.des,
-      phone: e.detail.value.phone,
-      price: e.detail.value.price
-    })
-    if(e.detail.value.des == ''){
-      wx.showToast({
-        title: '请填写帮助内容',
-        icon:'none'
-      })
-    } else if (e.detail.value.price == ''){
-      wx.showToast({
-        title: '请输入赏金',
-        icon: 'none'
-      })
-    } else if (e.detail.value.phone == ''){
-      wx.showToast({
-        title: '请输入手机号',
-        icon: 'none'
-      })
-    }else{
-      wx.showLoading({
-        title: '加载中',
-      })
-      app.com.post('help/add',{
-        des: e.detail.value.des,
-        wx_id: wx.getStorageSync("user").id,
-        phone: e.detail.value.phone,
-        price:e.detail.value.price
-      },function(res){
-        wx.hideLoading()
-        if(res.code == 1){
-          wx.showToast({
-            title: '发布成功',
-          })
-          _this.setData({
-            des: '',
-            phone: '',
-            price: ''
-          })
-        }
-      })
-    }
-  },
+  
   navTo(e) {
     app.com.navTo(e)
   },
@@ -71,15 +35,15 @@ Page({
     _this = this
   },
   onShow(){
-    if(wx.getStorageSync('area')){
-      this.setData({
-        area: wx.getStorageSync('area')
-      })
-    }else{
-      wx.navigateTo({
-        url: '/pages/area/area',
-      })
-    }
+    // if(wx.getStorageSync('area')){
+    //   this.setData({
+    //     area: wx.getStorageSync('area')
+    //   })
+    // }else{
+    //   wx.navigateTo({
+    //     url: '/pages/area/area',
+    //   })
+    // }
   }
   
 })

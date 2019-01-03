@@ -1,6 +1,6 @@
 .vb{
   padding: 30rpx;
-  background: linear-gradient(to top , #FF9933 0%,#FF6666 100%);
+  
 }
 .avatar{
   width: 100rpx;

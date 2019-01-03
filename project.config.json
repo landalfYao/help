@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -72,7 +72,20 @@
 				{
 					"id": -1,
 					"name": "我的钱包",
-					"pathName": "pages/payment/payment"
+					"pathName": "pages/payment/payment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "快递代取",
+					"pathName": "pages/daiqu/daiqu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "打印",
+					"pathName": "pages/dayin/dayin",
+					"query": ""
 				}
 			]
 		}
