@@ -1,0 +1,59 @@
+page{
+  background-color: #f7f7f7
+}
+.bg-m2{
+  background: linear-gradient(to top,#6183dd,#6e42d3)
+}
+.avatar{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 90rpx;
+  display: block;
+  border: 5rpx solid #ffffff;
+  box-shadow: 0 0 20rpx 0 #ffffff
+}
+.state{
+  height: 50rpx;
+  font-size: 24rpx;
+  width: 120rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 5rpx
+}
+.ste1{
+  background-color: rgb(236, 255, 250);
+  color: rgb(0, 204, 153)
+}
+.ste2{
+  background-color: rgb(225, 240, 255);
+  color: rgb(51, 153, 255)
+}
+.ste3{
+  background-color: rgb(255, 243, 226);
+  color: rgb(255, 153, 0)
+}
+.ste4{
+  background-color: rgba(255, 102, 102,0.08);
+  color: rgb(255, 102, 102)
+}
+.qi{
+  width: 60rpx;
+  height: 60rpx;
+  background: #ff9900;
+  border: 1px solid #ff9900;
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  border-radius: 60rpx;
+  margin: auto
+}
+.qi1{
+  width: 60rpx;
+  height: 60rpx;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  border-radius: 60rpx;
+  margin: auto
+}

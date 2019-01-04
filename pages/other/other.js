@@ -67,8 +67,15 @@ Page({
       url: '/pages/pub/pub',
     })
   },
-  onLoad: function () {
+  onLoad: function (options) {
     _this = this
+    this.setData({
+      config:JSON.parse(options.data),
+      title:options.label
+    })
+    wx.setNavigationBarTitle({
+      title: options.label,
+    })
   },
   onShow() {
     // if (wx.getStorageSync('area')) {

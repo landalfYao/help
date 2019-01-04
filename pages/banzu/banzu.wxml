@@ -1,0 +1,23 @@
+<view class="pa-30">
+  <view class='titem' wx:for="{{list}}" data-path='/pages/order/detail/detail' bindtap='navTo'>
+    <view class='panel-between'>
+      <view class='panel-start item-center'>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546594006865&di=e459828d53c4d297b887c0798077d69d&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F30%2F20170630082108_UY5Zf.thumb.700_0.jpeg' class='avatar' mode='aspectFill'></image>
+        <view class='ma-l20'>
+          <view class='fo-30 bold'>{{item.tit}}</view>
+          <view class='fo-26 fo-g'>landalf | 5分钟前</view>
+        </view>
+      </view>
+      <view class='state {{item.state== "需要帮助" ? "ste1":item.state== "已帮助" ? "ste2":"ste3"}}'>{{item.state}}</view>
+    </view>
+    <view  style='margin-left:80rpx'>
+      <view class='fo-28 ma-t10'>{{item.des}}</view>
+      <view class='fo-26 ma-t10 fo-g' wx:if="{{item.qi}}">起点: {{item.qi}}</view>
+      <view class='fo-26 ma-t10 fo-t'>目的地: {{item.mu}}</view>
+    </view>
+    <view class='panel-end item-center ma-t10'>
+      <view class='state ste4'>悬赏￥{{item.price}}</view>
+      <view class='bzBtn ma-l30' wx:if="{{item.state == '需要帮助'}}">帮助TA</view>
+    </view>
+  </view>
+</view>

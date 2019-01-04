@@ -13,7 +13,8 @@
   margin: auto;
   position: relative;
   top: -100rpx;
-  border: 6rpx solid #FFCC66
+  border: 6rpx solid #FFCC66;
+  background-color: #FFCC66
 }
 
 .fo-b{

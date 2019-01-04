@@ -1,7 +1,6 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
     "pages/order/order",
     "pages/mine/mine",
     "pages/area/area",
@@ -9,7 +8,9 @@
     "pages/payment/payment",
     "pages/other/other",
     "pages/daiqu/daiqu",
-    "pages/dayin/dayin"
+    "pages/dayin/dayin",
+    "pages/banzu/banzu",
+    "pages/order/detail/detail"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",
@@ -18,13 +19,19 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "selectedColor": "#FF6666",
+    "selectedColor": "#6887e1",
     "borderStyle": "white",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
       "iconPath": "img/t1.png",
       "selectedIconPath": "img/t2.png"
+    },
+    {
+      "pagePath": "pages/banzu/banzu",
+      "text": "去帮忙",
+      "iconPath": "img/t7.png",
+      "selectedIconPath": "img/t8.png"
     },{
       "pagePath": "pages/order/order",
       "text": "记录",

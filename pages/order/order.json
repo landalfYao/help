@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "订单"
+  "navigationBarTitleText": "我的记录",
+  "enablePullDownRefresh": true
 }

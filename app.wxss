@@ -7,6 +7,9 @@
   position: fixed;
   top: 0
 }
+.fo-t{
+  color: #6887e1
+}
 .fo-bu{
   color: #0099ff
 }
@@ -22,7 +25,7 @@
   background-color: #ff9900
 }
 .bg-m{
-  background: linear-gradient(to right top,#fd65a2,#ff8866);
+  background: linear-gradient(to right top,#6183dd,#6e42d3)
 }
 .pa-40{
   padding: 40rpx;
@@ -33,15 +36,24 @@
 .pa-r40{
   padding-right: 40rpx
 }
+.pa-60{
+  padding: 60rpx;
+}
+.pa-l60{
+  padding-left: 60rpx
+}
+.pa-r60{
+  padding-right: 60rpx
+}
 .btns{
   line-height: 90rpx;
   text-align: center;
   color: #fff;
   font-size: 30rpx;
   border-radius: 100rpx;
-  background: linear-gradient(to top right, #FF9933 0%,#FF6666 100%);
+  background: linear-gradient(to right top,#6183dd,#6e42d3);
   margin-top: 80rpx;
 }
 .btns:active{
-  background: linear-gradient(to top right, rgba(255, 153, 51, 0.8) 0%,rgba(255, 102, 102, 0.8) 100%);
+  background: linear-gradient(to right top,#6183dd,#6e42d3);
 }

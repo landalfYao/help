@@ -1,0 +1,30 @@
+<view class="pa-30 bg-m2">
+  <view class='panel-between'>
+    <view class='panel-start item-center'>
+      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546594006865&di=e459828d53c4d297b887c0798077d69d&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F30%2F20170630082108_UY5Zf.thumb.700_0.jpeg' class='avatar' mode='aspectFill'></image>
+      <view class='ma-l30'>
+        <view class='fo-28 fo-w'>Landalf | 2018-12-31</view>
+        <view class='fo-40 bold fo-w ma-t10'>校园代跑</view>
+      </view>
+    </view>
+    <view class='panel-end'>
+      <view class='state ste1'>需要帮助</view>
+    </view>
+  </view>
+  <view style='background:rgba(255,255,255,0.3)' class='pa-20 fo-w ra-10 ma-t30 fo-30'>
+    你说的了解了就卡死法律框架撒的法律加快速度房间里开发商代课 都是都是的
+  </view>
+  <view class='panel-center item-center ma-t30'>
+    <view class='text-center w-30' style='height:200rpx'>
+      <view class='qi1'>起</view>
+      <view class='fo-w fo-26 ma-t10'>南区1号楼1楼外卖柜</view>
+    </view>
+    <image src='/img/jt.png' class='icon-60 ma-l30 ma-r30'></image>
+    <view class='text-center w-30' style='height:200rpx'>
+      <view class='qi'>终</view>
+      <view class='fo-w fo-26 ma-t10'>南区1号楼5楼507</view>
+    </view>
+  </view>
+  
+  
+</view>

@@ -1,0 +1,49 @@
+page{
+  background-color: #f7f7f7
+}
+.titem{
+  padding: 20rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx 5rpx #f1f1f1;
+  margin-bottom: 20rpx
+}
+.avatar{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+}
+.state{
+  height: 50rpx;
+  font-size: 24rpx;
+  width: 120rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 5rpx
+}
+.ste1{
+  background-color: rgba(0, 204, 153,0.08);
+  color: rgb(0, 204, 153)
+}
+.ste2{
+  background-color: rgba(51, 153, 255, 0.08);
+  color: rgb(51, 153, 255)
+}
+.ste3{
+  background-color: rgba(255, 153, 0,0.08);
+  color: rgb(255, 153, 0)
+}
+.ste4{
+  background-color: rgba(255, 102, 102,0.08);
+  color: rgb(255, 102, 102)
+}
+.bzBtn{
+  font-size: 26rpx;
+  background: linear-gradient(to right top,#51c3fe,#92abff);
+  color: #fff;
+  line-height: 60rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 5rpx rgba(82, 197, 254, 0.267)
+}

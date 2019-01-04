@@ -1,4 +1,8 @@
-<view class='pa-l40 pa-r40' >
+<view style='height:200rpx'>
+  <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546588810872&di=cb67c135a68e37d90aeff10e5890504e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F503d269759ee3d6dfd34301f49166d224e4ade70.jpg' class='bg' mode='aspectFill'></image>
+</view>
+
+<view class='pa-l60 pa-r60 pa-b20' >
   <view class='pa-30 bg-m panel-between item-center ra-10' data-path='/pages/area/area' bindtap='navTo'>
     <view class='panel-start item-center'>
       <image src='/img/l.png' class='icon-35'></image>
@@ -8,13 +12,13 @@
   </view>
 </view>
 
-<view class='pa-40 panel-between wrap' style='padding-bottom:0'>
-  <view wx:for="{{list}}" class='items panel-center item-center wrap' data-path="{{item.page}}" bindtap='navTo'>
+<view class='pa-60 panel-between wrap' style='padding-bottom:0;'>
+  <view wx:for="{{list}}" class='items panel-center wrap' data-index='{{index}}' data-path="{{item.page}}" bindtap='navTo'>
     <view class='text-center'>
       <view class='cri panel-center item-center' style='background:{{item.color}}'>
-        <image src='{{item.icon}}' class='icon-40'></image>
+        <image src='{{item.icon}}' class='icon-30'></image>
       </view>
-      <view class=' fo-30 text-center ma-t20'>{{item.label}}</view>
+      <view class=' fo-30 text-center ma-t20 fo-t'>{{item.label}}</view>
     </view>
   </view>
 </view>
