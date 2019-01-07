@@ -14,11 +14,11 @@
       </view>
       <view class='panel-between border-b pa-t30 pa-b10 ' wx:if="{{config.qi}}">
         <view class='fo-28 bold'>取货地点(必填):</view>
-        <input class='text-right fo-28'  name='phone' value="{{phone}}" placeholder='输入取货地点'></input>
+        <input class='text-right fo-28'  name='qi' value="{{phone}}" placeholder='输入取货地点'></input>
       </view>
       <view class='panel-between border-b pa-t30 pa-b10 '>
         <view class='fo-28 bold'>目的地(必填):</view>
-        <input class='text-right fo-28'  name='phone' value="{{phone}}" placeholder='输入帮助地点'></input>
+        <input class='text-right fo-28'  name='mu' value="{{phone}}" placeholder='输入帮助地点'></input>
       </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>赏金(必填):</view>

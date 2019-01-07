@@ -1,4 +1,5 @@
 .fixt{
   padding: 20rpx 40rpx;
   width: 670rpx;
+  background: linear-gradient(to top,#6183dd,#6e42d3);
 }

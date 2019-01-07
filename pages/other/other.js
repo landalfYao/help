@@ -10,11 +10,7 @@ Page({
   },
 
   formSubmit(e) {
-    this.setData({
-      des: e.detail.value.des,
-      phone: e.detail.value.phone,
-      price: e.detail.value.price
-    })
+    let formId = e.detail.formId
     if (e.detail.value.des == '') {
       wx.showToast({
         title: '请填写帮助内容',
@@ -25,31 +21,31 @@ Page({
         title: '请输入赏金',
         icon: 'none'
       })
-    } else if (e.detail.value.phone == '') {
+    } else if (e.detail.value.mu == ''){
       wx.showToast({
-        title: '请输入手机号',
+        title: '请输入目的地',
         icon: 'none'
       })
-    } else {
+    }else {
       wx.showLoading({
         title: '加载中',
       })
       app.com.post('help/add', {
         des: e.detail.value.des,
         wx_id: wx.getStorageSync("user").id,
-        phone: e.detail.value.phone,
-        price: e.detail.value.price
+        total_fee: e.detail.value.price,
+        a_id: wx.getStorageSync("area").pk_id,
+        title:this.data.title,
+        mu: e.detail.value.mu,
+        qi: e.detail.value.qi,
+        form_id: e.detail.formId,
       }, function (res) {
         wx.hideLoading()
         if (res.code == 1) {
           wx.showToast({
             title: '发布成功',
           })
-          _this.setData({
-            des: '',
-            phone: '',
-            price: ''
-          })
+         
         }
       })
     }

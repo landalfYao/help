@@ -2,7 +2,7 @@
 <view class='fixt bg-g panel-between item-center'>
   <view class='panel-start item-center'>
     <image src='/img/search2.png' class='icon-30'></image>
-    <input class='fo-28 ma-l30' style='width:600rpx' auto-focus='true'  placeholder='输入关键字搜索'></input>
+    <input class='fo-28 ma-l30 fo-w' style='width:600rpx' auto-focus='true' placeholder-class='fo-w' placeholder='输入关键字搜索'></input>
   </view>
 </view>
 

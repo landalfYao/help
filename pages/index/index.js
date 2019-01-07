@@ -12,8 +12,8 @@ Page({
       { icon: '/img/s3.png', label: '打印服务', page: '/pages/dayin/dayin', color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
       { icon: '/img/s2.png', label: '校园跑腿', page: '/pages/other/other',data:{qi:true,mu:true}, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
       { icon: '/img/s4.png', label: '上门维修', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
-      { icon: '/img/s5.png', label: '代课', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
-      { icon: '/img/s6.png', label: '其他', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' }
+      { icon: '/img/s5.png', label: '代替服务', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
+      { icon: '/img/s6.png', label: '其他帮助', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' }
     ]
   },
 

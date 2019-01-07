@@ -1,4 +1,4 @@
-// pages/daiqu/daiqu.js
+const app = getApp()
 Page({
 
   /**
@@ -19,7 +19,42 @@ Page({
   onLoad: function (options) {
 
   },
+  formSubmit(e){
+    let formId = e.detail.formId
+    let mu = e.detail.value.mu
+    if(mu == ''){
+      wx.showToast({
+        title: '收件请填写地址',
+        icon:'none'
+      })
+    }else{
+      wx.showLoading({
+        title: '发布中',
+        mask:true
+      })
+      app.com.post('help/add',{
+        wx_id:wx.getStorageSync("user").id,
+        mu:mu,
+        a_id: wx.getStorageSync("area").pk_id,
+        form_id:formId,
+        title:'快递代取',
+        des:this.data.kdtype[this.data.flag].la+' '+e.detail.value.des,
+        total_fee: this.data.kdtype[this.data.flag].price
+      },function(res){
+        if(res.code == 1){
+          wx.showToast({
+            title: '发布成功',
+          })
 
+        }else{
+          wx.showToast({
+            title: res.msg,
+            icon:'none'
+          })
+        }
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

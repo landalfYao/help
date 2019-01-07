@@ -20,8 +20,22 @@ Page({
    */
   onLoad: function (options) {
     _this = this
+    _this.getList()
   },
-
+  getList(){
+    app.com.post('help/get',{},function(res){
+      if(res.code == 1){
+        _this.setData({
+          list:res.data.list
+        })
+      }else{
+        wx.showToast({
+          title: res.msg,
+          icon:'none'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
