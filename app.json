@@ -32,11 +32,6 @@
       "text": "去帮忙",
       "iconPath": "img/t7.png",
       "selectedIconPath": "img/t8.png"
-    },{
-      "pagePath": "pages/order/order",
-      "text": "记录",
-      "iconPath": "img/t3.png",
-      "selectedIconPath": "img/t4.png"
     },
     {
       "pagePath": "pages/mine/mine",

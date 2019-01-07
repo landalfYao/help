@@ -1,4 +1,4 @@
-// pages/login/login.js
+const app = getApp()
 Page({
 
   /**
@@ -21,7 +21,13 @@ Page({
   onReady: function () {
 
   },
+  authorLogin(e){
+    let userInfo = e.detail.userInfo
+    userInfo.id = wx.getStorageSync("user").id
+    app.com.post('wx/user/update',userInfo,function(res){
 
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

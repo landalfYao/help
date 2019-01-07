@@ -1,23 +1,35 @@
-<view class="pa-30 dk">
-  <view class='panel ra-10 ma-t30'>
-    <view class=' pa-b30 border-b'>
-      <view class='fo-30'>快递类型</view>
-      <view class='panel-around'>
-        <view  wx:for="{{kdtype}}" class='{{index == flag ? "fgh2":"fgh"}}' data-index='{{index}}' bindtap='change'>{{item.la}}</view>
+<view class='pa-30'>
+
+  <view class='bz'>
+    <view style='height:60rpx'>
+      <view class="avatar">
+        <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
       </view>
     </view>
-    <view class='pa-t30 panel-between item-center'>
-      <view class='fo-30'>收件地址</view>
-      <input class='fo-30 text-right' placeholder='输入详细地址'></input>
-    </view>
+    <form bindsubmit="formSubmit" report-submit="true">
+      <view class='panel ra-10 '>
+        <view class=' pa-b30 border-b'>
+          <view class='fo-30'>快递类型</view>
+          <view class='panel-around'>
+            <view wx:for="{{kdtype}}" class='{{index == flag ? "fgh2":"fgh"}}' data-index='{{index}}' bindtap='change'>{{item.la}}</view>
+          </view>
+        </view>
+        <view class='pa-t30 panel-between item-center border-b pa-b20'>
+          <view class='fo-30'>收件地址</view>
+          <input class='fo-30 text-right' placeholder='输入详细地址'></input>
+        </view>
+      </view>
+      <view class='fo-26 text-center ma-t30 '>需支付</view>
+      <view class='text-center fo-40 bold ma-t20 fo-m'>{{kdtype[flag].price}}
+        <text class='fo-26'>元</text>
+      </view>
+      <button class='btns ' form-type="submit">立即发布帮助</button>
+    </form>
+
   </view>
-</view>
+  <!-- <view class='panel-center item-center'>
+    <view class='fo-28 fo-b text-center '>费用参考</view>
+    <view class='fo-28 fo-b text-center ma-l30'>代理商入口</view>
+  </view> -->
 
-<view class='fo-26 text-center ma-t30'>需支付</view>
-<view class='text-center fo-40 bold ma-t20 fo-m'>{{kdtype[flag].price}}<text class='fo-26'>元</text></view>
-
-<view class='pa-l40 pa-r40'>
-  <form >
-    <button class='btns ' form-type="submit">立即发布</button>
-  </form>
 </view>

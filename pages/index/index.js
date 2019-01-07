@@ -4,9 +4,9 @@ const app = getApp()
 let _this;
 Page({
   data: {
-    area:{
-      name:'宁波大红鹰学院'
-    },
+    // area:{
+    //   name:'宁波大红鹰学院'
+    // },
     list:[
       { icon: '/img/s1.png', label: '快递代取', page: '/pages/daiqu/daiqu', color:'linear-gradient(to right top,#6183dd,#6e42d3)'},
       { icon: '/img/s3.png', label: '打印服务', page: '/pages/dayin/dayin', color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
@@ -43,13 +43,20 @@ Page({
     _this = this
   },
   onShow(){
-    // if(wx.getStorageSync('area')){
-    //   this.setData({
-    //     area: wx.getStorageSync('area')
-    //   })
+    if(wx.getStorageSync('area')){
+      this.setData({
+        area: wx.getStorageSync('area')
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/area/area',
+      })
+    }
+    // if(wx.getStorageSync("user").nick_name){
+      
     // }else{
     //   wx.navigateTo({
-    //     url: '/pages/area/area',
+    //     url: '/pages/login/login',
     //   })
     // }
   }

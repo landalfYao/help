@@ -19,9 +19,7 @@ Page({
   checkedIt(e){
     let index = e.currentTarget.dataset.index;
     wx.setStorageSync('area', this.data.list[index])
-    wx.navigateBack({
-      delta:1
-    })
+    _this.getDail(this.data.list[index].pk_id)
   },
   getArea(){
     app.com.get('area/wxget',{},function(res){
@@ -29,6 +27,7 @@ Page({
         _this.setData({
           list: res.data
         })
+        
       }else{
         wx.showToast({
           title: '请求失败',
@@ -38,6 +37,24 @@ Page({
       
     })
   },
+  getDail(aid){
+    app.com.post('user/get/aid',{
+      aid:aid
+    },function(res){
+      console.log(res)
+      if(res.code == 1){
+        wx.setStorageSync("dl", res.data)
+        wx.navigateBack({
+          delta: 1
+        })
+      }else{
+        wx.showToast({
+          title: res.msg,
+          icon:'none'
+        })
+      }
+    })
+  },  
 
   /**
    * 生命周期函数--监听页面初次渲染完成
