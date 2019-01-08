@@ -1,53 +1,70 @@
-page{
-  background-color: #f7f7f7
+page {
+  background-color: #f7f7f7;
 }
-.bg-m2{
-  background: linear-gradient(to top,#6183dd,#6e42d3)
+
+.bg-m2 {
+  background: linear-gradient(to top, #6183dd, #6e42d3);
 }
-.avatar{
+
+.avatar {
   width: 90rpx;
   height: 90rpx;
   border-radius: 90rpx;
   display: block;
-  border: 5rpx solid #ffffff;
-  box-shadow: 0 0 20rpx 0 #ffffff
+  border: 5rpx solid #fff;
+  box-shadow: 0 0 20rpx 0 #fff;
 }
-.state{
+
+.state {
   height: 50rpx;
   font-size: 24rpx;
   width: 120rpx;
   text-align: center;
   line-height: 50rpx;
-  border-radius: 5rpx
+  border-radius: 5rpx;
 }
-.ste1{
+.cri2 {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 90rpx;
+  background-color: rgb(0, 204, 153);
+  margin-left: 30rpx;
+  box-shadow: 0 0 10rpx 0 rgb(0, 204, 153)
+}
+.ste1 {
   background-color: rgb(236, 255, 250);
-  color: rgb(0, 204, 153)
+  color: rgb(0, 204, 153);
 }
-.ste2{
+
+.ste2 {
   background-color: rgb(225, 240, 255);
-  color: rgb(51, 153, 255)
+  color: rgb(51, 153, 255);
 }
-.ste3{
+
+.ste3 {
   background-color: rgb(255, 243, 226);
-  color: rgb(255, 153, 0)
+  color: rgb(255, 153, 0);
 }
-.ste4{
-  background-color: rgba(255, 102, 102,0.08);
-  color: rgb(255, 102, 102)
+
+.ste4 {
+  padding: 0 15rpx;
+  background-color: rgba(255, 102, 102, 0.08);
+  color: rgb(255, 102, 102);
 }
-.qi{
+
+.qi {
   width: 60rpx;
   height: 60rpx;
-  background: #ff9900;
-  border: 1px solid #ff9900;
+  background: #f90;
+  border: 1px solid #f90;
   color: #fff;
   font-size: 24rpx;
   line-height: 60rpx;
   border-radius: 60rpx;
-  margin: auto
+  margin: auto;
 }
-.qi1{
+
+.qi1 {
   width: 60rpx;
   height: 60rpx;
   color: #fff;
@@ -55,5 +72,47 @@ page{
   font-size: 24rpx;
   line-height: 60rpx;
   border-radius: 60rpx;
-  margin: auto
+  margin: auto;
+}
+
+.bggs {
+  width: 100%;
+  height: 200rpx;
+  background-position: center;
+  background-size: cover;
+  position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        filter: blur(20rpx);/*为了模糊更明显，调高模糊度*/
+}
+.fix-b{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0
+}
+.bzbtn{
+  font-size: 26rpx;
+  background: linear-gradient(to right top,#51c3fe,#92abff);
+  color: #fff;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 200rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 0rpx rgba(82, 197, 254, 0.267)
+}
+
+.bzbtn2{
+  font-size: 26rpx;
+  background: linear-gradient(to right top,#ff8965,#ff64a1);
+  color: #fff;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 200rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(14, 100%, 70%, 0.267)
 }

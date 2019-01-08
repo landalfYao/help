@@ -1,4 +1,5 @@
 const app = getApp()
+let _this;
 Page({
 
   /**
@@ -17,7 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    _this = this
   },
   formSubmit(e){
     let formId = e.detail.formId
@@ -33,6 +34,7 @@ Page({
         mask:true
       })
       app.com.post('help/add',{
+        openid: wx.getStorageSync("user").openid, 
         wx_id:wx.getStorageSync("user").id,
         mu:mu,
         a_id: wx.getStorageSync("area").pk_id,
@@ -45,7 +47,7 @@ Page({
           wx.showToast({
             title: '发布成功',
           })
-
+          _this.wxpay(res)
         }else{
           wx.showToast({
             title: res.msg,
@@ -54,6 +56,9 @@ Page({
         }
       })
     }
+  },
+  wxpay(msg){
+    app.com.wxpay(msg)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

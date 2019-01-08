@@ -6,11 +6,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[
-      { tit: '校园跑腿', des: '我有一个外卖需要人帮我拿一下', price: 2, state: '需要帮助', qi: '南区1号楼1楼外卖柜', mu:'南区1号楼5楼507'},
-      { tit: '代课', des: '下午12节课', price: 50, state: '已帮助', qi: '', mu: '南区21号楼5楼501教师' },
-      { tit: '上门维修', des: '电脑开不了机了，头大。求大神帮忙', price: 10, state: '已完成', qi: '', mu: '南区1号楼5楼507' },
-    ]
+    list:[],
+    page:1,
+    size:10,
+    tag:['校园帮','我发出的','我帮助的'],
+    flag:0,
+    url:'get',
+    wheres:"",
+    sorts:"",
+    fields:''
+  },
+  changeTag(e) {
+    let index = e.currentTarget.dataset.index
+    this.setData({
+      flag: e.currentTarget.dataset.index
+    })
+    if(index == 0){
+      _this.data.url = 'get'
+      _this.data.wheres = ''
+      _this.data.sorts = ""
+      _this.data.fields = ''
+      _this.getList(0)
+    }else if(index == 1){
+      _this.data.url = 'get2'
+      _this.data.fields = 'helplist.*,wxuser.phone,wxuser.dphone,wxuser.avatar_url,wxuser.nick_name'
+      _this.data.wheres = 'helplist.is_delete=0 and wx_id=' + wx.getStorageSync("user").id
+      _this.data.sorts = "helplist.create_time desc"
+      _this.getList(0)
+    }else{
+      _this.data.url = 'get2'
+      _this.getList(0)
+    }
   },
   navTo(e) {
     app.com.navTo(e)
@@ -20,29 +46,49 @@ Page({
    */
   onLoad: function (options) {
     _this = this
-    _this.getList()
+    _this.getList(0)
   },
-  getList(){
-    app.com.post('help/get',{},function(res){
-      if(res.code == 1){
+ 
+  getList(type){
+    if (type == 0) {
+      this.data.page = 1
+    } else {
+      this.data.page += 1
+    }
+    app.com.post('help/'+this.data.url, {
+      wheres:this.data.wheres,
+      sorts:this.data.sorts,
+      fields:this.data.fields,
+      pageIndex: this.data.page,
+      pageSize: this.data.size
+    }, function (res) {
+      wx.stopPullDownRefresh()
+      if (res.code == 1) {
+        let re = res.data.list
+        for (let i in re) {
+          re[i].time = app.com.formatMsgTime(re[i].create_time)
+        }
+        let arr = []
+        if (type == 0) {
+          arr = re
+        } else {
+          arr = _this.data.list
+          for (let i in re) {
+            arr.push(re[i])
+          }
+        }
         _this.setData({
-          list:res.data.list
+          list: arr,
+          total: res.data.total
         })
-      }else{
+      } else {
         wx.showToast({
           title: res.msg,
-          icon:'none'
+          icon: 'none'
         })
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
@@ -50,32 +96,22 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
+  
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    _this.getList(0)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if(this.data.list.length < this.data.total){
+      _this.getList(1)
+    }
   },
 
   /**

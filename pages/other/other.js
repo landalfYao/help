@@ -31,6 +31,7 @@ Page({
         title: '加载中',
       })
       app.com.post('help/add', {
+        openid: wx.getStorageSync("user").openid, 
         des: e.detail.value.des,
         wx_id: wx.getStorageSync("user").id,
         total_fee: e.detail.value.price,
@@ -42,13 +43,18 @@ Page({
       }, function (res) {
         wx.hideLoading()
         if (res.code == 1) {
+          _this.wxpay(res)
+        } else {
           wx.showToast({
-            title: '发布成功',
+            title: res.msg,
+            icon: 'none'
           })
-         
         }
       })
     }
+  },
+  wxpay(msg) {
+    app.com.wxpay(msg)
   },
   navTo(e) {
     app.com.navTo(e)

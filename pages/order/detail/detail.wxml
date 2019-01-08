@@ -1,30 +1,46 @@
-<view class="pa-30 bg-m2">
-  <view class='panel-between'>
-    <view class='panel-start item-center'>
-      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546594006865&di=e459828d53c4d297b887c0798077d69d&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201706%2F30%2F20170630082108_UY5Zf.thumb.700_0.jpeg' class='avatar' mode='aspectFill'></image>
-      <view class='ma-l30'>
-        <view class='fo-28 fo-w'>Landalf | 2018-12-31</view>
-        <view class='fo-40 bold fo-w ma-t10'>校园代跑</view>
+<view style="height:150rpx">
+  <view style='background-image:url({{list.avatar_url}})' class='bggs'></view>
+</view>
+<view class='pa-l30 pa-r30 ' style='position:relative;' >
+  <view class='panel ra-10 shadow'>
+    <view class="panel-between">
+      <view class='panel-start item-center'>
+        <image class='avatar' src='{{list.avatar_url}}' mode='aspectFill'></image>
+        <view class='ma-l30'>
+          <view class='fo-36 bold '>{{list.title}}</view>
+          <view class='fo-26 fo-g'>{{list.nick_name}} | {{list.create_time}}</view>
+        </view>
+      </view>
+      <view class='state ste{{list.state}}'>{{list.state==0? '待付款':list.state ==1 ? '需要帮助':list.state ==2?'已帮助':list.state ==3?'已完成':'已取消'}}</view>
+    </view>
+    <view class='w-20 border-b ma-t30'></view>
+    <view class='fo-30 ma-t30'>{{list.des}}</view>
+    <view class='fo-26 ma-t30 fo-g' wx:if="{{list.qi != '' && list.qi != 'undefined'}}">起点：{{list.qi}}</view>
+    <view class='fo-26 ma-t30 fo-g'>目的地：{{list.mu}}</view>
+    <view class='state ste4 ma-t30'>赏金￥{{list.total_fee}}</view>
+    <view class='panel-end' style='height:30rpx'>
+      <view class='cri2 panel-center item-center' style='background-color:rgb(51, 153, 255);box-shadow: 0 0 10rpx 0 rgb(51, 153, 255)' wx:if="{{list.dphone}}" data-type='dphone' bindtap='makePhoneCall'>
+        <view class='text-center'>
+          <image src='/img/pjh.png' class='icon-30'></image>
+          <view class='fo-20 fo-w'>短号</view>
+        </view>
+      </view>
+      <view class='cri2 panel-center item-center' wx:if="{{list.phone}}" data-type='phone' bindtap='makePhoneCall'>
+        <view class='text-center'>
+          <image src='/img/pjh.png' class='icon-30'></image>
+          <view class='fo-20 fo-w'>手机号</view>
+        </view>
       </view>
     </view>
-    <view class='panel-end'>
-      <view class='state ste1'>需要帮助</view>
-    </view>
   </view>
-  <view style='background:rgba(255,255,255,0.3)' class='pa-20 fo-w ra-10 ma-t30 fo-30'>
-    你说的了解了就卡死法律框架撒的法律加快速度房间里开发商代课 都是都是的
-  </view>
-  <view class='panel-center item-center ma-t30'>
-    <view class='text-center w-30' style='height:200rpx'>
-      <view class='qi1'>起</view>
-      <view class='fo-w fo-26 ma-t10'>南区1号楼1楼外卖柜</view>
-    </view>
-    <image src='/img/jt.png' class='icon-60 ma-l30 ma-r30'></image>
-    <view class='text-center w-30' style='height:200rpx'>
-      <view class='qi'>终</view>
-      <view class='fo-w fo-26 ma-t10'>南区1号楼5楼507</view>
-    </view>
-  </view>
-  
-  
+</view>
+
+<view class='panel-center item-center ma-t30'>
+  <view class='border-b ' style='width:50rpx'></view>
+  <view class='fo-30 ma-l30 ma-r30 fo-g'>暂无接单人</view>
+  <view class='border-b ' style='width:50rpx'></view>
+</view>
+
+<view class='fix-b panel-end itme-center'>
+  <view class=' {{list.state == 1 ? "bzbtn":"bzbtn2"}} ma-r30' wx:if="{{list.state == 1 || list.state == 0}}">{{list.state == 1 ? "帮助TA":"立即付款"}}</view>
 </view>

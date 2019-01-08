@@ -91,7 +91,7 @@
 					"id": 8,
 					"name": "帮助",
 					"pathName": "pages/banzu/banzu",
-					"query": "label=校园跑腿&data={\"qi\":true,\"mu\":true}"
+					"query": ""
 				},
 				{
 					"id": -1,
@@ -106,10 +106,16 @@
 					"query": "label=校园跑腿&data={\"qi\":true,\"mu\":true}"
 				},
 				{
-					"id": -1,
+					"id": 11,
 					"name": "详情",
 					"pathName": "pages/order/detail/detail",
-					"query": "label=校园跑腿&data={\"qi\":true,\"mu\":true}"
+					"query": "id=15"
+				},
+				{
+					"id": -1,
+					"name": "帮助",
+					"pathName": "pages/order/detail/detail",
+					"query": "id=15"
 				}
 			]
 		}

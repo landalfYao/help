@@ -1,14 +1,22 @@
+<view class="bbf panel-between">
+  <view wx:for="{{tag}}" class='bbf-item ' data-index='{{index}}' bindtap='changeTag'>
+    <view class='fo-28 lh-90 text-center {{index == flag ? "bold fo-t":"fo-g"}}'>{{item}}</view>
+    <view class='botn' wx:if="{{index == flag}}"></view>
+  </view>
+</view>
+<view style='height:90rpx'></view>
+
 <view class="pa-30">
-  <view class='titem' wx:for="{{list}}" data-path='/pages/order/detail/detail' bindtap='navTo'>
+  <view class='titem' wx:for="{{list}}" data-id='{{item.id}}' data-names='id' data-path='/pages/order/detail/detail' bindtap='navTo'>
     <view class='panel-between'>
       <view class='panel-start item-center'>
         <image src='{{item.avatar_url}}' class='avatar' mode='aspectFill'></image>
         <view class='ma-l20'>
           <view class='fo-30 bold'>{{item.title}}</view>
-          <view class='fo-26 fo-g'>{{item.nick_name}} | {{item.create_time}}</view>
+          <view class='fo-26 fo-g'>{{item.nick_name}} | {{item.time}}</view>
         </view>
       </view>
-      <view class='state {{item.state== 1 ? "ste1":item.state== 2 ? "ste2":"ste3"}}'>{{item.state ==1 ? '需要帮助':item.state ==2?'已帮助':'已完成'}}</view>
+      <view class='state {{item.state== 0 ?"ste4":item.state== 1 ? "ste1":item.state== 2 ? "ste2":"ste3"}}'>{{item.state ==0?'待付款':item.state ==1 ? '需要帮助':item.state ==2?'已帮助':'已完成'}}</view>
     </view>
     <view  style='margin-left:80rpx'>
       <view class='fo-28 ma-t10'>{{item.des}}</view>
@@ -17,7 +25,7 @@
     </view>
     <view class='panel-end item-center ma-t10'>
       <view class='state ste4'>悬赏￥{{item.total_fee}}</view>
-      <view class='bzBtn ma-l30' wx:if="{{item.state == 1}}">帮助TA</view>
+      <view class='{{item.state == 1 ? "bzBtn":"bzBtn2"}} ma-l30' wx:if="{{item.state == 1 || item.state == 0}}">{{item.state == 1 ? "帮助TA":"立即付款"}}</view>
     </view>
   </view>
 </view>

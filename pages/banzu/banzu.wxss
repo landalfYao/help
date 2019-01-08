@@ -1,6 +1,23 @@
 page{
   background-color: #f7f7f7
 }
+.bbf{
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  height: 90rpx
+}
+.bbf-item{
+  width: 33.33%;
+  text-align: center;
+  color: #6887e1
+}
+.botn{
+  border-bottom: 4rpx solid #6887e1;
+  width: 60%;
+  margin: auto
+}
 .titem{
   padding: 20rpx;
   background-color: #ffffff;
@@ -14,6 +31,7 @@ page{
   border-radius: 60rpx;
 }
 .state{
+  padding:0 15rpx;
   height: 50rpx;
   font-size: 24rpx;
   width: 120rpx;
@@ -45,5 +63,15 @@ page{
   width: 150rpx;
   text-align: center;
   border-radius: 20rpx 0 20rpx 0;
-  box-shadow: 5rpx 10rpx 10rpx 5rpx rgba(82, 197, 254, 0.267)
+  box-shadow: 5rpx 10rpx 10rpx 0rpx rgba(82, 197, 254, 0.267)
+}
+.bzBtn2{
+  font-size: 26rpx;
+  background: linear-gradient(to right top,#ff8965,#ff64a1);
+  color: #fff;
+  line-height: 60rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(14, 100%, 70%, 0.267)
 }

@@ -10,7 +10,7 @@
 
   <view class='panel panel-between item-center ma-t20'>
     <view class='panel-start'>
-      <view class='fo-28'>我的记录</view>
+      <view class='fo-28'>我的信息</view>
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
