@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -85,7 +85,7 @@
 					"id": 7,
 					"name": "打印",
 					"pathName": "pages/dayin/dayin",
-					"query": "index=1"
+					"query": "index=0"
 				},
 				{
 					"id": 8,
@@ -116,6 +116,12 @@
 					"name": "帮助",
 					"pathName": "pages/order/detail/detail",
 					"query": "id=15"
+				},
+				{
+					"id": -1,
+					"name": "sq",
+					"pathName": "pages/register/register",
+					"query": ""
 				}
 			]
 		}

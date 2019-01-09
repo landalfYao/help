@@ -1,4 +1,5 @@
-<view class='pa-30'>
+<web-view src="{{url}}"></web-view>
+<!-- <view class='pa-30'>
 
   <view class='bz'>
     <view style='height:60rpx'>
@@ -35,9 +36,6 @@
     </form>
 
   </view>
-  <!-- <view class='panel-center item-center'>
-    <view class='fo-28 fo-b text-center '>费用参考</view>
-    <view class='fo-28 fo-b text-center ma-l30'>代理商入口</view>
-  </view> -->
+ 
 
-</view>
+</view> -->

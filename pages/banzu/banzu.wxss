@@ -41,7 +41,7 @@ page{
 }
 .ste1{
   background-color: rgba(0, 204, 153,0.08);
-  color: rgb(0, 204, 153)
+  color: #00cc99
 }
 .ste2{
   background-color: rgba(51, 153, 255, 0.08);

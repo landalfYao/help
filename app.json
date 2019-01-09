@@ -10,7 +10,9 @@
     "pages/daiqu/daiqu",
     "pages/dayin/dayin",
     "pages/banzu/banzu",
-    "pages/order/detail/detail"
+    "pages/order/detail/detail",
+    "pages/register/register",
+    "pages/register/success/success"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",

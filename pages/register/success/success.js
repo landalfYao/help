@@ -1,30 +1,18 @@
-const app = getApp()
+// pages/register/success/success.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    url:''
+
   },
-  chooseFile(){
-    wx.chooseImage({
-      count:1,
-      success: function(res) {
-        console.log(res)
-      },
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      msg:wx.getStorageSync("server")[options.index],
-      price: wx.getStorageSync("server")[options.index].price_gui.split(','),
-      url: 'http://localhost:8080/#/dayin_wx?uid=' + wx.getStorageSync('user').id + '&data=' + JSON.stringify(wx.getStorageSync("server")[options.index])
-    })
-    console.log(this.data.url)
+
   },
 
   /**
