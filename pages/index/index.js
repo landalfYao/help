@@ -16,18 +16,35 @@ Page({
       { icon: '/img/s6.png', label: '其他帮助', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' }
     ]
   },
-
+  navToArea(){
+    wx.navigateTo({
+      url: '/pages/area/area',
+    })
+  },
   
   navTo(e) {
-    if(e.currentTarget.dataset.path == '/pages/other/other'){
-      let index = e.currentTarget.dataset.index
+    if (wx.getStorageSync("user").phone == '' || wx.getStorageSync("user").phone == null || wx.getStorageSync("user").phone == undefined){
       wx.navigateTo({
-        url: '/pages/other/other?label=' + this.data.list[index].label + '&data=' + JSON.stringify(this.data.list[index].data),
+        url: '/pages/login/login',
       })
     }else{
-      app.com.navTo(e)
+      let name = e.currentTarget.dataset.name
+      let index = e.currentTarget.dataset.index
+      if (name == '快递代取') {
+        wx.navigateTo({
+          url: '/pages/daiqu/daiqu?index='+index,
+        })
+      } else if (name == '打印服务'){
+        wx.navigateTo({
+          url: '/pages/dayin/dayin?index=' + index,
+        })
+      }else{
+        wx.navigateTo({
+          url: '/pages/other/other?label=' + name+'&index='+index,
+        })
+        
+      }
     }
-    
   },
   navToArea(){
     wx.navigateTo({
@@ -45,20 +62,14 @@ Page({
   onShow(){
     if(wx.getStorageSync('area')){
       this.setData({
-        area: wx.getStorageSync('area')
+        area: wx.getStorageSync('area'),
+        list: wx.getStorageSync('server')
       })
     }else{
       wx.navigateTo({
         url: '/pages/area/area',
       })
     }
-    // if(wx.getStorageSync("user").nick_name){
-      
-    // }else{
-    //   wx.navigateTo({
-    //     url: '/pages/login/login',
-    //   })
-    // }
   }
   
 })

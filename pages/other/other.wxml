@@ -12,7 +12,7 @@
       <view class='border pa-20 ma-t20'>
         <textarea class='fo-28' name='des' value='{{des}}' style='height:200rpx' placeholder='请输入详细的帮助信息'></textarea>
       </view>
-      <view class='panel-between border-b pa-t30 pa-b10 ' wx:if="{{config.qi}}">
+      <view class='panel-between border-b pa-t30 pa-b10 ' wx:if="{{title == '校园跑腿'}}">
         <view class='fo-28 bold'>取货地点(必填):</view>
         <input class='text-right fo-28'  name='qi' value="{{phone}}" placeholder='输入取货地点'></input>
       </view>
@@ -22,17 +22,9 @@
       </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>赏金(必填):</view>
-        <input class='text-right fo-28' type='number' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
+        <input class='text-right fo-28' type='digit' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
       </view>
-      <!-- <picker range='{{limit}}'>
-        <view class='panel-between item-center border-b pa-t30 pa-b30 '>
-          <view class='fo-28 bold'>性别限制:</view>
-          <view class='panel-end item-center'>
-            <view class='fo-28'>不限</view>
-            <image src='/img/right.png' class='icon-25 ma-l20'></image>
-          </view>
-        </view>
-      </picker> -->
+      <view class='fo-26 text-center fo-g ma-t30' wx:if="{{msg.des}}">{{msg.des}}</view>
       <button class='btns ' form-type="submit">立即发布帮助</button>
     </form>
     

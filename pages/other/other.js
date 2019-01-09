@@ -72,8 +72,8 @@ Page({
   onLoad: function (options) {
     _this = this
     this.setData({
-      config:JSON.parse(options.data),
-      title:options.label
+      title:options.label,
+      msg: wx.getStorageSync("server")[options.index],
     })
     wx.setNavigationBarTitle({
       title: options.label,

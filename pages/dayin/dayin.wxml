@@ -9,7 +9,7 @@
     <form bindsubmit="formSubmit" report-submit="true">
       <view class=' pa-b20  panel-between item-center border-b'>
         <view class='fo-30'>打印原件</view>
-        <view class='day'>+</view>
+        <view class='day' bindtap='chooseFile'>+</view>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>收件地址</view>
@@ -24,9 +24,9 @@
         <switch color="#0099ff" bindchange="switch1Change" />
       </view>
       <view class='text-center fo-26 fo-g ma-t30'>彩印
-        <text class='fo-m'>1元/张</text> 黑白
-        <text class='fo-m'>0.3元/张</text> 跑路费
-        <text class='fo-m'>1元</text>
+        <text class='fo-m'>{{price[0]}}元/张</text> 黑白
+        <text class='fo-m'>{{price[1]}}元/张</text> 跑路费
+        <text class='fo-m'>{{price[2]}}元</text>
       </view>
       <view class='fo-26 text-center ma-t30'>需支付</view>
       <view class='text-center fo-40 bold ma-t20 fo-m'>1

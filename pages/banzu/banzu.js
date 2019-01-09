@@ -23,7 +23,7 @@ Page({
     })
     if(index == 0){
       _this.data.url = 'get'
-      _this.data.wheres = ''
+      _this.data.wheres = 'a_id=' + wx.getStorageSync("area").pk_id
       _this.data.sorts = ""
       _this.data.fields = ''
       _this.getList(0)

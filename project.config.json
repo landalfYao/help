@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -76,16 +76,16 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 6,
 					"name": "快递代取",
 					"pathName": "pages/daiqu/daiqu",
-					"query": ""
+					"query": "index=1"
 				},
 				{
-					"id": -1,
+					"id": 7,
 					"name": "打印",
 					"pathName": "pages/dayin/dayin",
-					"query": ""
+					"query": "index=1"
 				},
 				{
 					"id": 8,

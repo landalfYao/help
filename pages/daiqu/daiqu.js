@@ -19,6 +19,14 @@ Page({
    */
   onLoad: function (options) {
     _this = this
+    let p = wx.getStorageSync("server")[options.index].price_gui.split(',')
+    this.data.kdtype[0].price = p[0]
+    this.data.kdtype[1].price = p[1]
+    this.data.kdtype[1].price = p[2]
+    this.setData({
+      msg: wx.getStorageSync("server")[options.index],
+      kdtype:this.data.kdtype
+    })
   },
   formSubmit(e){
     let formId = e.detail.formId

@@ -51,6 +51,7 @@ Page({
         wx.navigateBack({
           delta: 1
         })
+        _this.getServer(res.data.pk_id)
       }else{
         wx.showToast({
           title: res.msg,
@@ -59,6 +60,23 @@ Page({
       }
     })
   },  
+  getServer(id){
+    app.com.post('server/get/uid', {
+      uid: id
+    }, function (res) {
+      if (res.code == 1) {
+        wx.setStorageSync("server", res.data)
+        wx.navigateBack({
+          delta: 1
+        })
+      } else {
+        wx.showToast({
+          title: res.msg,
+          icon: 'none'
+        })
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

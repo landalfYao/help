@@ -3,7 +3,7 @@
 </view>
 
 <view class='pa-l60 pa-r60 pa-b20' >
-  <view class='pa-30 bg-m panel-between item-center ra-10' data-path='/pages/area/area' bindtap='navTo'>
+  <view class='pa-30 bg-m panel-between item-center ra-10'  bindtap='navToArea'>
     <view class='panel-start item-center'>
       <image src='/img/l.png' class='icon-35'></image>
       <view class='fo-28 fo-w ma-l20'>{{area.name}}</view>
@@ -13,12 +13,12 @@
 </view>
 
 <view class='pa-60 panel-between wrap' style='padding-bottom:0;'>
-  <view wx:for="{{list}}" class='items panel-center wrap' data-index='{{index}}' data-path="{{item.page}}" bindtap='navTo'>
+  <view wx:for="{{list}}" class='items panel-center wrap' data-index='{{index}}' data-name='{{item.server_name}}' data-path="{{item.page}}" bindtap='navTo'>
     <view class='text-center'>
-      <view class='cri panel-center item-center' style='background:{{item.color}}'>
+      <view class='cri panel-center item-center' style='background:linear-gradient(to right top,#6183dd,#6e42d3)'>
         <image src='{{item.icon}}' class='icon-30'></image>
       </view>
-      <view class=' fo-30 text-center ma-t20 fo-t'>{{item.label}}</view>
+      <view class=' fo-30 text-center ma-t20 fo-t'>{{item.server_name}}</view>
     </view>
   </view>
 </view>

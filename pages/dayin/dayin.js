@@ -1,4 +1,4 @@
-// pages/dayin/dayin.js
+const app = getApp()
 Page({
 
   /**
@@ -7,12 +7,22 @@ Page({
   data: {
 
   },
-
+  chooseFile(){
+    wx.chooseImage({
+      count:1,
+      success: function(res) {
+        console.log(res)
+      },
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      msg:wx.getStorageSync("server")[options.index],
+      price: wx.getStorageSync("server")[options.index].price_gui.split(',')
+    })
   },
 
   /**
