@@ -6,9 +6,36 @@ Page({
    * 页面的初始数据
    */
   data: {
+    wx_id:wx.getStorageSync("user").id
+  },
+  cancel(e) {
+    wx.showModal({
+      title: '提示',
+      content: '确定要取消吗？',
+      success(res) {
+        if (res.confirm) {
+          app.com.cancel(e.currentTarget.dataset.id, 'navigateTo', function (res) {
+            if (res) {
+              _this.getList(e.currentTarget.dataset.id)
+            }
+          })
+        }
+      }
+    })
 
   },
-
+  pay(e){
+    app.com.post('help/pay',{
+      title: e.currentTarget.dataset.title,
+      openid:wx.getStorageSync("user").openid,
+      oid: e.currentTarget.dataset.id,
+      total_fee: e.currentTarget.dataset.price
+    },function(res){
+      if(res.code == 1){
+        app.com.wxpay(res)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -28,6 +55,9 @@ Page({
           list: re[0],
           total: res.data.total
         })
+        if(re[0].jd_id){
+          _this.getJd()
+        }
       } else {
         wx.showToast({
           title: res.msg,
@@ -36,11 +66,44 @@ Page({
       }
     })
   },
+  getJd(){
+    app.com.post('wx/user/get/id',{
+      id: wx.getStorageSync("user").id
+    },function(res){
+      if(res.code == 1){
+        _this.setData({
+          jduser:res.data
+        })
+      }
+    })
+  },
   makePhoneCall(e){
     let ty = e.currentTarget.dataset.type
-    wx.makePhoneCall({
-      phoneNumber:this.data.list[ty] ,
-    })
+    if (this.data.wx_id == this.data.list.wx_id || this.data.wx_id == this.data.list.jd_id){
+      wx.makePhoneCall({
+        phoneNumber: this.data.list[ty],
+      })
+    }else{
+      wx.showToast({
+        title: '您不是该单的发布者或接单人',
+        icon:'none'
+      })
+    }
+    
+  },
+  makePhoneCall2(e) {
+    let ty = e.currentTarget.dataset.type
+    if (this.data.wx_id == this.data.list.wx_id || this.data.wx_id == this.data.list.jd_id) {
+      wx.makePhoneCall({
+        phoneNumber: this.data.jduser[ty],
+      })
+    } else {
+      wx.showToast({
+        title: '您不是该单的发布者或接单人',
+        icon: 'none'
+      })
+    }
+   
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

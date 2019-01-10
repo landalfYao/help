@@ -1,5 +1,5 @@
 const util = {
-  API: 'http://localhost:3333/api/',
+  API: 'http://129.28.89.58:3333/api/',
 
 
   /**
@@ -118,7 +118,7 @@ const util = {
       url: url,
     })
   },
-  wxpay(msg){
+  wxpay(msg,cb){
     wx.requestPayment({
       timeStamp: msg.timestamp,
       nonceStr: msg.nonceStr,
@@ -131,16 +131,26 @@ const util = {
         })
         util.post('help/update/state', {
           state: 1,
+          is_pay:1,
           id: msg.oid
         }, function (res) {
           if (res.code == 1) {
-            wx.redirectTo({
-              url: '/pages/order/detail/detail?id=' + msg.oid,
-            })
+            if(cb){
+              cb(true)
+            }else{
+              wx.redirectTo({
+                url: '/pages/order/detail/detail?id=' + msg.oid,
+              })
+            }
+            
           } else {
-            wx.redirectTo({
-              url: '/pages/order/detail/detail?id=' + msg.oid,
-            })
+            if (cb) {
+              cb(false)
+            } else {
+              wx.redirectTo({
+                url: '/pages/order/detail/detail?id=' + msg.oid,
+              })
+            }
           }
         })
       },
@@ -149,9 +159,13 @@ const util = {
           title: '支付失败',
           icon: 'none'
         })
-        wx.redirectTo({
-          url: '/pages/order/detail/detail?id=' + msg.oid,
-        })
+        if (cb) {
+          cb(false)
+        } else {
+          wx.redirectTo({
+            url: '/pages/order/detail/detail?id=' + msg.oid,
+          })
+        }
       }
     })
   },
@@ -189,6 +203,25 @@ const util = {
       timeSpanStr = timespan;
     }
     return timeSpanStr;
+  },
+  cancel(oid,name,cb){
+    this.post('help/update/state',{
+      state:4,
+      id:oid
+    },function(res){
+      if(res.code == 1){
+        wx.showToast({
+          title: '取消成功',
+        })
+        cb(true)
+      }else{
+        cb(false)
+        wx.showToast({
+          title: '取消失败',
+          icon:'none'
+        })
+      }
+    })
   }
 }
 module.exports = util

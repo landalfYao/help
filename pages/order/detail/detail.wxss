@@ -51,7 +51,10 @@ page {
   background-color: rgba(255, 102, 102, 0.08);
   color: rgb(255, 102, 102);
 }
-
+.ste5{
+  background-color: rgba(136, 136, 136,0.08);
+  color: rgb(136, 136, 136)
+}
 .qi {
   width: 60rpx;
   height: 60rpx;
@@ -73,6 +76,26 @@ page {
   line-height: 60rpx;
   border-radius: 60rpx;
   margin: auto;
+}
+.tagsd1{
+  width: 150rpx;
+  font-size: 24rpx;
+  background-color: rgb(225, 240, 255);
+  color: rgb(51, 153, 255);
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  margin-left: 30rpx
+}
+.tagsd2{
+  width: 150rpx;
+  font-size: 24rpx;
+  background-color: rgb(236, 255, 250);
+  color: rgb(0, 204, 153);
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  margin-left: 30rpx
 }
 
 .bggs {
@@ -102,7 +125,8 @@ page {
   width: 200rpx;
   text-align: center;
   border-radius: 20rpx 0 20rpx 0;
-  box-shadow: 5rpx 10rpx 10rpx 0rpx rgba(82, 197, 254, 0.267)
+  box-shadow: 5rpx 10rpx 10rpx 0rpx rgba(82, 197, 254, 0.267);
+  margin-right: 30rpx
 }
 
 .bzbtn2{
@@ -114,5 +138,30 @@ page {
   width: 200rpx;
   text-align: center;
   border-radius: 20rpx 0 20rpx 0;
-  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(14, 100%, 70%, 0.267)
+  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(14, 100%, 70%, 0.267);
+  margin-right: 30rpx
+}
+.bzbtn3{
+  font-size: 26rpx;
+  background: #fff;
+  color: #000;
+  border: 1rpx solid #888;
+  line-height: 78rpx;
+  height: 80rpx;
+  width: 200rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  margin-right: 30rpx
+}
+.bzbtn4{
+  font-size: 26rpx;
+  background: linear-gradient(to right top,#ff9900,#ff6633);
+  color: #fff;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 200rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(36, 100%, 50%, 0.267);
+  margin-right: 30rpx
 }

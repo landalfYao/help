@@ -55,6 +55,10 @@ page{
   background-color: rgba(255, 102, 102,0.08);
   color: rgb(255, 102, 102)
 }
+.ste5{
+  background-color: rgba(136, 136, 136,0.08);
+  color: rgb(136, 136, 136)
+}
 .bzBtn{
   font-size: 26rpx;
   background: linear-gradient(to right top,#51c3fe,#92abff);
@@ -74,4 +78,25 @@ page{
   text-align: center;
   border-radius: 20rpx 0 20rpx 0;
   box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(14, 100%, 70%, 0.267)
+}
+.bzBtn3{
+  font-size: 26rpx;
+  background: #fff;
+  color: #000;
+  border: 1rpx solid #888;
+  line-height: 58rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(0, 0%, 95%, 0.267)
+}
+.bzBtn4{
+  font-size: 26rpx;
+  background: linear-gradient(to right top,#ff9900,#ff6633);
+  color: #fff;
+  line-height: 60rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 20rpx 0 20rpx 0;
+  box-shadow: 5rpx 10rpx 10rpx 0rpx hsla(36, 100%, 50%, 0.267)
 }

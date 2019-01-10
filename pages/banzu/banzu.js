@@ -14,7 +14,94 @@ Page({
     url:'get',
     wheres:"",
     sorts:"",
-    fields:''
+    fields:'',
+    wx_id:wx.getStorageSync("user").id
+  },
+  comfirm(e){
+    let id = e.currentTarget.dataset.id
+    app.com.post('help/confirm',{id:id},function(res){
+      if(res.code == 1){
+        wx.showToast({
+          title: '订单已完成',
+        })
+        _this.getList(0)
+      }else{
+        wx.showToast({
+          title: '确认失败',
+          icon: 'none'
+        })
+      }
+    })
+  },
+  takeIt(e){
+    if (wx.getStorageSync("res").state == 1){
+      this.takeDo(e.currentTarget.dataset.id)
+    }else{
+      wx.showModal({
+        title: '提示',
+        content: '您还不是接单员，是否前往申请',
+        confirmText:'立即前往',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/register/register',
+            })
+          }
+        }
+      })
+    }
+    
+    
+  },
+  takeDo(id){
+    app.com.post('help/jd', {
+      jd_id: wx.getStorageSync("user").id,
+      id: id
+    }, function (res) {
+      if (res.code == 1) {
+        wx.showToast({
+          title: '接单成功',
+        })
+        _this.getList(0)
+      } else {
+        wx.showToast({
+          title: '接单失败',
+          icon: 'none'
+        })
+      }
+    })
+  },
+  pay(e) {
+    app.com.post('help/pay', {
+      title: e.currentTarget.dataset.title,
+      openid: wx.getStorageSync("user").openid,
+      oid: e.currentTarget.dataset.id,
+      total_fee: e.currentTarget.dataset.price
+    }, function (res) {
+      if (res.code == 1) {
+        app.com.wxpay(res,function(res){
+          if(res){
+            _this.getList(0)
+          }
+        })
+      }
+    })
+  },
+  cancel(e){
+    wx.showModal({
+      title: '提示',
+      content: '确定要取消吗？',
+      success(res){
+        if(res.confirm){
+          app.com.cancel(e.currentTarget.dataset.id, 'navigateTo',function(res){
+            if(res){
+              _this.getList(0)
+            }
+          })
+        }
+      }
+    })
+    
   },
   changeTag(e) {
     let index = e.currentTarget.dataset.index
@@ -35,6 +122,9 @@ Page({
       _this.getList(0)
     }else{
       _this.data.url = 'get2'
+      _this.data.fields = 'helplist.*,wxuser.phone,wxuser.dphone,wxuser.avatar_url,wxuser.nick_name'
+      _this.data.wheres = 'helplist.is_delete=0 and jd_id=' + wx.getStorageSync("user").id
+      _this.data.sorts = "helplist.create_time desc"
       _this.getList(0)
     }
   },
@@ -118,6 +208,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title:'互帮互助代替你',
+      path:'/pages/index/index'
+    }
   }
 })

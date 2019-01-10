@@ -11,7 +11,7 @@
           <view class='fo-26 fo-g'>{{list.nick_name}} | {{list.create_time}}</view>
         </view>
       </view>
-      <view class='state ste{{list.state}}'>{{list.state==0? '待付款':list.state ==1 ? '需要帮助':list.state ==2?'已帮助':list.state ==3?'已完成':'已取消'}}</view>
+      <view class='state {{list.state== 0 ?"ste4":list.state== 1 ? "ste1":list.state== 2 ? "ste2":list.state == 3?"ste3":"ste5"}}'>{{list.state ==0?'待付款':list.state ==1 ? '需要帮助':list.state ==2?'已帮助':list.state ==3?"已完成":"已取消"}}</view>
     </view>
     <view class='w-20 border-b ma-t30'></view>
     <view class='fo-30 ma-t30'>{{list.des}}</view>
@@ -37,10 +37,28 @@
 
 <view class='panel-center item-center ma-t30'>
   <view class='border-b ' style='width:50rpx'></view>
-  <view class='fo-30 ma-l30 ma-r30 fo-g'>暂无接单人</view>
+  <view class='fo-30 ma-l30 ma-r30 fo-g'>{{list.jd_id ? '接单人':'暂无接单人'}}</view>
   <view class='border-b ' style='width:50rpx'></view>
 </view>
 
+<view class='pa-30 ' wx:if="{{list.jd_id}}">
+  <view class='panel ra-10 shadow'>
+    <view class='panel-between item-center'>
+      <view class='panel-start item-center'>
+        <image src='{{jduser.avatar_url}}' mode='aspectFill' style="width:80rpx;height:80rpx;border-radius:100rpx"></image>
+        <view class='fo-28 bold ma-l30'>{{jduser.nick_name}}</view>
+      </view>
+      <view class='panel-end item-center'>
+        <view class='tagsd1' data-type='dphone' bindtap='makePhoneCall2'>拨打短号</view>
+        <view class='tagsd2' data-type='phone' bindtap='makePhoneCall2'>拨打手机号</view>
+      </view>
+    </view>
+  </view>
+</view>
+
 <view class='fix-b panel-end itme-center'>
-  <view class=' {{list.state == 1 ? "bzbtn":"bzbtn2"}} ma-r30' wx:if="{{list.state == 1 || list.state == 0}}">{{list.state == 1 ? "帮助TA":"立即付款"}}</view>
+  <view class='bzbtn ' wx:if="{{list.state == 1 && list.wx_id != wx_id}}">帮助TA</view>
+  <view class='bzbtn3 ' wx:if="{{(list.state == 1 || list.state == 0) && list.wx_id == wx_id}}" data-id='{{list.id}}' bindtap='cancel'>取消</view>
+  <view class='bzbtn2 ' wx:if="{{list.state == 0 && wx_id == list.wx_id}}" data-title='{{list.title}}' data-id='{{list.id}}' data-price='{{list.total_fee}}' bindtap='pay'>立即付款</view>
+  <view class='bzbtn4 ma-l30' wx:if="{{list.state == 2 && wx_id == list.wx_id}}"  data-id='{{list.id}}'  bindtap='comfirm'>确认完成</view>
 </view>

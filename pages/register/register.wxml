@@ -19,12 +19,10 @@
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>身份证正面(必填):</view>
         <view class='tuu panel-center item-center fo-g fo-50' style='background-image:url({{cert}})' data-name='cert' bindtap='choose'> + </view>
-        <button type='primary' class='ma-t10' data-name='cert' bindtap='upload' wx:if="{{cert}}">点击上传</button>
       </view>
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>学生证正面(必填):</view>
         <view class='tuu panel-center item-center fo-g fo-50' style='background-image:url({{stu_card}})' data-name='stu_card' bindtap='choose'> + </view>
-        <button type='primary' class='ma-t10' data-name='stu_card' bindtap='upload' wx:if="{{stu_card}}">点击上传</button>
       </view>
       <button class='btns ' form-type="submit">提交申请</button>
     </form>
@@ -53,7 +51,7 @@
       <view class='fo-30 text-center'>{{res.msg}}</view>
       <view class='fo-30 text-center fo-t' bindtap='gotoUpdate'>去修改</view>
     </view>
-    <view class="fo-30 text-center fo-t" style='margin-top:100rpx'>联系客服</view>
+    <view class="fo-30 text-center fo-t" style='margin-top:100rpx' bindtap='makePhone'>联系客服</view>
   </view>
 
 

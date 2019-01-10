@@ -17,26 +17,26 @@ Page({
     })
   },
   choose(e){
+    let name = e.currentTarget.dataset.name
     wx.chooseImage({
+      count:1,
       success(res) {
         const tempFilePaths = res.tempFilePaths
-        if(e.currentTarget.dataset.name=='cert'){
+        if(name=='cert'){
           _this.setData({
             cert: tempFilePaths[0]
           })
+          
         }else{
           _this.setData({
             stu_card: tempFilePaths[0]
           })
         }
-        
-        
+        _this.upload(name)
       }
     })
   },
-  upload(e){
-    
-    let name = e.currentTarget.dataset.name
+  upload(name){
     if (this.data[name] != '' && this.data[name].indexOf('tmp')>0){
       wx.showLoading({
         title: '上传中',
@@ -44,18 +44,20 @@ Page({
       })
       wx.uploadFile({
         url: app.com.API + 'file/upload', // 仅为示例，非真实的接口地址
-        filePath: file,
+        filePath: this.data[name],
         name: 'file',
         success(res) {
           wx.hideLoading()
-          if (res.data) {
+          let red = JSON.parse(res.data)
+          if (red.data) {
+            
             if(name == 'cert'){
               _this.setData({
-                cert: res.data
+                cert: red.data
               })
             }else{
               _this.setData({
-                stu_card: res.data
+                stu_card: red.data
               })
             }
             
@@ -98,7 +100,7 @@ Page({
       })
       let url = 'regis'
       if(this.data.res){
-        url = 'update'
+        url = 'update/info'
       }
       app.com.post('wx/user/'+url, {
         wx_id: wx.getStorageSync("user").id,
@@ -106,13 +108,22 @@ Page({
         name: e.detail.value.name,
         card_num: e.detail.value.card_num,
         cert: _this.data.cert,
-        stu_card: _this.data.stu_card
+        stu_card: _this.data.stu_card,
+        id: _this.data.res ? _this.data.res.id:'',
+        a_id: wx.getStorageSync("area").pk_id
       }, function (res) {
         wx.hideLoading()
         if (res.code == 1) {
           wx.showToast({
             title: '提交成功',
           })
+          if (_this.data.res) {
+            wx.setStorageSync("res", _this.data.res)
+            _this.setData({
+              'res.state':0,
+              show:false
+            })
+          }
         } else {
           wx.showToast({
             title: res.msg,
@@ -123,20 +134,36 @@ Page({
       
     }
   },
-  
+  makePhone(){
+    wx.makePhoneCall({
+      phoneNumber: wx.getStorageSync("dl").phone,
+    })
+  },
   onLoad: function (options) {
     _this = this
     if(wx.getStorageSync("res")){
-      this.setData({
-        res: wx.getStorageSync("res"),
-        show:false,
-        cert: wx.getStorageSync("res").cert,
-        stu_card: wx.getStorageSync("res").stu_card,
-        name: wx.getStorageSync("res").name,
-        card_num: wx.getStorageSync("res").card_num,
-      })
+      this.getRes()
     }
-    
+  },
+  getRes() {
+    app.com.post('wx/user/get/info/wxid', { wx_id: wx.getStorageSync("res").wx_id }, function (res) {
+      if (res.code == 1) {
+        wx.setStorageSync("res", res.data)
+        _this.setData({
+          res: res.data,
+          show: false,
+          cert: res.data.cert,
+          stu_card: res.data.stu_card,
+          name: res.data.name,
+          card_num: res.data.card_num,
+        })
+      } else {
+        wx.showToast({
+          title: '失败',
+          icon: 'none'
+        })
+      }
+    })
   },
 
 

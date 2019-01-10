@@ -1,5 +1,5 @@
-<web-view src="{{url}}"></web-view>
-<!-- <view class='pa-30'>
+<!-- <web-view src="{{url}}"></web-view> -->
+<view class='pa-30'>
 
   <view class='bz'>
     <view style='height:60rpx'>
@@ -38,4 +38,4 @@
   </view>
  
 
-</view> -->
+</view>
