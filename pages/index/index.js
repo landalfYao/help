@@ -60,6 +60,7 @@ Page({
     _this = this
   },
   onShow(){
+    console.log(1)
     if(wx.getStorageSync('area')){
       this.setData({
         area: wx.getStorageSync('area'),
@@ -69,6 +70,12 @@ Page({
       wx.navigateTo({
         url: '/pages/area/area',
       })
+    }
+  },
+  onShareAppMessage(){
+    return {
+      title:'互帮互助代替你',
+      path:'/pages/index/index'
     }
   }
   

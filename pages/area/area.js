@@ -48,10 +48,8 @@ Page({
       console.log(res)
       if(res.code == 1){
         wx.setStorageSync("dl", res.data)
-        wx.navigateBack({
-          delta: 1
-        })
         _this.getServer(res.data.pk_id)
+        
       }else{
         wx.showToast({
           title: res.msg,

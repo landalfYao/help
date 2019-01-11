@@ -7,7 +7,7 @@
 <view style='height:90rpx'></view>
 
 <view class="pa-30">
-  <view class='titem' wx:for="{{list}}" >
+  <view class='titem' wx:for="{{list}}">
     <view data-id='{{item.id}}' data-names='id' data-path='/pages/order/detail/detail' bindtap='navTo'>
       <view class='panel-between'>
         <view class='panel-start item-center'>
@@ -19,7 +19,7 @@
         </view>
         <view class='state {{item.state== 0 ?"ste4":item.state== 1 ? "ste1":item.state== 2 ? "ste2":item.state == 3?"ste3":"ste5"}}'>{{item.state ==0?'待付款':item.state ==1 ? '需要帮助':item.state ==2?'已帮助':item.state ==3?"已完成":"已取消"}}</view>
       </view>
-      <view  style='margin-left:80rpx'>
+      <view style='margin-left:80rpx'>
         <view class='fo-28 ma-t10'>{{item.des}}</view>
         <view class='fo-26 ma-t10 fo-g' wx:if="{{item.qi != '' && item.qi != 'undefined'}}">起点: {{item.qi}}</view>
         <view class='fo-26 ma-t10 fo-t'>目的地: {{item.mu}}</view>
@@ -30,7 +30,22 @@
       <view class='bzBtn ma-l30' wx:if="{{item.state == 1 && item.wx_id != wx_id}}" data-id='{{item.id}}' bindtap='takeIt'>帮助TA</view>
       <view class='bzBtn3 ma-l30' wx:if="{{(item.state == 1 || item.state == 0) && item.wx_id == wx_id}}" data-id='{{item.id}}' bindtap='cancel'>取消</view>
       <view class='bzBtn2 ma-l30' wx:if="{{item.state == 0 && wx_id == item.wx_id}}" data-title='{{item.title}}' data-id='{{item.id}}' data-price='{{item.total_fee}}' bindtap='pay'>立即付款</view>
-      <view class='bzBtn4 ma-l30' wx:if="{{item.state == 2 && wx_id == item.wx_id}}"  data-id='{{item.id}}'  bindtap='comfirm'>确认完成</view>
+      <view class='bzBtn4 ma-l30' wx:if="{{item.state == 2 && wx_id == item.wx_id}}" data-id='{{item.id}}' bindtap='comfirm'>确认完成</view>
     </view>
   </view>
+</view>
+
+<view class='text-center' wx:if="{{list.length == 0 && !load }}">
+  <image src='/img/none.png' style='width:180rpx;height:180rpx'></image>
+  <view class='fo-g fo-26 text-center'>-- 暂无数据 --</view>
+</view>
+<view class="panel-center item-center" wx:if="{{load}}" style='margin-top:20rpx'>
+  <view class="three-quarters-loader">Loading</view>
+  <view class="loading-txt">加载中...</view>
+</view>
+
+<view class="panel-center item-center" wx:if="{{!load && total == list.length && total != 0}}" style='padding:30rpx;padding-top:0 '>
+  <view class='fg1'></view>
+  <view class='fg2'>我是有底线的</view>
+  <view class='fg1'></view>
 </view>

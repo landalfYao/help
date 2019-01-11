@@ -119,11 +119,12 @@ Page({
           })
           if (_this.data.res) {
             wx.setStorageSync("res", _this.data.res)
-            _this.setData({
-              'res.state':0,
-              show:false
-            })
+            
           }
+          _this.setData({
+            'res.state': 0,
+            show: false
+          })
         } else {
           wx.showToast({
             title: res.msg,
@@ -141,9 +142,7 @@ Page({
   },
   onLoad: function (options) {
     _this = this
-    if(wx.getStorageSync("res")){
-      this.getRes()
-    }
+    this.getRes()
   },
   getRes() {
     app.com.post('wx/user/get/info/wxid', { wx_id: wx.getStorageSync("res").wx_id }, function (res) {

@@ -10,6 +10,16 @@
 .fo-t{
   color: #6887e1
 }
+.fg1{
+  width: 80rpx;
+  border-bottom: 1px solid #aaaaaa
+}
+
+.fg2{
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  color: #888
+}
 .fo-bu{
   color: #0099ff
 }

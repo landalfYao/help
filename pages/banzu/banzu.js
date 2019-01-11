@@ -8,6 +8,7 @@ Page({
   data: {
     list:[],
     page:1,
+    load:false,
     size:10,
     tag:['校园帮','我发出的','我帮助的'],
     flag:0,
@@ -145,6 +146,9 @@ Page({
     } else {
       this.data.page += 1
     }
+    this.setData({
+      load:true
+    })
     app.com.post('help/'+this.data.url, {
       wheres:this.data.wheres,
       sorts:this.data.sorts,
@@ -169,9 +173,14 @@ Page({
         }
         _this.setData({
           list: arr,
-          total: res.data.total
+          total: res.data.total,
+          load:false
         })
       } else {
+        _this.setData({
+         
+          load: false
+        })
         wx.showToast({
           title: res.msg,
           icon: 'none'
