@@ -5,15 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url:''
+    address:'',
+    no:'',
+    page:0,
+    cai:false,
+    total_fee:0
   },
   chooseFile(){
-    wx.chooseImage({
-      count:1,
-      success: function(res) {
-        console.log(res)
-      },
+    wx.navigateTo({
+      url: '',
     })
+  },
+  pageInput(e){
+    this.data.page = e.detail.value
+    this.init()
   },
   /**
    * 生命周期函数--监听页面加载
@@ -22,57 +27,33 @@ Page({
     this.setData({
       msg:wx.getStorageSync("server")[options.index],
       price: wx.getStorageSync("server")[options.index].price_gui.split(','),
-      url: 'http://localhost:8080/#/dayin_wx?uid=' + wx.getStorageSync('user').id + '&data=' + JSON.stringify(wx.getStorageSync("server")[options.index])
     })
-    console.log(this.data.url)
+    this.init()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  formSubmit(e){
+    console.log(e)
   },
+  switch1Change(e){
+    this.setData({
+      cai:e.detail.value
+    })
+    this.init()
+  },  
+  
+  init(){
+    let chenben = 0
+    let tui = parseFloat(this.data.price[2])
+    if(this.data.cai){
+      chenben = parseFloat(this.data.price[1])
+    }else{
+      chenben = parseFloat(this.data.price[0])
+    }
+    let page = this.data.page ? parseFloat(this.data.page) : 0
+    let total = 0
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    total = chenben*page+tui
+    this.setData({
+      total_fee:total
+    })
   }
 })

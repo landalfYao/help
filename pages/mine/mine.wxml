@@ -8,28 +8,32 @@
     </view>
   </view>
 
-  <view class='panel panel-between item-center ma-t20'>
-    <view class='panel-start'>
+  <view class='panel panel-between item-center ma-t20' data-path='/pages/mine/info/info' bindtap='navTo'>
+    <view class='panel-start item-center'>
+      <image src='/img/d1.png' class='icon-35 ma-r20'></image>
       <view class='fo-28'>我的信息</view>
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
 
   <view class='panel panel-between item-center ma-t20 border-b'>
-    <view class='panel-start'>
+    <view class='panel-start item-center'>
+    <image src='/img/d2.png' class='icon-35 ma-r20'></image>
       <view class='fo-28'>问题反馈</view>
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
   <view class='panel panel-between item-center'>
-    <view class='panel-start'>
+    <view class='panel-start item-center'>
+      <image src='/img/d3.png' class='icon-35 ma-r20'></image>
       <view class='fo-28'>电话客服</view>
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
 
   <view class='panel panel-between item-center ma-t20 ' data-path='/pages/register/register' bindtap='navTo'>
-    <view class='panel-start'>
+    <view class='panel-start item-center'>
+      <image src='/img/d4.png' class='icon-35 ma-r20'></image>
       <view class='fo-28'>申请接单</view>
     </view>
     <image src='/img/right.png' class='icon-25'></image>

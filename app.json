@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/order/order",
     "pages/mine/mine",
+    "pages/mine/info/info",
     "pages/area/area",
     "pages/login/login",
     "pages/payment/payment",

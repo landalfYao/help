@@ -9,16 +9,20 @@
     </view>
     <form bindsubmit="formSubmit" report-submit="true">
       <view class=' pa-b20  panel-between item-center border-b'>
-        <view class='fo-30'>打印原件</view>
+        <view class='fo-30'>添加打印原件</view>
         <view class='day' bindtap='chooseFile'>+</view>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+        <view class='fo-30'>原件号码</view>
+        <input class='fo-30 text-right' name="no" style='width:450rpx' placeholder='(原件上传后会生成原件号码)'></input>
+      </view>
+      <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>收件地址</view>
-        <input class='fo-30 text-right' placeholder='输入详细地址'></input>
+        <input class='fo-30 text-right' name='address' placeholder='输入详细地址'></input>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>页数</view>
-        <input class='fo-30 text-right' type='number' placeholder='输入页数'></input>
+        <input class='fo-30 text-right' bindinput='pageInput' name="page" type='number' placeholder='输入页数'></input>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>是否彩印</view>
@@ -30,12 +34,9 @@
         <text class='fo-m'>{{price[2]}}元</text>
       </view>
       <view class='fo-26 text-center ma-t30'>需支付</view>
-      <view class='text-center fo-40 bold ma-t20 fo-m'>1
+      <view class='text-center fo-40 bold ma-t20 fo-m'>{{total_fee}}
         <text class='fo-26'>元</text> </view>
       <button class='btns ' form-type="submit">立即发布帮助</button>
     </form>
-
   </view>
- 
-
 </view>

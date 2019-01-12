@@ -34,6 +34,7 @@ Page({
         openid: wx.getStorageSync("user").openid, 
         des: e.detail.value.des,
         wx_id: wx.getStorageSync("user").id,
+        openid: wx.getStorageSync("user").openid,
         total_fee: e.detail.value.price,
         a_id: wx.getStorageSync("area").pk_id,
         title:this.data.title,

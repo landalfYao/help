@@ -1,0 +1,32 @@
+<view class='pa-l30 pa-r30 pa-t20 pa-b20 fo-g fo-26'>
+  可直接修改信息
+</view>
+<form bindsubmit="formSubmit">
+<view class='bg-w' style='padding:0 30rpx'>
+  <view class='panel panel-between border-b item-center' style='padding:30rpx 0'>
+    <view class='fo-30'>昵称</view>
+    <view class='panel-end item-center'>
+      <input name="nick_name" class='fo-30 fo-g text-right' value='{{msg.nick_name}}'></input>
+      <!-- <image src='/img/right.png' class='icon-25 ma-l20'></image> -->
+    </view>
+  </view>
+  <view class='panel panel-between border-b item-center' style='padding:30rpx 0'>
+    <view class='fo-30'>手机号</view>
+    <view class='panel-end item-center'>
+      <input name="phone" class='fo-30 fo-g text-right' value='{{msg.phone}}'></input>
+      <!-- <image src='/img/right.png' class='icon-25 ma-l20'></image> -->
+    </view>
+  </view>
+  <view class='panel panel-between item-center' style='padding:30rpx 0'>
+    <view class='fo-30'>短号</view>
+    <view class='panel-end item-center'>
+      <input name="dphone" class='fo-30 fo-g text-right' value='{{msg.dphone}}'></input>
+      <!-- <image src='/img/right.png' class='icon-25 ma-l20'></image> -->
+    </view>
+  </view>
+</view>
+
+<view class='pa-30'>
+  <button class='btns' form-type='submit'>保存修改</button>
+</view>
+</form>

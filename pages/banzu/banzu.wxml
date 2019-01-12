@@ -8,7 +8,7 @@
 
 <view class="pa-30">
   <view class='titem' wx:for="{{list}}">
-    <view data-id='{{item.id}}' data-names='id' data-path='/pages/order/detail/detail' bindtap='navTo'>
+    <view data-id='{{item.id}}'  data-path='/pages/order/detail/detail' data-names='id' bindtap='navTo'>
       <view class='panel-between'>
         <view class='panel-start item-center'>
           <image src='{{item.avatar_url}}' class='avatar' mode='aspectFill'></image>
@@ -27,7 +27,7 @@
     </view>
     <view class='panel-end item-center ma-t10'>
       <view class='state ste4'>悬赏￥{{item.total_fee}}</view>
-      <view class='bzBtn ma-l30' wx:if="{{item.state == 1 && item.wx_id != wx_id}}" data-id='{{item.id}}' bindtap='takeIt'>帮助TA</view>
+      <view class='bzBtn ma-l30' wx:if="{{item.state == 1 && item.wx_id != wx_id}}" data-index='{{index}}' data-openid='{{item.openid}}' data-formid='{{item.form_id}}'  bindtap='takeIt'>帮助TA</view>
       <view class='bzBtn3 ma-l30' wx:if="{{(item.state == 1 || item.state == 0) && item.wx_id == wx_id}}" data-id='{{item.id}}' bindtap='cancel'>取消</view>
       <view class='bzBtn2 ma-l30' wx:if="{{item.state == 0 && wx_id == item.wx_id}}" data-title='{{item.title}}' data-id='{{item.id}}' data-price='{{item.total_fee}}' bindtap='pay'>立即付款</view>
       <view class='bzBtn4 ma-l30' wx:if="{{item.state == 2 && wx_id == item.wx_id}}" data-id='{{item.id}}' bindtap='comfirm'>确认完成</view>

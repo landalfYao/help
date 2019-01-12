@@ -57,8 +57,10 @@
 </view>
 
 <view class='fix-b panel-end itme-center'>
-  <view class='bzbtn ' wx:if="{{list.state == 1 && list.wx_id != wx_id}}">帮助TA</view>
+  <view class='bzbtn ' wx:if="{{list.state == 1 && list.wx_id != wx_id}}" bindtap='takeIt'>帮助TA</view>
   <view class='bzbtn3 ' wx:if="{{(list.state == 1 || list.state == 0) && list.wx_id == wx_id}}" data-id='{{list.id}}' bindtap='cancel'>取消</view>
   <view class='bzbtn2 ' wx:if="{{list.state == 0 && wx_id == list.wx_id}}" data-title='{{list.title}}' data-id='{{list.id}}' data-price='{{list.total_fee}}' bindtap='pay'>立即付款</view>
   <view class='bzbtn4 ma-l30' wx:if="{{list.state == 2 && wx_id == list.wx_id}}"  data-id='{{list.id}}'  bindtap='comfirm'>确认完成</view>
 </view>
+
+<view class='pa-30 fo-30 fo-g' wx:if="{{list.is_pay == 1}}">订单编号：{{list.order_num}}</view>

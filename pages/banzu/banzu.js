@@ -35,8 +35,10 @@ Page({
     })
   },
   takeIt(e){
+    let index = e.currentTarget.dataset.index
+    let msg = this.data.list[index]
     if (wx.getStorageSync("res").state == 1){
-      this.takeDo(e.currentTarget.dataset.id)
+      this.takeDo(msg)
     }else{
       wx.showModal({
         title: '提示',
@@ -54,11 +56,20 @@ Page({
     
     
   },
-  takeDo(id){
+  takeDo(msg){
+    wx.showLoading({
+      title: '请稍等',
+      task:true
+    })
     app.com.post('help/jd', {
       jd_id: wx.getStorageSync("user").id,
-      id: id
+      id: msg.id,
+      openid:msg.openid,
+      form_id:msg.form_id,
+      title:msg.title,
+      order_num:msg.order_num
     }, function (res) {
+      wx.hideLoading()
       if (res.code == 1) {
         wx.showToast({
           title: '接单成功',
@@ -73,6 +84,10 @@ Page({
     })
   },
   pay(e) {
+    wx.showLoading({
+      title: '请稍等',
+      task: true
+    })
     app.com.post('help/pay', {
       title: e.currentTarget.dataset.title,
       openid: wx.getStorageSync("user").openid,
@@ -81,6 +96,7 @@ Page({
     }, function (res) {
       if (res.code == 1) {
         app.com.wxpay(res,function(res){
+          wx.hideLoading()
           if(res){
             _this.getList(0)
           }
@@ -94,7 +110,12 @@ Page({
       content: '确定要取消吗？',
       success(res){
         if(res.confirm){
+          wx.showLoading({
+            title: '请稍等',
+            task: true
+          })
           app.com.cancel(e.currentTarget.dataset.id, 'navigateTo',function(res){
+            wx.hideLoading()
             if(res){
               _this.getList(0)
             }

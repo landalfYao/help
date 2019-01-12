@@ -8,13 +8,66 @@ Page({
   data: {
     wx_id:wx.getStorageSync("user").id
   },
+  takeIt(e) {
+    let msg = this.data.list
+    if (wx.getStorageSync("res").state == 1) {
+      this.takeDo(msg)
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '您还不是接单员，是否前往申请',
+        confirmText: '立即前往',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/register/register',
+            })
+          }
+        }
+      })
+    }
+
+
+  },
+  takeDo(msg) {
+    wx.showLoading({
+      title: '请稍等',
+      task: true
+    })
+    app.com.post('help/jd', {
+      jd_id: wx.getStorageSync("user").id,
+      id: msg.id,
+      openid: msg.openid,
+      form_id: msg.form_id,
+      title: msg.title,
+      order_num: msg.order_num
+    }, function (res) {
+      wx.hideLoading()
+      if (res.code == 1) {
+        wx.showToast({
+          title: '接单成功',
+        })
+        _this.getList(0)
+      } else {
+        wx.showToast({
+          title: '接单失败',
+          icon: 'none'
+        })
+      }
+    })
+  },
   cancel(e) {
     wx.showModal({
       title: '提示',
       content: '确定要取消吗？',
       success(res) {
         if (res.confirm) {
+          wx.showLoading({
+            title: '请稍等',
+            task: true
+          })
           app.com.cancel(e.currentTarget.dataset.id, 'navigateTo', function (res) {
+            wx.hideLoading()
             if (res) {
               _this.getList(e.currentTarget.dataset.id)
             }
@@ -32,7 +85,12 @@ Page({
       total_fee: e.currentTarget.dataset.price
     },function(res){
       if(res.code == 1){
-        app.com.wxpay(res)
+        app.com.wxpay(res,function(res){
+          wx.hideLoading()
+          if (res) {
+            _this.getList(_this.data.id)
+          }
+        })
       }
     })
   },
@@ -41,6 +99,9 @@ Page({
    */
   onLoad: function (options) {
     _this = this
+    this.setData({
+      id:options.id
+    })
     this.getList(options.id)
   },
   getList(id) {
@@ -56,7 +117,7 @@ Page({
           total: res.data.total
         })
         if(re[0].jd_id){
-          _this.getJd()
+          _this.getJd(re[0].jd_id)
         }
       } else {
         wx.showToast({
@@ -66,9 +127,9 @@ Page({
       }
     })
   },
-  getJd(){
+  getJd(id){
     app.com.post('wx/user/get/id',{
-      id: wx.getStorageSync("user").id
+      id: id
     },function(res){
       if(res.code == 1){
         _this.setData({

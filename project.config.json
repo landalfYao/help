@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -122,6 +122,11 @@
 					"name": "sq",
 					"pathName": "pages/register/register",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的信息",
+					"pathName": "pages/mine/info/info"
 				}
 			]
 		}
