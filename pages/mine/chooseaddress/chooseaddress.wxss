@@ -1,0 +1,23 @@
+.scroll{
+  height: 100rpx;
+  white-space: nowrap; 
+}
+.fix-t{
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0
+}
+page{
+  background-color: #f3f3f3
+}
+.yitem{
+  width: 150rpx;
+  text-align: center;
+  display: inline-block
+}
+.lined{
+  margin: auto;
+  width: 60rpx;
+  border: 4rpx solid #000
+}

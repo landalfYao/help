@@ -1,0 +1,16 @@
+<view class='fix-t border-t'>
+  <scroll-view scroll-x="true" class='scroll' >
+    <view class='yitem' wx:for="{{cate}}" wx:key="{{index}}" data-index='{{index}}' bindtap='changeTag'>
+      <view class='fo-28 lh-100 {{index == flag ? "bold":"fo-g"}}' style='line-height:96rpx'>{{item.name}}</view>
+      <view class='lined' wx:if="{{index == flag}}"></view>
+    </view>
+  </scroll-view>
+</view>
+<view style='height:120rpx'></view>
+
+<view class='pa-l30 pa-r30 bg-w'>
+  <view class='bg-w pa-t30 pa-b30 border-b panel-start' wx:for="{{list}}" wx:key="index">
+    <view class='fo-30'>{{item.name}}</view>
+    <view class='fo-28 fo-g'>-{{item.sub_name}}</view>
+  </view>
+</view>

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -126,7 +126,25 @@
 				{
 					"id": -1,
 					"name": "我的信息",
-					"pathName": "pages/mine/info/info"
+					"pathName": "pages/mine/info/info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的地址",
+					"pathName": "pages/mine/address/address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新增地址",
+					"pathName": "pages/mine/addressinfo/addressinfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择地址",
+					"pathName": "pages/mine/chooseaddress/chooseaddress"
 				}
 			]
 		}

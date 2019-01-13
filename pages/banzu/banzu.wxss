@@ -53,7 +53,7 @@ page{
 }
 .ste4{
   background-color: rgba(255, 102, 102,0.08);
-  color: rgb(255, 102, 102)
+  color: #ff6666
 }
 .ste5{
   background-color: rgba(136, 136, 136,0.08);

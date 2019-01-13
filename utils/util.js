@@ -1,6 +1,6 @@
 const util = {
   // API: 'https://hapi.ypyzy.top/api/',
-  API:'http://192.168.0.106:3333/api/',
+  API:'http://192.168.1.3:3333/api/',
 
   /**
    * 获取窗口大小

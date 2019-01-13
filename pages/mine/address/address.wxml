@@ -1,0 +1,23 @@
+<view class="pa-30">
+  <view class='panel shadow ra-10 ma-b30'>
+    <view class='fo-30'>南区-21号楼-6楼507</view>
+    <view class='panel-between item-center ma-t20'>
+      <view class='panel-start item-center'>
+        <icon size="14" type='success' color='#0099ff'></icon>
+        <view class='ma-l20 fo-24' style='color:#0099ff'>默认地址</view>
+      </view>
+      <view class='panel-end item-center'>
+        <view class='panel-start item-center'>
+          <image src='/img/bj.png' class='icon-30'></image>
+          <view class='fo-26 ma-l10'>编辑</view>
+        </view>
+        <view class='panel-start item-center ma-l30'>
+          <image src='/img/ljt.png' class='icon-30'></image>
+          <view class='fo-26 ma-l10' style='color:#ff6666'>删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='btnns' data-path='/pages/mine/addressinfo/addressinfo' bindtap='navTo'>+</view>

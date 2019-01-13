@@ -1,0 +1,13 @@
+.btnns{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  box-shadow: 0 0 10rpx 0 rgba(0, 153, 255, 0.363);
+  background:linear-gradient(to right top,#6183dd,#6e42d3);
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff
+}

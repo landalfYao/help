@@ -60,7 +60,6 @@ Page({
     _this = this
   },
   onShow(){
-    console.log(1)
     if(wx.getStorageSync('area')){
       this.setData({
         area: wx.getStorageSync('area'),

@@ -4,6 +4,7 @@
     "pages/order/order",
     "pages/mine/mine",
     "pages/mine/info/info",
+    "pages/mine/address/address",
     "pages/area/area",
     "pages/login/login",
     "pages/payment/payment",
@@ -13,7 +14,8 @@
     "pages/banzu/banzu",
     "pages/order/detail/detail",
     "pages/register/register",
-    "pages/register/success/success"
+    "pages/mine/addressinfo/addressinfo",
+    "pages/mine/chooseaddress/chooseaddress"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",
