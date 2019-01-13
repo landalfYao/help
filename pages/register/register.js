@@ -46,18 +46,22 @@ Page({
         url: app.com.API + 'file/upload', // 仅为示例，非真实的接口地址
         filePath: this.data[name],
         name: 'file',
+        formData:{
+          wx_id:wx.getStorageSync("user").id,
+          a_id:wx.getStorageSync("area").pk_id
+        },
         success(res) {
           wx.hideLoading()
           let red = JSON.parse(res.data)
-          if (red.data) {
+          if (red.code == 1) {
             
             if(name == 'cert'){
               _this.setData({
-                cert: red.data
+                cert: red.data.url
               })
             }else{
               _this.setData({
-                stu_card: red.data
+                stu_card: red.data.url
               })
             }
             
