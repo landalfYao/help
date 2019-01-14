@@ -78,6 +78,7 @@ Page({
     app.com.post('user/address/get',{
       pageIndex:1,
       pageSize:1000,
+      wheres:'is_delete=0 and wx_id='+wx.getStorageSync("user").id,
       sorts:'create_time desc'
     },function(res){
       if(res.code == 1){

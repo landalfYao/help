@@ -6,9 +6,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    list:[],
+    load:false,
+    search:'',
+    wheres:''
   },
-
+  searchInput(e){
+    let search = e.detail.value
+    if(search == ''){
+      this.data.wheres = ''
+    }else{
+      this.data.wheres = 'is_delete=0 and name like "%'+search+'%"'
+    }
+    this.getArea()
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,10 +37,18 @@ Page({
     _this.getDail(this.data.list[index].pk_id)
   },
   getArea(){
-    app.com.get('area/wxget',{},function(res){
+    this.setData({
+      load:true
+    })
+    app.com.post('area/get',{
+      pageIndex:1,
+      pageSize:1000,
+      wheres:this.data.wheres
+    },function(res){
       if(res.code == 1){
         _this.setData({
-          list: res.data
+          list: res.data.list,
+          load:false
         })
         
       }else{

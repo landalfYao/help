@@ -2,7 +2,7 @@
 <view class='fixt bg-g panel-between item-center'>
   <view class='panel-start item-center'>
     <image src='/img/search2.png' class='icon-30'></image>
-    <input class='fo-28 ma-l30 fo-w' style='width:600rpx' auto-focus='true' placeholder-class='fo-w' placeholder='输入关键字搜索'></input>
+    <input class='fo-28 ma-l30 fo-w' style='width:600rpx' auto-focus='true' placeholder-class='fo-w' placeholder='输入关键字搜索' bindinput='searchInput'></input>
   </view>
 </view>
 
@@ -10,4 +10,19 @@
   <view class='pa-t30 pa-b30 border-b fo-28' wx:for="{{list}}" data-index='{{index}}' bindtap='checkedIt'>
     {{item.name}}
   </view>
+</view>
+
+<view class='text-center' wx:if="{{list.length == 0 && !load }}">
+  <image src='/img/none.png' style='width:180rpx;height:180rpx'></image>
+  <view class='fo-g fo-26 text-center'>-- 暂无数据 --</view>
+</view>
+<view class="panel-center item-center" wx:if="{{load}}" style='margin-top:20rpx'>
+  <view class="three-quarters-loader">Loading</view>
+  <view class="loading-txt">加载中...</view>
+</view>
+
+<view class="panel-center item-center ma-t30" wx:if="{{!load }}" style='padding:30rpx;padding-top:0 '>
+  <view class='fg1'></view>
+  <view class='fg2'>我是有底线的</view>
+  <view class='fg1'></view>
 </view>

@@ -34,6 +34,7 @@ Page({
       title: '请稍等',
       task: true
     })
+    
     app.com.post('help/jd', {
       jd_id: wx.getStorageSync("user").id,
       id: msg.id,
@@ -47,7 +48,7 @@ Page({
         wx.showToast({
           title: '接单成功',
         })
-        _this.getList(0)
+        _this.getList(_this.data.list.id)
       } else {
         wx.showToast({
           title: '接单失败',
