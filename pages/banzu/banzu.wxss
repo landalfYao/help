@@ -29,6 +29,7 @@ page{
   width: 60rpx;
   height: 60rpx;
   border-radius: 60rpx;
+  background: #e1e1e1
 }
 .state{
   padding:0 15rpx;

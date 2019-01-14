@@ -21,7 +21,7 @@
       </view>
       <view style='margin-left:80rpx'>
         <view class='fo-28 ma-t10'>{{item.des}}</view>
-        <view class='fo-26 ma-t10 fo-g' wx:if="{{item.qi != '' && item.qi != 'undefined'}}">起点: {{item.qi}}</view>
+        <view class='fo-26 ma-t10 fo-g' wx:if="{{item.qi != '' && item.qi != 'undefined' && item.qi != null}}">起点: {{item.qi}}</view>
         <view class='fo-26 ma-t10 fo-t'>目的地: {{item.mu}}</view>
       </view>
     </view>

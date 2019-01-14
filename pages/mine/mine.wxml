@@ -22,15 +22,16 @@
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
-
-  <view class='panel panel-between item-center ma-t20 border-b'>
-    <view class='panel-start item-center'>
-    <image src='/img/d2.png' class='icon-35 ma-r20'></image>
-      <view class='fo-28'>问题反馈</view>
+  <button class='filter-btn' open-type='contact'>
+    <view class='panel panel-between item-center ma-t20 border-b'>
+      <view class='panel-start item-center'>
+      <image src='/img/d2.png' class='icon-35 ma-r20'></image>
+        <view class='fo-28'>微信客服</view>
+      </view>
+      <image src='/img/right.png' class='icon-25'></image>
     </view>
-    <image src='/img/right.png' class='icon-25'></image>
-  </view>
-  <view class='panel panel-between item-center'>
+  </button>
+  <view class='panel panel-between item-center' bindtap='makePhone'>
     <view class='panel-start item-center'>
       <image src='/img/d3.png' class='icon-35 ma-r20'></image>
       <view class='fo-28'>电话客服</view>

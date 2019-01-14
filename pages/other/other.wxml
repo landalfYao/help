@@ -14,12 +14,15 @@
       </view>
       <view class='panel-between border-b pa-t30 pa-b10 ' wx:if="{{title == '校园跑腿'}}">
         <view class='fo-28 bold'>取货地点(必填):</view>
-        <input class='text-right fo-28'  name='qi' value="{{phone}}" placeholder='输入取货地点'></input>
+        <input class='text-right fo-28'  name='qi'  placeholder='输入取货地点'></input>
       </view>
-      <view class='panel-between border-b pa-t30 pa-b10 '>
-        <view class='fo-28 bold'>目的地(必填):</view>
-        <input class='text-right fo-28'  name='mu' value="{{phone}}" placeholder='输入帮助地点'></input>
-      </view>
+      <view class='pa-t30 pa-b30 panel-between item-center border-b' data-path='/pages/mine/address/address?choose=1' bindtap='navTo'>
+          <view class='fo-30'>帮助地点(必选)</view>
+          <view class='panel-end item-center'>
+            <view class='fo-30 fo-g'>{{address ? address:'请选择地址'}}</view>
+            <image src='/img/right.png' class='icon-30 ma-l20'></image>
+          </view>
+        </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>赏金(必填):</view>
         <input class='text-right fo-28' type='digit' name='price' value="{{price}}" placeholder='输入金额(元)'></input>

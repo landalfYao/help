@@ -7,7 +7,21 @@ Page({
    */
   data: {
     cate:[],
-    flag:0
+    flag:0,
+    load:false,
+    lisst:[]
+  },
+  chooseIt(e){
+    let index = e.currentTarget.dataset.index
+    let pages = getCurrentPages();
+    let currPage = pages[pages.length - 1];   //当前页面
+    let prevPage = pages[pages.length - 2];
+    prevPage.setData({
+      address: this.data.cate[this.data.flag].name+'-'+this.data.list[index].name
+    })
+    wx.navigateBack({
+      delta:1
+    })
   },
   changeTag(e){
     this.setData({
@@ -39,6 +53,9 @@ Page({
     })
   },
   getList(cate_id){
+    this.setData({
+      load:true
+    })
     app.com.post('address/get',{
       pageIndex: 1,
       pageSize: 1000,
@@ -47,7 +64,8 @@ Page({
     },function(res){
       if(res.code == 1){
         _this.setData({
-          list:res.data.list
+          list:res.data.list,
+          load:false
         })
       }
     })

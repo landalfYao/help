@@ -14,9 +14,16 @@
             <view wx:for="{{kdtype}}" class='{{index == flag ? "fgh2":"fgh"}}' data-index='{{index}}' bindtap='change'>{{item.la}}</view>
           </view>
         </view>
-        <view class='pa-t30 panel-between item-center border-b pa-b20'>
+        <!-- <view class='pa-t30 panel-between item-center border-b pa-b20'>
           <view class='fo-30'>收件地址</view>
           <input class='fo-30 text-right' name="mu" placeholder='输入详细地址(必填)'></input>
+        </view> -->
+        <view class='pa-t30 pa-b30 panel-between item-center border-b' data-path='/pages/mine/address/address?choose=1' bindtap='navTo'>
+          <view class='fo-30'>收件地址</view>
+          <view class='panel-end item-center'>
+            <view class='fo-30 fo-g'>{{address ? address:'请选择地址'}}</view>
+            <image src='/img/right.png' class='icon-30 ma-l20'></image>
+          </view>
         </view>
         <view class='pa-t30 panel-between item-center border-b pa-b20'>
           <view class='fo-30'>备注信息</view>

@@ -9,8 +9,23 @@
 <view style='height:120rpx'></view>
 
 <view class='pa-l30 pa-r30 bg-w'>
-  <view class='bg-w pa-t30 pa-b30 border-b panel-start' wx:for="{{list}}" wx:key="index">
+  <view class='bg-w pa-t30 pa-b30 border-b panel-start' wx:for="{{list}}" wx:key="index" data-index='{{index}}' bindtap='chooseIt'>
     <view class='fo-30'>{{item.name}}</view>
     <view class='fo-28 fo-g'>-{{item.sub_name}}</view>
   </view>
+</view>
+
+<view class='text-center' wx:if="{{list.length == 0 && !load }}">
+  <image src='/img/none.png' style='width:180rpx;height:180rpx'></image>
+  <view class='fo-g fo-26 text-center'>-- 暂无数据 --</view>
+</view>
+<view class="panel-center item-center" wx:if="{{load}}" style='margin-top:20rpx'>
+  <view class="three-quarters-loader">Loading</view>
+  <view class="loading-txt">加载中...</view>
+</view>
+
+<view class="panel-center item-center ma-t30" wx:if="{{!load }}" style='padding:30rpx;padding-top:0 '>
+  <view class='fg1'></view>
+  <view class='fg2'>没有更多了</view>
+  <view class='fg1'></view>
 </view>

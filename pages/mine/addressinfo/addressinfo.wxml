@@ -15,12 +15,12 @@
       <view class='fo-30 ma-l20'>详细地址</view>
     </view>
     <view class='panel-end item-center'>
-      <input class='fo-30 fo-g text-right' bindinput='bInput' placeholder='输入门牌号'></input>
+      <input class='fo-30 fo-g text-right' value='{{detail}}' bindinput='bInput' placeholder='输入门牌号'></input>
     </view>
   </view>
   <view class='pa-t30 pa-b30 panel-end item-center'>
     <view class='fo-26 fo-g'>是否设为默认地址</view>
-    <switch checked='{{false}}' color='#0099ff' class='ma-l20'></switch>
+    <switch checked='{{mo}}' bindchange='dchange' color='#0099ff' class='ma-l20'></switch>
   </view>
 
   <view class='pa-30'>

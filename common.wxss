@@ -472,3 +472,25 @@
 .w-70{
   width: 70%
 }
+.filter-btn{
+  background: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  line-height: unset;
+  box-sizing: unset;
+  -webkit-tap-highlight-color: unset;
+  position: unset;
+  display: block
+}
+.filter-btn::after{
+  background: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  line-height: unset;
+  box-sizing: unset;
+  -webkit-tap-highlight-color: unset;
+  position: unset;
+  display: block
+}

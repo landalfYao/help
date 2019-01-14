@@ -13,6 +13,7 @@ page {
   display: block;
   border: 5rpx solid #fff;
   box-shadow: 0 0 20rpx 0 #fff;
+  background: #e1e1e1
 }
 
 .state {

@@ -10,6 +10,11 @@ Page({
   navTo(e) {
     app.com.navTo(e)
   },
+  makePhone(){
+    wx.makePhoneCall({
+      phoneNumber: wx.getStorageSync("dl").phone,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

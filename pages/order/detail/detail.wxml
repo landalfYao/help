@@ -15,7 +15,7 @@
     </view>
     <view class='w-20 border-b ma-t30'></view>
     <view class='fo-30 ma-t30'>{{list.des}}</view>
-    <view class='fo-26 ma-t30 fo-g' wx:if="{{list.qi != '' && list.qi != 'undefined'}}">起点：{{list.qi}}</view>
+    <view class='fo-26 ma-t30 fo-g' wx:if="{{list.qi != '' && list.qi != 'undefined' && list.qi != null}}">起点：{{list.qi}}</view>
     <view class='fo-26 ma-t30 fo-g'>目的地：{{list.mu}}</view>
     <view class='state ste4 ma-t30'>赏金￥{{list.total_fee}}</view>
     <view class='panel-end' style='height:30rpx'>
@@ -45,7 +45,7 @@
   <view class='panel ra-10 shadow'>
     <view class='panel-between item-center'>
       <view class='panel-start item-center'>
-        <image src='{{jduser.avatar_url}}' mode='aspectFill' style="width:80rpx;height:80rpx;border-radius:100rpx"></image>
+        <image src='{{jduser.avatar_url}}' mode='aspectFill' style="width:80rpx;height:80rpx;border-radius:100rpx;background: #e1e1e1"></image>
         <view class='fo-28 bold ma-l30'>{{jduser.nick_name}}</view>
       </view>
       <view class='panel-end item-center'>

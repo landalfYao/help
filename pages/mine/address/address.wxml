@@ -1,23 +1,40 @@
 <view class="pa-30">
-  <view class='panel shadow ra-10 ma-b30'>
-    <view class='fo-30'>南区-21号楼-6楼507</view>
+  <view class='panel shadow ra-10 ma-b30' wx:for="{{list}}" wx:key="{{index}}" data-index='{{index}}' bindtap='{{choose == 1 ? "chooseIt":""}}'>
+    <view class='fo-30'>{{item.address + '-'+item.detail}}</view>
     <view class='panel-between item-center ma-t20'>
-      <view class='panel-start item-center'>
-        <icon size="14" type='success' color='#0099ff'></icon>
-        <view class='ma-l20 fo-24' style='color:#0099ff'>默认地址</view>
+      <view>
+        <view class='panel-start item-center' wx:if="{{item.id == defId}}">
+          <icon size="14" type='success' color='#0099ff'></icon>
+          <view class='ma-l20 fo-24' style='color:#0099ff'>默认地址</view>
+        </view>
       </view>
       <view class='panel-end item-center'>
-        <view class='panel-start item-center'>
+        <view class='panel-start item-center' data-index='{{index}}' bindtap='bj'>
           <image src='/img/bj.png' class='icon-30'></image>
           <view class='fo-26 ma-l10'>编辑</view>
         </view>
-        <view class='panel-start item-center ma-l30'>
+        <view class='panel-start item-center ma-l30' data-index='{{index}}' bindtap='del'>
           <image src='/img/ljt.png' class='icon-30'></image>
           <view class='fo-26 ma-l10' style='color:#ff6666'>删除</view>
         </view>
       </view>
     </view>
   </view>
+</view>
+
+<view class='text-center' wx:if="{{list.length == 0 && !load }}">
+  <image src='/img/none.png' style='width:180rpx;height:180rpx'></image>
+  <view class='fo-g fo-26 text-center'>-- 暂无数据 --</view>
+</view>
+<view class="panel-center item-center" wx:if="{{load}}" style='margin-top:20rpx'>
+  <view class="three-quarters-loader">Loading</view>
+  <view class="loading-txt">加载中...</view>
+</view>
+
+<view class="panel-center item-center ma-t30" wx:if="{{!load }}" style='padding:30rpx;padding-top:0 '>
+  <view class='fg1'></view>
+  <view class='fg2'>没有更多了</view>
+  <view class='fg1'></view>
 </view>
 
 <view class='btnns' data-path='/pages/mine/addressinfo/addressinfo' bindtap='navTo'>+</view>

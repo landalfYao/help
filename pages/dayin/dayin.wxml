@@ -8,21 +8,29 @@
       </view>
     </view>
     <form bindsubmit="formSubmit" report-submit="true">
-      <view class=' pa-b20  panel-between item-center border-b'>
+      <view class=' pa-b20  panel-between item-center border-b' bindtap='chooseFile'>
         <view class='fo-30'>添加打印原件</view>
-        <view class='day' bindtap='chooseFile'>+</view>
+        <view class='day' wx:if="{{!file}}">+</view>
+        <view wx:if="{{file}}" class='ell fo-28 text-right' style='width:300rpx'>{{file.filename}}</view>
       </view>
-      <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+      <!-- <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>原件号码</view>
         <input class='fo-30 text-right' name="no" style='width:450rpx' placeholder='(原件上传后会生成原件号码)'></input>
-      </view>
-      <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+      </view> -->
+      <view class='pa-t30 pa-b30 panel-between item-center border-b' data-path='/pages/mine/address/address?choose=1' bindtap='navTo'>
         <view class='fo-30'>收件地址</view>
-        <input class='fo-30 text-right' name='address' placeholder='输入详细地址'></input>
+        <view class='panel-end item-center'>
+          <view class='fo-30 fo-g'>{{address ? address:'请选择地址'}}</view>
+          <image src='/img/right.png' class='icon-30 ma-l20'></image>
+        </view>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>页数</view>
         <input class='fo-30 text-right' bindinput='pageInput' name="page" type='number' placeholder='输入页数'></input>
+      </view>
+      <view class='pa-t30 pa-b20 panel-between item-center border-b'>
+        <view class='fo-30'>备注</view>
+        <input class='fo-30 text-right' name="des" placeholder='备注信息'></input>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
         <view class='fo-30'>是否彩印</view>

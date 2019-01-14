@@ -8,7 +8,9 @@ Page({
     des: '',
     phone: ''
   },
-
+  navTo(e) {
+    app.com.navTo(e)
+  },
   formSubmit(e) {
     let formId = e.detail.formId
     if (e.detail.value.des == '') {
@@ -21,9 +23,9 @@ Page({
         title: '请输入赏金',
         icon: 'none'
       })
-    } else if (e.detail.value.mu == ''){
+    } else if (this.data.address == ''){
       wx.showToast({
-        title: '请输入目的地',
+        title: '请选择目的地',
         icon: 'none'
       })
     }else {
@@ -34,11 +36,10 @@ Page({
         openid: wx.getStorageSync("user").openid, 
         des: e.detail.value.des,
         wx_id: wx.getStorageSync("user").id,
-        openid: wx.getStorageSync("user").openid,
         total_fee: e.detail.value.price,
         a_id: wx.getStorageSync("area").pk_id,
         title:this.data.title,
-        mu: e.detail.value.mu,
+        mu: this.data.address,
         qi: e.detail.value.qi,
         form_id: e.detail.formId,
       }, function (res) {

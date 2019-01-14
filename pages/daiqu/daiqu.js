@@ -7,7 +7,11 @@ Page({
    */
   data: {
     kdtype: [{ la: '小件', price: 1 }, { la: '中件', price: 2 }, { la: '大件', price: 3 }],
-    flag:0
+    flag:0,
+    address:''
+  },
+  navTo(e) {
+    app.com.navTo(e)
   },
   change(e){
     this.setData({
@@ -31,9 +35,9 @@ Page({
   formSubmit(e){
     let formId = e.detail.formId
     let mu = e.detail.value.mu
-    if(mu == ''){
+    if(this.data.address == ''){
       wx.showToast({
-        title: '收件请填写地址',
+        title: '请选择地址',
         icon:'none'
       })
     }else{
@@ -44,7 +48,7 @@ Page({
       app.com.post('help/add',{
         openid: wx.getStorageSync("user").openid, 
         wx_id:wx.getStorageSync("user").id,
-        mu:mu,
+        mu:this.data.address,
         a_id: wx.getStorageSync("area").pk_id,
         form_id:formId,
         title:'快递代取',
