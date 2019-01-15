@@ -28,6 +28,11 @@ Page({
         title: '请选择目的地',
         icon: 'none'
       })
+    } else if (e.detail.value.price <=0){
+      wx.showToast({
+        title: '输入金额必须大于0',
+        icon: 'none'
+      })
     }else {
       wx.showLoading({
         title: '加载中',
