@@ -8,6 +8,22 @@ Page({
   data: {
     wx_id:wx.getStorageSync("user").id
   },
+  comfirm(e) {
+    let id = e.currentTarget.dataset.id
+    app.com.post('help/confirm', { id: id }, function (res) {
+      if (res.code == 1) {
+        wx.showToast({
+          title: '订单已完成',
+        })
+        _this.getList(_this.data.list.id)
+      } else {
+        wx.showToast({
+          title: '确认失败',
+          icon: 'none'
+        })
+      }
+    })
+  },
   takeIt(e) {
     let msg = this.data.list
     if (wx.getStorageSync("res").state == 1) {
