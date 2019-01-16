@@ -85,6 +85,12 @@ Page({
     wx.setNavigationBarTitle({
       title: options.label,
     })
+    if (wx.getStorageSync("address")) {
+      let add = wx.getStorageSync("address")
+      this.setData({
+        address: add.address + '-' + add.detail
+      })
+    }
   },
   onShow() {
     // if (wx.getStorageSync('area')) {

@@ -36,6 +36,12 @@ Page({
       price: wx.getStorageSync("server")[options.index].price_gui.split(','),
     })
     this.init()
+    if (wx.getStorageSync("address")) {
+      let add = wx.getStorageSync("address")
+      this.setData({
+        address: add.address + '-' + add.detail
+      })
+    }
   },
   onShow(){
     this.getFile()

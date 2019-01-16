@@ -31,6 +31,12 @@ Page({
       msg: wx.getStorageSync("server")[options.index],
       kdtype:this.data.kdtype
     })
+    if(wx.getStorageSync("address")){
+      let add = wx.getStorageSync("address")
+      this.setData({
+        address: add.address + '-'+add.detail
+      })
+    }
   },
   formSubmit(e){
     let formId = e.detail.formId
