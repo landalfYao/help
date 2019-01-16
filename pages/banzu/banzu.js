@@ -171,6 +171,7 @@ Page({
       load:true
     })
     app.com.post('help/'+this.data.url, {
+      a_id:wx.getStorageSync("area").pk_id,
       wheres:this.data.wheres,
       sorts:this.data.sorts,
       fields:this.data.fields,
