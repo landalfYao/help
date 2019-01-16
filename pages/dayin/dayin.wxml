@@ -36,8 +36,8 @@
         <view class='fo-30'>是否彩印</view>
         <switch color="#0099ff" bindchange="switch1Change" />
       </view>
-      <view class='text-center fo-26 fo-g ma-t30'>彩印
-        <text class='fo-m'>{{price[0]}}元/张</text> 黑白
+      <view class='text-center fo-26 fo-g ma-t30'>黑白
+        <text class='fo-m'>{{price[0]}}元/张</text> 彩印
         <text class='fo-m'>{{price[1]}}元/张</text> 跑路费
         <text class='fo-m'>{{price[2]}}元</text>
       </view>
