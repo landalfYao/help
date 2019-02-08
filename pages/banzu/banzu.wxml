@@ -5,7 +5,16 @@
   </view>
 </view>
 <view style='height:90rpx'></view>
-
+<view class='pa-30 panel-around' style='padding-bottom:0' wx:if="{{flag == 2}}">
+  <view class='text-center'>
+    <view class='fo-30 bold'>{{anlysis.completeTotalByMonth}} <text class='fo-24 '>单</text></view>
+    <view class='fo-26 fo-g'>本月完成</view>
+  </view>
+  <view class='text-center'>
+    <view class='fo-30 bold'>{{anlysis.getFeeMonth}} <text class='fo-24 '>元</text></view>
+    <view class='fo-26 fo-g'>本月收益</view>
+  </view>
+</view>
 <view class="pa-30">
   <view class='titem' wx:for="{{list}}">
     <view data-id='{{item.id}}'  data-path='/pages/order/detail/detail' data-names='id' bindtap='navTo'>

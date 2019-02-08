@@ -1,6 +1,6 @@
 const util = {
-  API: 'https://hapi.ypyzy.top/api/',
-  // API:'http://localhost:3333/api/',
+  API: 'https://api.hbhzdtn.com/api/',
+  // API:'http://localhost:3336/api/',
   webSrc:'https://hapi.ypyzy.top/dist/#/dayin_wx',
 
   /**
@@ -45,6 +45,9 @@ const util = {
     if (_method.toUpperCase() == 'GET') {
       _header = { 'content-type': 'application/json' };
     }
+    if(wx.getStorageSync("token")){
+      _header.token = wx.getStorageSync("token")
+    }
     if (arguments.length == 2 && typeof _data == 'function') {
       _success = _data
     }
@@ -57,10 +60,19 @@ const util = {
         if (typeof _success == 'function' && res.statusCode != 404 && res.statusCode != 500 && res.statusCode != 400) {
 
           _success(res.data);
+          if(res.data.code != 1){
+            wx.showToast({
+              title: res.data.msg +'',
+              icon:'none'
+            })
+          }
         } else {
           if (typeof _success != 'function') {
           }
-          console.log(`======== 接口  错误 ${res.statusCode} ========`);
+          wx.showToast({
+            title: '接口  错误 ' + res.statusCode ,
+            icon: 'none'
+          })
         }
       },
       fail: function (res) {

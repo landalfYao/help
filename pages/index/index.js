@@ -4,9 +4,7 @@ const app = getApp()
 let _this;
 Page({
   data: {
-    // area:{
-    //   name:'宁波大红鹰学院'
-    // },
+    isFirst:true,
     list:[
       { icon: '/img/s1.png', label: '快递代取', page: '/pages/daiqu/daiqu', color:'linear-gradient(to right top,#6183dd,#6e42d3)'},
       { icon: '/img/s3.png', label: '打印服务', page: '/pages/dayin/dayin', color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
@@ -56,16 +54,32 @@ Page({
       url: '/pages/pub/pub',
     })
   },
-  onLoad: function () {
+  onLoad: function (options) {
     _this = this
+    app.login(function (res) {
+      app.getRes(res.data.id)
+      app.getMoren(res.data.default_address)
+      if (_this.data.isFirst){
+        _this.checkArea()
+        _this.setData({
+          isFirst:false
+        })
+      }
+    })
   },
   onShow(){
-    if(wx.getStorageSync('area')){
+    if(!this.data.isFirst){
+      this.checkArea()
+    }
+    
+  },
+  checkArea() {
+    if (wx.getStorageSync('area')) {
       this.setData({
         area: wx.getStorageSync('area'),
         list: wx.getStorageSync('server')
       })
-    }else{
+    } else {
       wx.navigateTo({
         url: '/pages/area/area',
       })

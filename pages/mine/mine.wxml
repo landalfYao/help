@@ -7,7 +7,16 @@
       <open-data type="userNickName" mode="aspectFill"></open-data>
     </view>
   </view>
-
+  <view class='pa-t30 pa-b10 panel-between'>
+    <view class='btn-1 panel-center item-center' data-index='1' bindtap='swtobz'>
+      <image src='/img/mt.png' class='icon-40'></image>
+      <view class='fo-30 ma-l20'>我发布的</view>
+    </view>
+    <view class='btn-1 panel-center item-center' data-index='2' bindtap='swtobz'>
+      <image src='/img/mt2.png' class='icon-40'></image>
+      <view class='fo-30 ma-l20'>我帮助的</view>
+    </view>
+  </view>
   <view class='panel panel-between item-center ma-t20  border-b' data-path='/pages/mine/info/info' bindtap='navTo'>
     <view class='panel-start item-center'>
       <image src='/img/d1.png' class='icon-35 ma-r20'></image>
