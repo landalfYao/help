@@ -67,6 +67,9 @@ Page({
       }
     })
   },
+  login(){
+
+  },
   onShow(){
     if(!this.data.isFirst){
       this.checkArea()
