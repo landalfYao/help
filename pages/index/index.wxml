@@ -13,7 +13,7 @@
 </view>
 
 <view class='pa-60 panel-between wrap' style='padding-bottom:0;'>
-  <view wx:for="{{list}}" class='items panel-center wrap' data-index='{{index}}' data-name='{{item.server_name}}' data-path="{{item.page}}" bindtap='navTo'>
+  <view wx:for="{{list}}" wx:key="{{index}}" class='items panel-center wrap' data-index='{{index}}' data-name='{{item.server_name}}' data-path="{{item.page}}" bindtap='navTo'>
     <view class='text-center'>
       <view class='cri panel-center item-center' style='background:linear-gradient(to right top,#6183dd,#6e42d3)'>
         <image src='{{item.icon}}' class='icon-30'></image>

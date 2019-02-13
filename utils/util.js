@@ -1,7 +1,7 @@
 const util = {
   API: 'https://api.hbhzdtn.com/api/',
-  // API:'http://localhost:3333/api/',
-  webSrc:'https://hapi.ypyzy.top/dist/#/dayin_wx',
+
+  webSrc: 'https://hapi.ypyzy.top/dist/#/dayin_wx',
 
   /**
    * 获取窗口大小
@@ -40,10 +40,17 @@ const util = {
       console.log(e)
     };
     let _method = method || 'POST';
-    let _header = { 'content-type': 'application/x-www-form-urlencoded' };
+    let _header = {
+      'content-type': 'application/x-www-form-urlencoded'
+    };
 
     if (_method.toUpperCase() == 'GET') {
-      _header = { 'content-type': 'application/json' };
+      _header = {
+        'content-type': 'application/json'
+      };
+    }
+    if (wx.getStorageSync("token")) {
+      _header.token = wx.getStorageSync("token")
     }
     if (arguments.length == 2 && typeof _data == 'function') {
       _success = _data
@@ -57,10 +64,18 @@ const util = {
         if (typeof _success == 'function' && res.statusCode != 404 && res.statusCode != 500 && res.statusCode != 400) {
 
           _success(res.data);
-        } else {
-          if (typeof _success != 'function') {
+          if (res.data.code != 1) {
+            wx.showToast({
+              title: res.data.msg + '',
+              icon: 'none'
+            })
           }
-          console.log(`======== 接口  错误 ${res.statusCode} ========`);
+        } else {
+          if (typeof _success != 'function') {}
+          wx.showToast({
+            title: '接口  错误 ' + res.statusCode,
+            icon: 'none'
+          })
         }
       },
       fail: function (res) {
@@ -119,7 +134,7 @@ const util = {
       url: url,
     })
   },
-  wxpay(msg,cb){
+  wxpay(msg, cb) {
     wx.requestPayment({
       timeStamp: msg.timestamp,
       nonceStr: msg.nonceStr,
@@ -132,18 +147,18 @@ const util = {
         })
         util.post('help/update/state', {
           state: 1,
-          is_pay:1,
+          is_pay: 1,
           id: msg.oid
         }, function (res) {
           if (res.code == 1) {
-            if(cb){
+            if (cb) {
               cb(true)
-            }else{
+            } else {
               wx.redirectTo({
                 url: '/pages/order/detail/detail?id=' + msg.oid,
               })
             }
-            
+
           } else {
             if (cb) {
               cb(false)
@@ -179,7 +194,7 @@ const util = {
     var minute = dateTime.getMinutes();
     var second = dateTime.getSeconds();
     var now = new Date();
-    var now_new = now.getTime();  //typescript转换写法
+    var now_new = now.getTime(); //typescript转换写法
 
     var milliseconds = 0;
     var timeSpanStr;
@@ -188,39 +203,35 @@ const util = {
 
     if (milliseconds <= 1000 * 60 * 1) {
       timeSpanStr = '刚刚';
-    }
-    else if (1000 * 60 * 1 < milliseconds && milliseconds <= 1000 * 60 * 60) {
+    } else if (1000 * 60 * 1 < milliseconds && milliseconds <= 1000 * 60 * 60) {
       timeSpanStr = Math.round((milliseconds / (1000 * 60))) + '分钟前';
-    }
-    else if (1000 * 60 * 60 * 1 < milliseconds && milliseconds <= 1000 * 60 * 60 * 24) {
+    } else if (1000 * 60 * 60 * 1 < milliseconds && milliseconds <= 1000 * 60 * 60 * 24) {
       timeSpanStr = Math.round(milliseconds / (1000 * 60 * 60)) + '小时前';
-    }
-    else if (1000 * 60 * 60 * 24 < milliseconds && milliseconds <= 1000 * 60 * 60 * 24 * 15) {
+    } else if (1000 * 60 * 60 * 24 < milliseconds && milliseconds <= 1000 * 60 * 60 * 24 * 15) {
       timeSpanStr = Math.round(milliseconds / (1000 * 60 * 60 * 24)) + '天前';
-    }
-    else if (milliseconds > 1000 * 60 * 60 * 24 * 15 && year == now.getFullYear()) {
+    } else if (milliseconds > 1000 * 60 * 60 * 24 * 15 && year == now.getFullYear()) {
       timeSpanStr = month + '-' + day + ' ' + hour + ':' + minute;
     } else {
       timeSpanStr = timespan;
     }
     return timeSpanStr;
   },
-  cancel(oid,name,cb){
-    this.post('help/update/state',{
-      state:4,
-      id:oid
-    },function(res){
-      
-      if(res.code == 1){
+  cancel(oid, name, cb) {
+    this.post('help/update/state', {
+      state: 4,
+      id: oid
+    }, function (res) {
+
+      if (res.code == 1) {
         wx.showToast({
           title: '取消成功',
         })
         cb(true)
-      }else{
+      } else {
         cb(false)
         wx.showToast({
           title: '取消失败',
-          icon:'none'
+          icon: 'none'
         })
       }
     })

@@ -54,7 +54,7 @@ Page({
       }else{
         wx.showToast({
           title: '请求失败',
-          icon:none
+          icon:'none'
         })
       }
       

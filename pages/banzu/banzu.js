@@ -18,6 +18,20 @@ Page({
     fields:'',
     wx_id:wx.getStorageSync("user").id
   },
+  getWxsmData(){
+    let date = new Date()
+    let m = date.getMonth() + 1
+    let month = m < 10 ? ""+"0"+m:m
+    let com = date.getFullYear() + '-' + month+'%'
+    app.com.post('anlysis/get/wx/sm',{wx_id:wx.getStorageSync("user").id,com_time:com},function(res){
+      console.log(res)
+      if(res.code == 1){
+        _this.setData({
+          anlysis:res.data
+        })
+      }
+    })
+  },
   comfirm(e){
     let id = e.currentTarget.dataset.id
     wx.showLoading({
@@ -153,6 +167,7 @@ Page({
       _this.data.wheres = 'helplist.is_delete=0 and jd_id=' + wx.getStorageSync("user").id
       _this.data.sorts = "helplist.create_time desc"
       _this.getList(0)
+      _this.getWxsmData()
     }
   },
   navTo(e) {
@@ -219,6 +234,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if(wx.getStorageSync("bzflag")){
+      this.changeTag({ currentTarget: { dataset: { index: wx.getStorageSync("bzflag")}}})
+      wx.removeStorageSync("bzflag")
+    }else{
+      if(this.data.flag != 0){
+        this.changeTag({ currentTarget: { dataset: { index: 0 } } })
+      }
+    }
     this.setData({
       wx_id: wx.getStorageSync("user").id
     })

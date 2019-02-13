@@ -7,6 +7,12 @@ Page({
   data: {
 
   },
+  swtobz(e){
+    wx.setStorageSync("bzflag", e.currentTarget.dataset.index)
+    wx.switchTab({
+      url: '/pages/banzu/banzu',
+    })
+  },
   navTo(e) {
     app.com.navTo(e)
   },
