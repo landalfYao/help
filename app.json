@@ -16,7 +16,8 @@
     "pages/order/detail/detail",
     "pages/register/register",
     "pages/mine/addressinfo/addressinfo",
-    "pages/mine/chooseaddress/chooseaddress"
+    "pages/mine/chooseaddress/chooseaddress",
+    "pages/mine/cash/cash"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",

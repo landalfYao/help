@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -145,7 +145,13 @@
 				{
 					"id": -1,
 					"name": "选择地址",
-					"pathName": "pages/mine/chooseaddress/chooseaddress"
+					"pathName": "pages/mine/chooseaddress/chooseaddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "客服",
+					"pathName": "pages/mine/cash/cash"
 				}
 			]
 		}

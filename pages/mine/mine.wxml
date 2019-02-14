@@ -31,6 +31,14 @@
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
+  <view class='panel panel-between item-center border-t' data-path='/pages/mine/cash/cash' bindtap='navTo'>
+    <view class='panel-start item-center'>
+      <image src='/img/tx.png' class='icon-35 ma-r20'></image>
+      <view class='fo-28'>提现</view>
+    </view>
+    <image src='/img/right.png' class='icon-25'></image>
+  </view>
+
   <button class='filter-btn' open-type='contact'>
     <view class='panel panel-between item-center ma-t20 border-b'>
       <view class='panel-start item-center'>
@@ -55,4 +63,5 @@
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>
+  
 </view>

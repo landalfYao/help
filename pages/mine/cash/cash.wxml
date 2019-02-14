@@ -1,0 +1,24 @@
+<view class='pa-30'>
+  <view class='panel ra-10 shadow'>
+    <view class='pa-20'>
+      <view class='panel-start item-center'>
+        <view class='fo-28'>账户余额</view>
+        <view class='fo-50 ' style='margin-left:100rpx'>{{showFee}} <text class='fo-26'>元</text></view>
+      </view>
+      <view class='fo-28 ma-t30'>提现现金</view>
+      <view class='pa-b10 pa-t30 border-b'>
+        <view class='panel-between item-center'>
+          <view class='fo-50'>￥</view>
+          <input placeholder='提现到微信钱包' bindinput='cashInput' value='{{cashFee}}' placeholder-class='fo-28'></input>
+          <view class='fo-t fo-28' bindtap='cashAll'>全部</view>
+        </view>
+      </view>
+      <view class='fo-26 fo-g pa-t30'>单次提现金额至少0.3元,最多1000元</view>
+      <button type='primary' class='ma-t30'  bindtap='cashIt'>提现</button>
+    </view>
+  </view>
+</view>
+<view class='pa-30 text-center fo-30'>提现申请将在1-3个工作日内到账</view>
+<view class=" pa-30 panel-center">
+  <button class='filter-btn fo-30 fo-t'  open-type='contact'>联系客服</button>
+</view>
