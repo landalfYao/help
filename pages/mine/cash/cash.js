@@ -72,7 +72,12 @@ Page({
       })
     }else{
       app.com.post('wallet/cash',{cashFee:this.data.cashFee},function(res){
-
+        if(res.code == 1){
+          wx.showToast({
+            title: res.msg,
+          })
+          _this.getData()
+        }
       })
     }
   }
