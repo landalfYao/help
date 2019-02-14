@@ -16,12 +16,7 @@ Page({
         title: '单笔提现金额不能大于1000元',
         icon: 'none'
       })
-    } else if (e.detail.value > this.data.realFee){
-      wx.showToast({
-        title: '提现金额不能大于余额',
-        icon: 'none'
-      })
-    }else{
+    } else{
       this.setData({
         cashFee: e.detail.value
       })
@@ -50,7 +45,7 @@ Page({
   cashAll(){
     if(this.data.realFee > 0.3){
       this.setData({
-        cashFee: this.data.realFee
+        cashFee: this.data.realFee.toFixed(2)
       })
     }else{
       wx.showToast({
@@ -70,11 +65,27 @@ Page({
         title: '单笔提现金额不能大于1000元',
         icon: 'none'
       })
+    } else if (this.data.cashFee > this.data.realFee+0.01) {
+      wx.showToast({
+        title: '提现金额不能大于余额',
+        icon: 'none'
+      })
+      this.setData({
+        cashFee: this.data.realFee.toFixed(2)
+      })
     }else{
+      wx.showLoading({
+        title: '请求中',
+        task:true
+      })
       app.com.post('wallet/cash',{cashFee:this.data.cashFee},function(res){
         if(res.code == 1){
-          wx.showToast({
-            title: res.msg,
+          wx.hideLoading()
+      
+          wx.showModal({
+            title: '提现结果',
+            content: res.msg,
+            showCancel:false,
           })
           _this.getData()
         }
