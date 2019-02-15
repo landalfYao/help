@@ -21,6 +21,20 @@ const util = {
       },
     })
   },
+  login(cb){
+    var that = this;
+    wx.login({
+      success(res) {
+        that.post('wx/user/login', { js_code: res.code }, function (res) {
+          if (res.code == 1) {
+            wx.setStorageSync("user", res.data)
+            wx.setStorageSync("token", res.token)
+            cb(res)
+          }
+        })
+      }
+    })
+  },
   //post请求
   post(url, data, success, fail) {
     this.http('POST', url, data, success, fail)
@@ -63,13 +77,21 @@ const util = {
       success: function (res) {
         if (typeof _success == 'function' && res.statusCode != 404 && res.statusCode != 500 && res.statusCode != 400) {
 
-          _success(res.data);
-          if (res.data.code != 1) {
-            wx.showToast({
-              title: res.data.msg + '',
-              icon: 'none'
+         
+          if (res.data.code != 101 && res.data.code != -1){
+            if (res.data.code != 1) {
+              wx.showToast({
+                title: res.data.msg + '',
+                icon: 'none'
+              })
+            }
+            _success(res.data);
+          }else{
+            that.login(function(res){
+              that.http(method, url, data, success, fail)
             })
           }
+          
         } else {
           if (typeof _success != 'function') {}
           wx.showToast({

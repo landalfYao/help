@@ -146,20 +146,37 @@ Page({
   },
   onLoad: function (options) {
     _this = this
+  },
+  onShow(){
     this.getRes()
   },
   getRes() {
-    app.com.post('wx/user/get/info/wxid', { wx_id: wx.getStorageSync("res").wx_id }, function (res) {
+    wx.showLoading({
+      title: '加载中',
+      task:true
+    })
+    app.com.post('wx/user/get/info/wxid', { wx_id: wx.getStorageSync("user").id }, function (res) {
+      wx.hideLoading()
       if (res.code == 1) {
-        wx.setStorageSync("res", res.data)
-        _this.setData({
-          res: res.data,
-          show: false,
-          cert: res.data.cert,
-          stu_card: res.data.stu_card,
-          name: res.data.name,
-          card_num: res.data.card_num,
-        })
+        if(res.data != 0){
+          wx.setStorageSync("res", res.data)
+          _this.setData({
+            res: res.data,
+            show: false,
+            cert: res.data.cert,
+            stu_card: res.data.stu_card,
+            name: res.data.name,
+            card_num: res.data.card_num,
+          })
+        }else{
+          if (wx.getStorageSync("xy")) {
+
+          } else {
+            wx.navigateTo({
+              url: '/pages/mine/jdsm/jdsm',
+            })
+          }
+        }
       } else {
         wx.showToast({
           title: '失败',

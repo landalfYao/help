@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 19,
 			"list": [
 				{
 					"id": -1,
@@ -151,7 +151,14 @@
 				{
 					"id": -1,
 					"name": "客服",
-					"pathName": "pages/mine/cash/cash"
+					"pathName": "pages/mine/cash/cash",
+					"query": ""
+				},
+				{
+					"id": 19,
+					"name": "电子协议书",
+					"pathName": "pages/mine/jdsm/jdsm",
+					"query": ""
 				}
 			]
 		}
