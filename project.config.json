@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 19,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -159,6 +159,12 @@
 					"name": "电子协议书",
 					"pathName": "pages/mine/jdsm/jdsm",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/mine/about/about",
+					"scene": null
 				}
 			]
 		}

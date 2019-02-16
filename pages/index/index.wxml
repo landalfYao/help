@@ -1,14 +1,23 @@
-<view style='height:200rpx'>
-  <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546588810872&di=cb67c135a68e37d90aeff10e5890504e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F503d269759ee3d6dfd34301f49166d224e4ade70.jpg' class='bg' mode='aspectFill'></image>
+<view>
+  <image wx:if="{{imgurls.length==0}}" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546588810872&di=cb67c135a68e37d90aeff10e5890504e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F503d269759ee3d6dfd34301f49166d224e4ade70.jpg'
+    class='bg' mode='aspectFill'></image>
+  <swiper wx:if="{{imgurls.length>0}}" indicator-dots="true" autoplay="true" interval="5000" duration="500" class='bg'>
+    <block wx:for="{{imgurls}}">
+      <swiper-item>
+        <image src="{{item.cover}}" data-path="{{item.path}}" bindtap='navTo2' class="slide-image" mode='aspectFill' class='bg'  />
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
-
-<view class='pa-l60 pa-r60 pa-b20' >
-  <view class='pa-30 bg-m panel-between item-center ra-10'  bindtap='navToArea'>
-    <view class='panel-start item-center'>
-      <image src='/img/l.png' class='icon-35'></image>
-      <view class='fo-28 fo-w ma-l20'>{{area.name}}</view>
+<view style='position:relative;top:-50rpx;height:70rpx'>
+  <view class='pa-l60 pa-r60 pa-b20'>
+    <view class='pa-30 bg-m panel-between item-center ra-10' bindtap='navToArea'>
+      <view class='panel-start item-center'>
+        <image src='/img/l.png' class='icon-35'></image>
+        <view class='fo-28 fo-w ma-l20'>{{area.name}}</view>
+      </view>
+      <image src='/img/cn.png' class='icon-30'></image>
     </view>
-    <image src='/img/cn.png' class='icon-30'></image>
   </view>
 </view>
 

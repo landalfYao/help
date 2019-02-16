@@ -1,0 +1,12 @@
+<view class="pa-30 text-center border-b">
+  <image src='/img/logo.png' style='width:150rpx;height:150rpx'></image>
+  <view class='text-center fo-30 ma-t10'>互帮互助代替你</view>
+</view>
+<view class='pa-30 fo-26 lh-40'>
+互帮互助代替你，由叮点网络科技有限公司出品，是一个专注于为全国高校学生提供的最便捷的校园生活服务平台。我们的理念——互利共生。你可以成为一个发布者，发布你的需求并提供赏金；你也可以做一个接收者，接收任务并完成他人的需求，拿到赏金；当然，你也可以是个双面者（即是发布者，也是接收者），你时而寻求帮助时而提供帮助。当发布者和接收者完成各自所需，就达到了互利共生。我们希望这样一个平台，能让所有学生受利并喜欢上它，它不仅仅是一种便捷，更是为学生打开了一扇彼此合作的大门。
+</view>
+<view class='bg-g pa-l30 pa-r30 pa-t20 pa-b20 fo-28 fo-g'>
+  联系我们
+</view>
+<view class='panel border-b fo-28'>合作电话: 17858959662</view>
+<view class='panel border-b fo-28'>E-mail: ttwshnyqhj@foxmail.com</view>

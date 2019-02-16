@@ -18,7 +18,8 @@
     "pages/mine/addressinfo/addressinfo",
     "pages/mine/chooseaddress/chooseaddress",
     "pages/mine/cash/cash",
-    "pages/mine/jdsm/jdsm"
+    "pages/mine/jdsm/jdsm",
+    "pages/mine/about/about"
   ],
   "window":{ 
     "backgroundTextStyle":"dark",

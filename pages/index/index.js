@@ -4,6 +4,7 @@ const app = getApp()
 let _this;
 Page({
   data: {
+    imgurls:[],
     isFirst:true,
     list:[
       { icon: '/img/s1.png', label: '快递代取', page: '/pages/daiqu/daiqu', color:'linear-gradient(to right top,#6183dd,#6e42d3)'},
@@ -19,7 +20,9 @@ Page({
       url: '/pages/area/area',
     })
   },
-  
+  navTo2(e){
+    app.com.navTo(e)
+  },
   navTo(e) {
     if (wx.getStorageSync("user").phone == '' || wx.getStorageSync("user").phone == null || wx.getStorageSync("user").phone == undefined){
       wx.navigateTo({
@@ -56,26 +59,47 @@ Page({
   },
   onLoad: function (options) {
     _this = this
-    app.login(function (res) {
-      app.getRes(res.data.id)
-      app.getMoren(res.data.default_address)
-      if (_this.data.isFirst){
-        _this.checkArea()
+    this.login()
+    
+  },
+  getCarousel(){
+    app.com.post('calousels/get',{a_id:wx.getStorageSync("area").pk_id},function(res){
+      if(res.code == 1){
         _this.setData({
-          isFirst:false
+          imgurls:res.data.list
         })
       }
     })
   },
   login(){
-
+    wx.showLoading({
+      title: '加载中',
+      task:true
+    })
+    app.login(function (res) {
+      wx.hideLoading()
+      wx.stopPullDownRefresh()
+      app.getRes(res.data.id)
+      app.getMoren(res.data.default_address)
+      _this.getCarousel()
+      if (_this.data.isFirst) {
+        
+        _this.checkArea()
+        _this.setData({
+          isFirst: false
+        })
+      }
+    })
+  },
+  onPullDownRefresh(){
+    this.login()
   },
   onShow(){
     if(!this.data.isFirst){
       this.checkArea()
     }
-    
   },
+
   checkArea() {
     if (wx.getStorageSync('area')) {
       this.setData({

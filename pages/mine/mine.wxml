@@ -48,10 +48,17 @@
       <image src='/img/right.png' class='icon-25'></image>
     </view>
   </button>
-  <view class='panel panel-between item-center' bindtap='makePhone'>
+  <view class='panel panel-between item-center border-b' bindtap='makePhone'>
     <view class='panel-start item-center'>
       <image src='/img/d3.png' class='icon-35 ma-r20'></image>
       <view class='fo-28'>电话客服</view>
+    </view>
+    <image src='/img/right.png' class='icon-25'></image>
+  </view>
+  <view class='panel panel-between item-center' data-path='/pages/mine/about/about' bindtap='navTo'>
+    <view class='panel-start item-center'>
+      <image src='/img/d6.png' class='icon-35 ma-r20'></image>
+      <view class='fo-28'>关于我们</view>
     </view>
     <image src='/img/right.png' class='icon-25'></image>
   </view>

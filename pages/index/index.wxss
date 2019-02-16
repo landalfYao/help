@@ -17,7 +17,7 @@ page{
   box-shadow: 4rpx 4rpx 4rpx 4rpx rgba(104, 135, 225, 0.2)
 }
 .bg{
-  width: 100%;
-  height: 250rpx;
+  width: 750rpx;
+  height: 280rpx;
   display: block
 }
