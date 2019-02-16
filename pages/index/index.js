@@ -81,7 +81,7 @@ Page({
       wx.stopPullDownRefresh()
       app.getRes(res.data.id)
       app.getMoren(res.data.default_address)
-      _this.getCarousel()
+      // _this.getCarousel()
       if (_this.data.isFirst) {
         
         _this.checkArea()
@@ -98,14 +98,54 @@ Page({
     if(!this.data.isFirst){
       this.checkArea()
     }
+    if(!this.data.emer){
+      this.getAdminMemr()
+    }
   },
-
+  getAdminMemr(){
+    app.com.post('user/get/emer', { dl_id: 1 }, function (res) {
+      _this.setData({
+        emer: res.data
+      })
+      if (res.data.open_emer == 1) {
+        wx.showModal({
+          title: res.data.emer_title,
+          content: res.data.emer_content,
+          showCancel: false,
+          confirmText: '朕知道了',
+          confirmColor: '#6887e1'
+        })
+      }else{
+        _this.getMemr()
+      }
+    })
+  },
+  getMemr(){
+    app.com.post('user/get/emer',{dl_id:wx.getStorageSync("dl").pk_id},function(res){
+      _this.setData({
+        emer:res.data
+      })
+      if(res.data.open_emer == 1){
+        wx.showModal({
+          title: res.data.emer_title,
+          content: res.data.emer_content,
+          showCancel:false,
+          confirmText:'朕知道了',
+          confirmColor:'#6887e1'
+        })
+      }
+    })
+  },
   checkArea() {
     if (wx.getStorageSync('area')) {
       this.setData({
         area: wx.getStorageSync('area'),
         list: wx.getStorageSync('server')
       })
+      if(_this.data.imgurls.length == 0){
+        _this.getCarousel()
+      }
+
     } else {
       wx.navigateTo({
         url: '/pages/area/area',

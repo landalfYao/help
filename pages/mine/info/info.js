@@ -21,6 +21,8 @@ Page({
           wx.showToast({
             title: '修改成功',
           })
+          let uinfo = wx.getStorageSync("user")
+          uinfo.nick_name = e.detail.value.nick_name
         }
       })
     }else{

@@ -4,7 +4,8 @@
       <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
     </view>
     <view class='fo-w fo-30 text-center ma-t10'>
-      <open-data type="userNickName" mode="aspectFill"></open-data>
+      {{userInfo.nick_name || ''}}
+      <open-data wx:if="{{!userInfo.nick_name}}" type="userNickName" mode="aspectFill"></open-data>
     </view>
   </view>
   <view class='pa-t30 pa-b10 panel-between'>
