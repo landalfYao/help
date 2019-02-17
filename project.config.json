@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 20,
+			"current": 21,
 			"list": [
 				{
 					"id": -1,
@@ -164,6 +164,14 @@
 					"id": -1,
 					"name": "关于我们",
 					"pathName": "pages/mine/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "文章详情页",
+					"pathName": "pages/richtext/richtext",
+					"query": "id=1",
 					"scene": null
 				}
 			]

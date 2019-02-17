@@ -28,6 +28,7 @@
         <image src='{{item.icon}}' class='icon-30'></image>
       </view>
       <view class=' fo-30 text-center ma-t20 fo-t'>{{item.server_name}}</view>
+      <view class='fo-26 fo-g text-center' wx:if="{{item.is_show == 0}}">(休息中)</view>
     </view>
   </view>
 </view>
