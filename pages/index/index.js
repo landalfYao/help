@@ -162,7 +162,6 @@ Page({
     if (wx.getStorageSync('area')) {
       this.setData({
         area: wx.getStorageSync('area'),
-        // list: wx.getStorageSync('server')
       })
       if(_this.data.imgurls.length == 0){
         _this.getCarousel()

@@ -123,7 +123,6 @@ Page({
           })
           if (_this.data.res) {
             wx.setStorageSync("res", _this.data.res)
-            
           }
           _this.setData({
             'res.state': 0,
@@ -146,6 +145,13 @@ Page({
   },
   onLoad: function (options) {
     _this = this
+    let server = wx.getStorageSync("server")
+    for(let i in server){
+      server[i].pk_server = ((server[i].dl_sy + server[i].p_sy)*100).toFixed(0)
+    }
+    this.setData({
+      server: server
+    })
   },
   onShow(){
     this.getRes()
