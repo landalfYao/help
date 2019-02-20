@@ -21,3 +21,14 @@
   margin-top: 50rpx;
   color: #6699CC
 }
+.tags{
+  padding:0 30rpx;
+  line-height: 70rpx;
+  background: #0099ff0a;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  color: #0099ff;
+  border-radius: 10rpx
+}

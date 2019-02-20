@@ -10,7 +10,10 @@
     <form bindsubmit="formSubmit" report-submit="true">
       <view class='fo-28 ma-t10 bold'>帮助内容(必填):</view>
       <view class='border pa-20 ma-t20'>
-        <textarea class='fo-28' name='des' value='{{des}}' style='height:200rpx' placeholder='请输入详细的帮助信息'></textarea>
+        <textarea class='fo-28' name='des' value='{{des}}' style='height:{{msg.tagsFilter.length==0?200:100}}rpx' placeholder='请输入详细的帮助信息'></textarea>
+        <view class='panel-start wrap'>
+          <view class='tags' wx:for="{{msg.tagsFilter}}" data-index='{{index}}' bindtap='tagsClick'>{{item.label}}</view>
+        </view>
       </view>
       <view class='panel-between border-b pa-t30 pa-b10 ' wx:if="{{title == '校园跑腿'}}">
         <view class='fo-28 bold'>取货地点(必填):</view>

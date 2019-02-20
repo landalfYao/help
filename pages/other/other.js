@@ -76,11 +76,25 @@ Page({
       url: '/pages/pub/pub',
     })
   },
+  tagsClick(e){
+    let index = e.currentTarget.dataset.index
+    this.setData({
+      price:this.data.msg.tagsFilter[index].price,
+      des: this.data.msg.tagsFilter[index].label
+    })
+  },
   onLoad: function (options) {
     _this = this
+    let msg = wx.getStorageSync("server")[options.index];
+    let tags = msg.tags ?  msg.tags.split(','):[];
+    let arr= []
+    for(let i in tags){
+      arr.push({ label: tags[i], price: tags[i].replace(/[^0-9]/ig, "")})
+    }
+    msg.tagsFilter = arr
     this.setData({
       title:options.label,
-      msg: wx.getStorageSync("server")[options.index],
+      msg: msg,
     })
     wx.setNavigationBarTitle({
       title: options.label,
