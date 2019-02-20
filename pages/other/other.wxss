@@ -24,7 +24,7 @@
 .tags{
   padding:0 30rpx;
   line-height: 70rpx;
-  background: #0099ff0a;
+  background: #f1faff;
   font-size: 28rpx;
   text-align: center;
   margin-top: 20rpx;

@@ -10,7 +10,12 @@ Page({
   },
   comfirm(e) {
     let id = e.currentTarget.dataset.id
+    wx.showLoading({
+      title: '请稍等',
+      task:true
+    })
     app.com.post('help/confirm', { id: id }, function (res) {
+      wx.hideLoading()
       if (res.code == 1) {
         wx.showToast({
           title: '订单已完成',
