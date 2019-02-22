@@ -26,7 +26,7 @@ Page({
     let p = wx.getStorageSync("server")[options.index].price_gui.split(',')
     this.data.kdtype[0].price = p[0]
     this.data.kdtype[1].price = p[1]
-    this.data.kdtype[1].price = p[2]
+    this.data.kdtype[2].price = p[2]
     this.setData({
       msg: wx.getStorageSync("server")[options.index],
       kdtype:this.data.kdtype
@@ -92,38 +92,5 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
