@@ -1,0 +1,21 @@
+.cover{
+  width: 750rpx;
+  height: 380rpx;
+  display: block
+}
+page{
+  background-color: #f3f3f3
+}
+.dobtn{
+  position: fixed;
+  bottom: 30rpx;
+  right: 0rpx;
+  padding: 0 40rpx;
+  background: linear-gradient(to right top,#6183dd,#6e42d3);
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 90rpx 0 0 90rpx;
+  box-shadow: 0 0 10rpx 0 #6e42d3
+}

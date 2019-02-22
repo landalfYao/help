@@ -7,13 +7,8 @@ Page({
     imgurls:[],
     isFirst:true,
     list:[
-      { icon: '/img/s1.png', label: '快递代取', page: '/pages/daiqu/daiqu', color:'linear-gradient(to right top,#6183dd,#6e42d3)'},
-      { icon: '/img/s3.png', label: '打印服务', page: '/pages/dayin/dayin', color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
-      { icon: '/img/s2.png', label: '校园跑腿', page: '/pages/other/other',data:{qi:true,mu:true}, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
-      { icon: '/img/s4.png', label: '上门维修', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
-      { icon: '/img/s5.png', label: '代替服务', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' },
-      { icon: '/img/s6.png', label: '其他帮助', page: '/pages/other/other', data: { qi: false, mu: true }, color: 'linear-gradient(to right top,#6183dd,#6e42d3)' }
-    ]
+    ],
+    server:[]
   },
   navToArea(){
     wx.navigateTo({
@@ -31,19 +26,29 @@ Page({
     }else{
       let name = e.currentTarget.dataset.name
       let index = e.currentTarget.dataset.index
-      if (name == '快递代取') {
-        wx.navigateTo({
-          url: '/pages/daiqu/daiqu?index='+index,
-        })
-      } else if (name == '打印服务'){
-        wx.navigateTo({
-          url: '/pages/dayin/dayin?index=' + index,
-        })
+      if(this.data.list[index].is_show == 1){
+        if (name == '快递代取') {
+          wx.navigateTo({
+            url: '/pages/daiqu/daiqu?index=' + index,
+          })
+        } else if (name == '打印服务') {
+          wx.navigateTo({
+            url: '/pages/dayin/dayin?index=' + index,
+          })
+        } else {
+          wx.navigateTo({
+            url: '/pages/other/other?label=' + name + '&index=' + index,
+          })
+
+        }
       }else{
-        wx.navigateTo({
-          url: '/pages/other/other?label=' + name+'&index='+index,
+        wx.showModal({
+          title: '提示',
+          content: '服务暂停中',
+          showCancel: false,
+          confirmText: '朕知道了',
+          confirmColor: '#6887e1'
         })
-        
       }
     }
   },
@@ -60,7 +65,6 @@ Page({
   onLoad: function (options) {
     _this = this
     this.login()
-    
   },
   getCarousel(){
     app.com.post('calousels/get',{a_id:wx.getStorageSync("area").pk_id},function(res){
@@ -93,6 +97,7 @@ Page({
   },
   onPullDownRefresh(){
     this.login()
+    this.getServer(wx.getStorageSync('dl').pk_id)
   },
   onShow(){
     if(!this.data.isFirst){
@@ -102,6 +107,7 @@ Page({
       this.getAdminMemr()
     }
   },
+  //通知
   getAdminMemr(){
     app.com.post('user/get/emer', { dl_id: 1 }, function (res) {
       _this.setData({
@@ -136,14 +142,32 @@ Page({
       }
     })
   },
+  getServer(id) {
+    app.com.post('server/get/uid', {
+      uid: id
+    }, function (res) {
+      if (res.code == 1) {
+        wx.setStorageSync("server", res.data)
+        _this.setData({list:res.data})
+      
+      } else {
+        wx.showToast({
+          title: res.msg,
+          icon: 'none'
+        })
+      }
+    })
+  },
   checkArea() {
     if (wx.getStorageSync('area')) {
       this.setData({
         area: wx.getStorageSync('area'),
-        list: wx.getStorageSync('server')
       })
       if(_this.data.imgurls.length == 0){
         _this.getCarousel()
+      }
+      if(_this.data.list.length == 0){
+        _this.getServer(wx.getStorageSync('dl').pk_id)
       }
 
     } else {

@@ -41,6 +41,19 @@
         <image src='/img/sh1.png' style='width:200rpx;height:200rpx'></image>
       </view>
       <view class='fo-30 text-center'>审核成功，您可以接单啦</view>
+      <view class='fo-26 ma-t20 text-center ma-b20'>以下为服务费用收取参考表</view>
+      <view class='border ma-t20' style='width:450rpx;margin:auto'>
+        <view class='panel-start border-b pa-t20 pa-b20' style='width:450rpx' >
+          <view class='text-center fo-28' style='width:150rpx'>服务项</view>
+          <view class='text-center fo-28' style='width:150rpx'>平台获得</view>
+          <view class='text-center fo-28' style='width:150rpx'>用户获得</view>
+        </view>
+        <view class='panel-start border-b pa-t20 pa-b20' style='width:450rpx' wx:for="{{server}}" wx:if="{{item.server_name != '打印服务' && item.server_name != '快递代取' }}" >
+          <view class='text-center fo-28' style='width:150rpx'>{{item.server_name}}</view>
+          <view class='text-center fo-28' style='width:150rpx'>{{(item.pk_server)}}%</view>
+          <view class='text-center fo-28' style='width:150rpx'>{{item.user_sy*100}}%</view>
+        </view>
+      </view>
     </view>
 
     <view wx:if="{{res.state == 2}}">

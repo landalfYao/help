@@ -1,0 +1,10 @@
+<image wx:if="{{msg.cover}}" src="{{msg.cover}}" class="cover" mode="aspectFill" ></image>
+<view class='panel border-b border-t'>
+  <view class='fo-32 bold'>{{msg.title}}</view>
+  <view class='fo-28 fo-t ma-t10'>{{msg.author}} - <text class='fo-26 fo-g'>{{msg.create_time}}</text></view>
+</view>
+<view class='panel fo-30'>
+  <rich-text type="text" nodes="{{msg.content}}"></rich-text>
+</view>
+
+<view class='dobtn' wx:if="{{msg.contact}}" bindtap='doIT'>联系{{msg.contact}}</view>
