@@ -43,7 +43,8 @@ Page({
     app.com.post('area/get',{
       pageIndex:1,
       pageSize:1000,
-      wheres:this.data.wheres
+      wheres:this.data.wheres,
+      sorts:'sort asc'
     },function(res){
       if(res.code == 1){
         _this.setData({

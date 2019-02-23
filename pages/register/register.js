@@ -9,11 +9,13 @@ Page({
     phone: '',
     cert:'',
     stu_card:'',
-    show:true
+    show:true,
+    isUpdate:false
   },
   gotoUpdate(){
     this.setData({
-      show:true
+      show:true,
+      isUpdate:true
     })
   },
   choose(e){
@@ -126,7 +128,8 @@ Page({
           }
           _this.setData({
             'res.state': 0,
-            show: false
+            show: false,
+            isUpdate:false
           })
         } else {
           wx.showToast({

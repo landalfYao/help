@@ -1,6 +1,6 @@
 <view class='pa-30'>
 
-  <view class='bz' wx:if="{{show}}">
+  <view class='bz' wx:if="{{show || isUpdate}}">
     <view style='height:60rpx'>
       <view class="avatar">
         <open-data type="userAvatarUrl" mode="aspectFill"></open-data>
@@ -28,7 +28,7 @@
     </form>
 
   </view>
-  <view wx:if="{{!show}}">
+  <view wx:if="{{!show && !isUpdate}}">
     <view wx:if="{{res.state == 0}}">
       <view class='text-center'>
         <image src='/img/sh.png' style='width:200rpx;height:200rpx'></image>
@@ -56,7 +56,7 @@
       </view>
     </view>
 
-    <view wx:if="{{res.state == 2}}">
+    <view wx:if="{{res.state == 2  && !isUpdate}}">
       <view class='text-center'>
         <image src='/img/sh2.png' style='width:200rpx;height:200rpx'></image>
       </view>

@@ -57,8 +57,24 @@ Page({
     let index = e.currentTarget.dataset.index
     let msg = this.data.list[index]
     if (wx.getStorageSync("res").state == 1){
-      this.takeDo(msg)
-    }else{
+      if (wx.getStorageSync("res").a_id == wx.getStorageSync("area").pk_id) {
+        this.takeDo(msg)
+      }else{
+        wx.showModal({
+          title: '提示',
+          content: '您不是该学校的接单员',
+          confirmText: '朕知道了',
+          showCancel:false,
+          success(res) {
+            if (res.confirm) {
+              wx.navigateTo({
+                url: '/pages/register/register',
+              })
+            }
+          }
+        })
+      }
+    } else{
       wx.showModal({
         title: '提示',
         content: '您还不是接单员，是否前往申请',
