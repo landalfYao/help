@@ -157,7 +157,8 @@ Page({
     })
   },
   onShow(){
-    this.getRes()
+      this.getRes()
+    
   },
   getRes() {
     wx.showLoading({

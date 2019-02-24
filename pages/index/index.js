@@ -127,7 +127,7 @@ Page({
     })
   },
   getMemr(){
-    app.com.post('user/get/emer',{dl_id:wx.getStorageSync("dl").pk_id},function(res){
+    app.com.post('user/get/emer',{dl_id:wx.getStorageSync("dl").pk_id || 1},function(res){
       _this.setData({
         emer:res.data
       })
