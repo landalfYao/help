@@ -28,9 +28,9 @@ Page({
         title: '请选择目的地',
         icon: 'none'
       })
-    } else if (e.detail.value.price <=0){
+    } else if (e.detail.value.price <1){
       wx.showToast({
-        title: '输入金额必须大于0',
+        title: '输入金额不能小于1',
         icon: 'none'
       })
     }else {

@@ -33,8 +33,22 @@ Page({
   },
   checkedIt(e){
     let index = e.currentTarget.dataset.index;
-    wx.setStorageSync('area', this.data.list[index])
-    _this.getDail(this.data.list[index].pk_id)
+    wx.showModal({
+      title: '请确认您的选择',
+      content: '您的选择是"' + _this.data.list[index].name+'"',
+      cancelText:'我点错了',
+      confirmText:'确认',
+      confirmColor:'#6887e1',
+      success(res){
+        if(res.confirm){
+          wx.setStorageSync('area', _this.data.list[index])
+          _this.getDail(_this.data.list[index].pk_id)
+        }else{
+
+        }
+      }
+    })
+    
   },
   getArea(){
     this.setData({
@@ -65,7 +79,6 @@ Page({
     app.com.post('user/get/aid',{
       aid:aid
     },function(res){
-      console.log(res)
       if(res.code == 1){
         wx.setStorageSync("dl", res.data)
         // _this.getServer(res.data.pk_id)

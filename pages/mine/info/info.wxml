@@ -6,21 +6,21 @@
   <view class='panel panel-between border-b item-center' style='padding:30rpx 0'>
     <view class='fo-30'>昵称</view>
     <view class='panel-end item-center'>
-      <input name="nick_name" class='fo-30 fo-g text-right' value='{{msg.nick_name}}'></input>
+      <input name="nick_name" class='fo-30 fo-g text-right' placeholder="请填写昵称(必填)" value='{{msg.nick_name}}'></input>
       <!-- <image src='/img/right.png' class='icon-25 ma-l20'></image> -->
     </view>
   </view>
   <view class='panel panel-between border-b item-center' style='padding:30rpx 0'>
     <view class='fo-30'>手机号</view>
     <view class='panel-end item-center'>
-      <input name="phone" class='fo-30 fo-g text-right' value='{{msg.phone}}'></input>
+      <input name="phone" class='fo-30 fo-g text-right' placeholder="请填写11位手机号(必填)" value='{{msg.phone}}'></input>
       <!-- <image src='/img/right.png' class='icon-25 ma-l20'></image> -->
     </view>
   </view>
   <view class='panel panel-between item-center' style='padding:30rpx 0'>
     <view class='fo-30'>短号</view>
     <view class='panel-end item-center'>
-      <input name="dphone" class='fo-30 fo-g text-right' value='{{msg.dphone}}'></input>
+      <input name="dphone" class='fo-30 fo-g text-right' placeholder='请填写校园短号(选填)' value='{{msg.dphone}}'></input>
       <!-- <image src='/img/right.png' class='icon-25 ma-l20'></image> -->
     </view>
   </view>

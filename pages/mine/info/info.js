@@ -14,7 +14,7 @@ Page({
     })
     let form = e.detail.value
     form.id = wx.getStorageSync('user').id
-    if (e.detail.value.nick_name != '' && e.detail.value.phone != '' && e.detail.value.dphone != ''){
+    if (e.detail.value.nick_name != '' && e.detail.value.phone != '' ){
       app.com.post('wx/user/update/wx', form, function (res) {
         wx.hideLoading()
         if(res.code == 1){
