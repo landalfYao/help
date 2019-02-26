@@ -1,6 +1,6 @@
 const util = {
   API: 'https://api.hbhzdtn.com/api/',
-  // API: 'http://localhost:3336/api/',
+  // API: 'http://localhost:3336/api/', 
   webSrc: 'https://hapi.ypyzy.top/dist/#/dayin_wx',
 
   /**
@@ -87,6 +87,7 @@ const util = {
             }
             _success(res.data);
           }else{
+            
             that.login(function(res){
               that.http(method, url, data, success, fail)
             })
