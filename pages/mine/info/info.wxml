@@ -3,6 +3,13 @@
 </view>
 <form bindsubmit="formSubmit">
 <view class='bg-w' style='padding:0 30rpx'>
+  <view class='panel panel-between border-b item-center' style='padding:30rpx 0' bindtap='changeAvatar'>
+    <view class='fo-30'>头像</view>
+    <view class='panel-end item-center'>
+      <image src='{{msg.avatar_url}}' style='height:100rpx;width:100rpx;border-radius:100rpx' mode='aspectFill'></image>
+      <image src='/img/right.png' class='icon-25 ma-l20'></image>
+    </view>
+  </view>
   <view class='panel panel-between border-b item-center' style='padding:30rpx 0'>
     <view class='fo-30'>昵称</view>
     <view class='panel-end item-center'>

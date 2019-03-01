@@ -21,6 +21,14 @@ Page({
     wx.navigateTo({
       url: '/pages/dayin/dy/dy',
     })
+    // wx.chooseMessageFile({
+    //   count: 1,
+    //   type: 'all',
+    //   success(res) {
+    //     const tempFilePaths = res.tempFilePaths
+    //     console.log(res)
+    //   }
+    // })
   },
   pageInput(e){
     this.data.page = e.detail.value

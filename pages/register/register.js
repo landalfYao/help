@@ -50,7 +50,8 @@ Page({
         name: 'file',
         formData:{
           wx_id:wx.getStorageSync("user").id,
-          a_id:wx.getStorageSync("area").pk_id
+          a_id:wx.getStorageSync("area").pk_id,
+          is_temp: 0
         },
         success(res) {
           wx.hideLoading()

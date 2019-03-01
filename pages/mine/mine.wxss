@@ -8,7 +8,7 @@
   border-radius: 130rpx;
   overflow: hidden;
   margin: auto;
-  border: 6rpx solid #ffffff
+  border: 6rpx solid #ffffff;
 }
 page{
   background: #f3f3f3
