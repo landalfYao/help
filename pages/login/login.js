@@ -55,12 +55,14 @@ Page({
             mask:true,
             duration:800
           })
-          wx.setStorageSync("user", res.data)
+          let user = res.data
+          user.phone = this.data.phone
+          wx.setStorageSync("user", user)
           setTimeout(function(){
             wx.navigateBack({
               detal:1
             })
-          },800)
+          },900)
         }else{
           wx.showToast({
             title: '授权失败',
