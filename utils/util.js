@@ -1,7 +1,6 @@
 const util = {
-  API: 'https://api.hbhzdtn.com/api/',
-  // API: 'http://localhost:3336/api/', 
-  webSrc: 'https://hapi.ypyzy.top/dist/#/dayin_wx',
+  API: 'http://localhost:3336/api/', 
+  webSrc: 'http://localhost:8080/dist/#/dayin_wx',
 
   /**
    * 获取窗口大小
