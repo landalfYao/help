@@ -1,6 +1,6 @@
 # 校园综合服务平台小程序
 #### 项目链接
-本项目配合以下两端使用
+本项目配合以下两端使用<br>
 [1.后台服务端地址：https://github.com/landalfYao/helpserver.git](https://github.com/landalfYao/helpserver.git)<br>
 [2.后台客户端地址：https://github.com/landalfYao/helpclient.git](https://github.com/landalfYao/helpclient.git)<br>
 #### 交流
