@@ -1,4 +1,5 @@
 const app = getApp()
+const _this;
 Page({
 
   /**
@@ -20,6 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    _this = this
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#6e42d3',
@@ -56,7 +58,7 @@ Page({
             duration:800
           })
           let user = res.data
-          user.phone = this.data.phone
+          user.phone = _this.data.phone
           wx.setStorageSync("user", user)
           setTimeout(function(){
             wx.navigateBack({
