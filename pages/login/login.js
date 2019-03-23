@@ -1,5 +1,5 @@
 const app = getApp()
-const _this;
+let _this;
 Page({
 
   /**
