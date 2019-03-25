@@ -6,3 +6,6 @@
 #### 交流
 微信号：landalfyzy<br>
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0320/102250_efc7b2d0_1930998.jpeg "微信图片_20190320102141.jpg")
+<br>
+QQ群<br>
+![输入图片说明](https://images.gitee.com/uploads/images/2019/0325/100055_4cc3cea8_1930998.png "微信截图_20190325095959.png")
