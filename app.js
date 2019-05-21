@@ -3,11 +3,6 @@ App({
   com: com,
   onLaunch: function () {
     let _this = this
-    // this.login(function(res){
-    //   _this.getRes(res.data.id)
-    //   _this.getMoren(res.data.default_address)
-    // })
-    
   },
   login(cb){
     wx.login({

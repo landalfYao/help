@@ -10,8 +10,9 @@ Page({
     dphone:''
   },
   ddinput(e){
-    let name = e.currentTarget.dataset.name
-    this.data[name] = e.detail.value
+    let name = e.currentTarget.dataset.name;
+    this.data[name] = e.detail.value;
+    
     this.setData({
       phone: this.data.phone,
       dphone: this.data.dphone
@@ -58,8 +59,12 @@ Page({
             duration:800
           })
           let user = res.data
-          user.phone = _this.data.phone
-          wx.setStorageSync("user", user)
+          user.phone = userInfo.phone
+          wx.setStorage({
+            key: 'user',
+            data: user,
+          })
+          // wx.setStorageSync("user", user)
           setTimeout(function(){
             wx.navigateBack({
               detal:1

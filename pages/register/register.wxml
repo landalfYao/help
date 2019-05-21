@@ -12,18 +12,19 @@
         <view class='fo-28 bold'>姓名(必填):</view>
         <input class='text-right fo-28' name='name' value='{{name}}' placeholder='姓名'></input>
       </view>
-      <view class='panel-between border-b pa-t30 pa-b10'>
+      <!-- <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>身份证号(必填):</view>
         <input class='text-right fo-28' type='number' value='{{card_num}}' name='card_num' placeholder='身份证号'></input>
-      </view>
-      <view class='pa-t30 pa-b10'>
-        <view class='fo-28 bold'>身份证正面(必填):</view>
-        <view class='tuu panel-center item-center fo-g fo-50' style='background-image:url({{cert}})' data-name='cert' bindtap='choose'> + </view>
-      </view>
+      </view> -->
+      
       <view class='pa-t30 pa-b10'>
         <view class='fo-28 bold'>学生证正面(必填):</view>
         <view class='tuu panel-center item-center fo-g fo-50' style='background-image:url({{stu_card}})' data-name='stu_card' bindtap='choose'> + </view>
       </view>
+      <!-- <view class='pa-t30 pa-b10'>
+        <view class='fo-28 bold'>身份证正面(选填):</view>
+        <view class='tuu panel-center item-center fo-g fo-50' style='background-image:url({{cert}})' data-name='cert' bindtap='choose'> + </view>
+      </view> -->
       <button class='btns ' form-type="submit">提交申请</button>
     </form>
 

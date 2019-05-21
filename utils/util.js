@@ -1,6 +1,6 @@
 const util = {
-  API: 'http://localhost:3336/api/', 
-  webSrc: 'http://localhost:8080/dist/#/dayin_wx',
+  API: 'https://api.hbhzdtn.com/api/', 
+  webSrc: 'https://sys.hbhzdtn.com/dist/#/dayin_wx',
 
   /**
    * 获取窗口大小
@@ -25,7 +25,12 @@ const util = {
     wx.login({
       success(res) {
         that.post('wx/user/login', { js_code: res.code }, function (res) {
-          if (res.code == 1) {
+          if(res.code == -1){
+            wx.showToast({
+              title: res.data.msg + '',
+              icon: 'none'
+            })
+          }else if (res.code == 1) {
             wx.setStorageSync("user", res.data)
             wx.setStorageSync("token", res.token)
             cb(res)
@@ -75,22 +80,31 @@ const util = {
       data: _data,
       success: function (res) {
         if (typeof _success == 'function' && res.statusCode != 404 && res.statusCode != 500 && res.statusCode != 400) {
-
-         
-          if (res.data.code != 101 && res.data.code != -1){
-            if (res.data.code != 1) {
-              wx.showToast({
-                title: res.data.msg + '',
-                icon: 'none'
-              })
-            }
-            _success(res.data);
-          }else{
-            
-            that.login(function(res){
+          _success(res.data);
+          if (res.data.code == -1){
+            that.login(function (res) {
               that.http(method, url, data, success, fail)
             })
+          } else if(res.data.code != 1){
+            wx.showToast({
+              title: res.data.msg + '',
+              icon: 'none'
+            })
           }
+         
+          // if (res.data.code != 101 && res.data.code != -1){
+          //   if (res.data.code != 1) {
+          //     wx.showToast({
+          //       title: res.data.msg + '',
+          //       icon: 'none'
+          //     })
+          //   }
+          //   _success(res.data);
+          // } else if (res.data.code != -1){
+          //   that.login(function(res){
+          //     that.http(method, url, data, success, fail)
+          //   })
+          // }
           
         } else {
           if (typeof _success != 'function') {}
