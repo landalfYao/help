@@ -1,6 +1,6 @@
 const util = {
   API: 'https://api.hbhzdtn.com/api/', 
-  webSrc: 'https://sys.hbhzdtn.com/dist/#/dayin_wx',
+  webSrc: 'https://api.hbhzdtn.com/dist/#/dayin_wx',
 
   /**
    * 获取窗口大小

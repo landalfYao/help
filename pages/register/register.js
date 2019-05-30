@@ -86,7 +86,17 @@ Page({
         title: '请输入填姓名',
         icon: 'none'
       })
-    } else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp')>0) {
+    } else if (e.detail.value.card_num == ''){
+      wx.showToast({
+        title: '请输入身份证号码',
+        icon: 'none'
+      })
+    }else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp') > 0) {
+      wx.showToast({
+        title: '请上传学生证',
+        icon: 'none'
+      })
+    }else if (this.data.stu_card == '' || this.data.stu_card.indexOf('tmp')>0) {
       wx.showToast({
         title: '请上传学生证',
         icon: 'none'

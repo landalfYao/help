@@ -1,4 +1,5 @@
 <!-- <web-view src="{{url}}"></web-view> -->
+<view class='pa-l30 pa-r30 fo-28 fo-g text-center'>*该服务由平台承包*</view>
 <view class='pa-30'>
 
   <view class='bz'>
@@ -33,14 +34,16 @@
         <input class='fo-30 text-right' name="des" placeholder='备注信息'></input>
       </view>
       <view class='pa-t30 pa-b20 panel-between item-center border-b'>
-        <view class='fo-30'>是否彩印</view>
-        <switch color="#0099ff" bindchange="switch1Change" />
+        <view class='fo-30'>印刷</view>
+        <view class='fo-30 fo-g'>暂仅支持黑白印刷</view>
+        <!-- <switch color="#0099ff" bindchange="switch1Change" /> -->
       </view>
       <view class='text-center fo-26 fo-g ma-t30'>黑白
-        <text class='fo-m'>{{price[0]}}元/张</text> 彩印
+        <!-- <text class='fo-m'>{{price[0]}}元/张</text> 彩印 -->
         <text class='fo-m'>{{price[1]}}元/张</text> 跑路费
         <text class='fo-m'>{{price[2]}}元</text>
       </view>
+      <view class='fo-26 fo-g text-center'>{{msg.des}}</view>
       <view class='fo-26 text-center ma-t30'>需支付</view>
       <view class='text-center fo-40 bold ma-t20 fo-m'>{{total_fee}}
         <text class='fo-26'>元</text> </view>
