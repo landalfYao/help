@@ -28,7 +28,7 @@
         </view>
       <view class='panel-between border-b pa-t30 pa-b10'>
         <view class='fo-28 bold'>赏金(必填):</view>
-        <input class='text-right fo-28' type='digit' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
+        <input class='text-right fo-28' type='digit' maxlength='4' name='price' value="{{price}}" placeholder='输入金额(元)'></input>
       </view>
       <view class='fo-26 text-center fo-g ma-t30' wx:if="{{msg.des}}">{{msg.des}}</view>
       <button class='btns ' form-type="submit">立即发布帮助</button>

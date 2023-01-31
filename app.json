@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/order/order",
     "pages/mine/mine",
@@ -22,32 +22,35 @@
     "pages/mine/about/about",
     "pages/richtext/richtext"
   ],
-  "window":{ 
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "互帮互助代替你",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "校园综合服务平台",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "selectedColor": "#6887e1",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "img/t1.png",
-      "selectedIconPath": "img/t2.png"
-    },
-    {
-      "pagePath": "pages/banzu/banzu",
-      "text": "去帮忙",
-      "iconPath": "img/t7.png",
-      "selectedIconPath": "img/t8.png"
-    },
-    {
-      "pagePath": "pages/mine/mine",
-      "text": "我的",
-      "iconPath": "img/t5.png",
-      "selectedIconPath": "img/t6.png"
-    }]
-  }
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/t1.png",
+        "selectedIconPath": "img/t2.png"
+      },
+      {
+        "pagePath": "pages/banzu/banzu",
+        "text": "去帮忙",
+        "iconPath": "img/t7.png",
+        "selectedIconPath": "img/t8.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/t5.png",
+        "selectedIconPath": "img/t6.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

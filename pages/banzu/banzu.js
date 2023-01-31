@@ -286,7 +286,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title:'互帮互助代替你',
+      title:'校园综合服务平台',
       path:'/pages/index/index'
     }
   }

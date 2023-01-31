@@ -5,9 +5,15 @@ Page({
   /**
    * 页面的初始数据
    */
+  userInfo: {},
+  hasUserInfo: false,
+  canIUseGetUserProfile: false,
   data: {
     phone:'',
     dphone:''
+  },
+  getPhoneNumber (e) {
+    console.log(e.detail.code)
   },
   ddinput(e){
     let name = e.currentTarget.dataset.name;
@@ -21,14 +27,29 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    _this = this
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff',
-      backgroundColor: '#6e42d3',
+  onLoad() {
+    if (wx.getUserProfile) {
+      this.setData({
+        canIUseGetUserProfile: true
+      })
+    }
+  },
+  getUserProfile(e) {
+
+    wx.getUserProfile({
+      desc: '用于完善用户资料(头像、昵称等)',
+      success: (res) => {
+        console.log('获取用户信息成功', res)
+        this.setData({
+          userInfo: res.userInfo
+        })
+        this.authorLogin()
+      },
+      fail: (res) => {
+        console.log('获取用户信息失败', res)
+      }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -46,7 +67,8 @@ Page({
         title: '授权中',
         task:true
       })
-      let userInfo = e.detail.userInfo
+      let userInfo = this.data.userInfo
+      console.log()
       userInfo.id = wx.getStorageSync("user").id
       userInfo.phone = this.data.phone
       userInfo.dphone = this.data.dphone
@@ -78,7 +100,5 @@ Page({
         }
       })
     }
-    
   },
- 
 })

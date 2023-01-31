@@ -1,186 +1,176 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"autoAudits": false,
-		"uglifyFileName": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
-	"appid": "wx20af16de914f1154",
-	"projectname": "%E5%B8%AE%E6%88%91%E4%B8%80%E4%B8%AA%E5%BF%99",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 22,
-			"list": [
-				{
-					"id": -1,
-					"name": "发布",
-					"pathName": "pages/pub/pub",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "订单",
-					"pathName": "pages/order/order",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "地区",
-					"pathName": "pages/area/area",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/mine/mine",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "登录",
-					"pathName": "pages/login/login",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的钱包",
-					"pathName": "pages/payment/payment",
-					"query": ""
-				},
-				{
-					"id": 6,
-					"name": "快递代取",
-					"pathName": "pages/daiqu/daiqu",
-					"query": "index=1"
-				},
-				{
-					"id": 7,
-					"name": "打印",
-					"pathName": "pages/dayin/dayin",
-					"query": "index=0"
-				},
-				{
-					"id": 8,
-					"name": "帮助",
-					"pathName": "pages/banzu/banzu",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "跑腿",
-					"pathName": "pages/paotui/paotui",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "帮助s",
-					"pathName": "pages/other/other",
-					"query": "label=校园跑腿&data={\"qi\":true,\"mu\":true}"
-				},
-				{
-					"id": 11,
-					"name": "详情",
-					"pathName": "pages/order/detail/detail",
-					"query": "id=24"
-				},
-				{
-					"id": -1,
-					"name": "帮助",
-					"pathName": "pages/order/detail/detail",
-					"query": "id=15"
-				},
-				{
-					"id": -1,
-					"name": "sq",
-					"pathName": "pages/register/register",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的信息",
-					"pathName": "pages/mine/info/info",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的地址",
-					"pathName": "pages/mine/address/address",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "新增地址",
-					"pathName": "pages/mine/addressinfo/addressinfo",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "选择地址",
-					"pathName": "pages/mine/chooseaddress/chooseaddress",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "客服",
-					"pathName": "pages/mine/cash/cash",
-					"query": ""
-				},
-				{
-					"id": 19,
-					"name": "电子协议书",
-					"pathName": "pages/mine/jdsm/jdsm",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "关于我们",
-					"pathName": "pages/mine/about/about",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "文章详情页",
-					"pathName": "pages/richtext/richtext",
-					"query": "id=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "申请接单",
-					"pathName": "pages/register/register",
-					"query": ""
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.17.0",
+  "appid": "wx865fd3e469d1d433",
+  "projectname": "%E4%BF%AE%E5%A4%8D%E7%89%88v1.1.2",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "发布",
+          "pathName": "pages/pub/pub",
+          "query": ""
+        },
+        {
+          "name": "订单",
+          "pathName": "pages/order/order",
+          "query": ""
+        },
+        {
+          "name": "地区",
+          "pathName": "pages/area/area",
+          "query": ""
+        },
+        {
+          "name": "我的",
+          "pathName": "pages/mine/mine",
+          "query": ""
+        },
+        {
+          "name": "登录",
+          "pathName": "pages/login/login",
+          "query": ""
+        },
+        {
+          "name": "我的钱包",
+          "pathName": "pages/payment/payment",
+          "query": ""
+        },
+        {
+          "name": "快递代取",
+          "pathName": "pages/daiqu/daiqu",
+          "query": "index=1"
+        },
+        {
+          "name": "打印",
+          "pathName": "pages/dayin/dayin",
+          "query": "index=0"
+        },
+        {
+          "name": "帮助",
+          "pathName": "pages/banzu/banzu",
+          "query": ""
+        },
+        {
+          "name": "跑腿",
+          "pathName": "pages/paotui/paotui",
+          "query": ""
+        },
+        {
+          "name": "帮助s",
+          "pathName": "pages/other/other",
+          "query": "label=校园跑腿&data={\"qi\":true,\"mu\":true}"
+        },
+        {
+          "name": "详情",
+          "pathName": "pages/order/detail/detail",
+          "query": "id=24"
+        },
+        {
+          "name": "帮助",
+          "pathName": "pages/order/detail/detail",
+          "query": "id=15"
+        },
+        {
+          "name": "sq",
+          "pathName": "pages/register/register",
+          "query": ""
+        },
+        {
+          "name": "我的信息",
+          "pathName": "pages/mine/info/info",
+          "query": ""
+        },
+        {
+          "name": "我的地址",
+          "pathName": "pages/mine/address/address",
+          "query": ""
+        },
+        {
+          "name": "新增地址",
+          "pathName": "pages/mine/addressinfo/addressinfo",
+          "query": ""
+        },
+        {
+          "name": "选择地址",
+          "pathName": "pages/mine/chooseaddress/chooseaddress",
+          "query": ""
+        },
+        {
+          "name": "客服",
+          "pathName": "pages/mine/cash/cash",
+          "query": ""
+        },
+        {
+          "name": "电子协议书",
+          "pathName": "pages/mine/jdsm/jdsm",
+          "query": ""
+        },
+        {
+          "name": "关于我们",
+          "pathName": "pages/mine/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "文章详情页",
+          "pathName": "pages/richtext/richtext",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "申请接单",
+          "pathName": "pages/register/register",
+          "query": ""
+        }
+      ]
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }

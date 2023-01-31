@@ -1,13 +1,11 @@
-
+﻿
 <!-- <view> -->
+  <view class="cover-box"></view>
 <view class="container">
-  <view class="wechatapp">
-    <!-- <image class="header" src="/images/wechatapp.png"></image> -->
-    <view class="header">
-      <open-data class="" type="userAvatarUrl"></open-data>
-    </view>
+  <view class="wechatapp" style="position: relative; left: 0rpx; top: 212rpx">
+<image class="header" src="../../img/logo.png" style="position: relative; left: 0rpx; top: 87rpx"></image>
   </view>
-  <view class='pa-30'>
+  <view class='pa-30' style="position: relative; left: 0rpx; top: 244rpx">
     <view class='panels ra-20'>
       
       <input class='bgg ra-10' type='number' maxlength='11' data-name='phone' bindinput='ddinput' placeholder='输入11位手机号(必填)'></input>
@@ -15,8 +13,11 @@
       <input class='bgg ra-10 ma-t30' type='number' maxlength='6' data-name='dphone' bindinput='ddinput' placeholder='输入6位短号(选填)'></input>
       
     </view>
-    <view class="fo-26 ma-t30 fo-w text-center " style='margin-top:100rpx'>获得你的公开信息（昵称、头像等）</view>
-    <button class="login-btn ma-t30" openType="getUserInfo" lang="zh_CN" bindgetuserinfo="authorLogin">授权登录</button>
+    <view class="fo-26 ma-t30 fo-w text-center" style="margin-top: 100rpx; position: relative; left: 0rpx; top: -62rpx">获得你的公开信息（昵称、头像、手机号等）</view>
+      <button lang="zh_CN" class="login-btn ma-t30"  bindtap="getUserProfile" style="position: relative; left: 0rpx; top: -57rpx"> 获取头像昵称 </button>
+      <!-- <button open-type="getPhoneNumber" class="login-btn ma-t30" bindgetphonenumber="getPhoneNumber" style="position: relative; left: 0rpx; top: -174rpx">授权手机号</button> -->
+
+
   </view>
   
   

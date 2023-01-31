@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f328497-e83e-4b9e-bdcc-1e4e72cffdd8" name="变更" comment="测试">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/common.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/s1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/s2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/s3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/s4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/s5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/s6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/area/area.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/area/area.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/area/area.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/area/area.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/area/area.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/area/area.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/area/area.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/area/area.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/banzu/banzu.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/banzu/banzu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/banzu/banzu.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/banzu/banzu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/banzu/banzu.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/banzu/banzu.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/banzu/banzu.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/banzu/banzu.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/daiqu/daiqu.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/daiqu/daiqu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/daiqu/daiqu.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/daiqu/daiqu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/daiqu/daiqu.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/daiqu/daiqu.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/daiqu/daiqu.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/daiqu/daiqu.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dayin/dayin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dayin/dayin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dayin/dayin.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dayin/dayin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dayin/dayin.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dayin/dayin.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dayin/dayin.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dayin/dayin.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dayin/dy/dy.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dayin/dy/dy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dayin/dy/dy.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dayin/dy/dy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/login.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/login.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/about/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/about/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/about/about.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/about/about.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/about/about.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/about/about.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/address/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/address/address.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/address/address.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/address/address.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/address/address.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/address/address.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/address/address.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/address/address.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/addressinfo/addressinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/addressinfo/addressinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/addressinfo/addressinfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/addressinfo/addressinfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/addressinfo/addressinfo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/addressinfo/addressinfo.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/cash/cash.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/cash/cash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/cash/cash.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/cash/cash.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/cash/cash.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/cash/cash.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/cash/cash.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/cash/cash.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/chooseaddress/chooseaddress.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/info/info.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/info/info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/info/info.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/info/info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/info/info.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/info/info.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/info/info.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/info/info.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/jdsm/jdsm.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/jdsm/jdsm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/jdsm/jdsm.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/jdsm/jdsm.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/jdsm/jdsm.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/jdsm/jdsm.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/mine.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/mine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/mine.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/mine.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/mine.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/mine.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/mine/mine.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/mine/mine.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/detail/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/detail/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/detail/detail.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/detail/detail.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/detail/detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/detail/detail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/detail/detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/detail/detail.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/order/order.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/order.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/other/other.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/other/other.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/other/other.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/other/other.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/other/other.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/other/other.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/payment/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/payment/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/payment/payment.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/payment/payment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/payment/payment.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/payment/payment.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/payment/payment.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/payment/payment.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register/register.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register/register.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/richtext/richtext.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/richtext/richtext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/richtext/richtext.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/richtext/richtext.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/richtext/richtext.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/richtext/richtext.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/richtext/richtext.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/richtext/richtext.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a8f43a42-d749-4af0-b867-bd62c5db0b40" />
+        <option name="url" value="https://github.com/landalfYao/help.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2L50U94mZ85NHWbQTLkeUS6bjo6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6f328497-e83e-4b9e-bdcc-1e4e72cffdd8" name="变更" comment="" />
+      <created>1675145649100</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675145649100</updated>
+      <workItem from="1675145652603" duration="791000" />
+    </task>
+    <task id="LOCAL-00001" summary="测试">
+      <created>1675145905478</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675145905478</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+  </component>
+</project>

@@ -1,5 +1,5 @@
 <view>
-  <image wx:if="{{imgurls.length==0}}" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546588810872&di=cb67c135a68e37d90aeff10e5890504e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F503d269759ee3d6dfd34301f49166d224e4ade70.jpg'
+  <image wx:if="{{imgurls.length==0}}" src='https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF'
     class='bg' mode='aspectFill'></image>
   <swiper wx:if="{{imgurls.length>0}}" indicator-dots="true" autoplay="true" interval="5000" duration="500" class='bg'>
     <block wx:for="{{imgurls}}">
