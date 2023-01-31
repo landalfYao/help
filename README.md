@@ -31,10 +31,10 @@
 
 ### ！搭建遇到任何问题，请联系群内管理人员，切勿相信其他非管理人员！
 
-点击链接加入群聊【hbhzdtn交流群1群】：https://jq.qq.com/?_wv=1027&k=8P2OdlUB
-1号群:664588763
-点击链接加入群聊【hbhzdtn交流群2群】：https://jq.qq.com/?_wv=1027&k=jNQktW2Q
-2号群:939216531
+点击链接加入群聊【hbhzdtn交流群1群】：https://jq.qq.com/?_wv=1027&k=8P2OdlUB <br>
+1号群:664588763 <br>
+点击链接加入群聊【hbhzdtn交流群2群】：https://jq.qq.com/?_wv=1027&k=jNQktW2Q <br>
+2号群:939216531 <br>
 
 ## 效果图展示
 ### 前端
