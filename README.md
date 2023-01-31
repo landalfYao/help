@@ -41,6 +41,8 @@
 ![小程序-首页](https://gitee.com/yaozy717/hbhzdtn/raw/master/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E9%A6%96%E9%A1%B5.jpg)
 ![小程序-订单](https://gitee.com/yaozy717/hbhzdtn/raw/master/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E8%AE%A2%E5%8D%95%E7%95%8C%E9%9D%A2.jpg)
 ![小程序-我的](https://gitee.com/yaozy717/hbhzdtn/raw/master/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E6%88%91%E7%9A%84.jpg)
+![小程序-申请接单](https://gitee.com/yaozy717/hbhzdtn/raw/master/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E7%94%B3%E8%AF%B7%E6%8E%A5%E5%8D%95.jpg)
+![小程序-提现](https://gitee.com/yaozy717/hbhzdtn/raw/master/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%89%87/%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E6%8F%90%E7%8E%B0.jpg)
 
 
 
