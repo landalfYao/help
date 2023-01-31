@@ -19,7 +19,7 @@
 4.修复接单员上传证件失败问题<br>
 
 ### 项目链接
-本项目 一共分为三个仓库，以下为对应三个仓库地址：
+ 本项目 一共分为三个仓库，以下为对应三个仓库地址：
 
 #### [1.小程序端地址：https://github.com/landalfYao/help.git](https://github.com/landalfYao/help.git)<br>
 
